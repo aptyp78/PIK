@@ -1,0 +1,22 @@
+{
+  "markerEndpoint": "localhost:8000",
+  "pythonEndpoint": "localhost:8001",
+  "createFolder": true,
+  "deleteOriginal": false,
+  "extractContent": "all",
+  "writeMetadata": true,
+  "movePDFtoFolder": false,
+  "createAssetSubfolder": true,
+  "apiEndpoint": "selfhosted",
+  "apiKey": "",
+  "datalabApiKey": "",
+  "mistralaiApiKey": "",
+  "langs": "en",
+  "forceOCR": true,
+  "paginate": false,
+  "stripExistingOCR": false,
+  "useLLM": false,
+  "skipCache": false,
+  "imageLimit": 0,
+  "imageMinSize": 0
+}

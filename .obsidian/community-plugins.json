@@ -8,5 +8,10 @@
   "table-editor-obsidian",
   "calendar",
   "obsidian-kanban",
-  "omnisearch"
+  "omnisearch",
+  "text-extractor",
+  "extract-url",
+  "marker-api",
+  "ai-image-analyzer",
+  "ai-image-ocr"
 ]
