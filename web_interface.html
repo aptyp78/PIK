@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIK OCR - Интеллектуальное распознавание документов</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .upload-section {
+            padding: 40px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .upload-zone {
+            border: 3px dashed #007bff;
+            border-radius: 10px;
+            padding: 60px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: white;
+        }
+
+        .upload-zone:hover {
+            border-color: #0056b3;
+            background: #f8f9fa;
+        }
+
+        .upload-zone.dragover {
+            border-color: #28a745;
+            background: #e8f5e8;
+        }
+
+        .upload-icon {
+            font-size: 4em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .upload-text {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #495057;
+        }
+
+        .upload-hint {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        .ocr-options {
+            padding: 30px 40px;
+            background: white;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .option-group {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .option-group h4 {
+            margin-bottom: 15px;
+            color: #495057;
+            font-size: 1.1em;
+        }
+
+        .option-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .option-group select,
+        .option-group input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            background: white;
+        }
+
+        .range-value {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .process-button {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .process-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .process-button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .results-section {
+            padding: 40px;
+            display: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #007bff, #28a745);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .status-message {
+            text-align: center;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .result-panel {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            border: 1px solid #e9ecef;
+        }
+
+        .result-panel h3 {
+            margin-bottom: 20px;
+            color: #495057;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .text-preview {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-item {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .category-name {
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+
+        .category-items {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .download-btn {
+            flex: 1;
+            padding: 12px;
+            background: #17a2b8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #138496;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #f5c6cb;
+            margin: 20px 0;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #c3e6cb;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .upload-section,
+            .ocr-options,
+            .results-section {
+                padding: 20px;
+            }
+            
+            .options-grid,
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .quality-indicator {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .quality-excellent {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .quality-good {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .quality-fair {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 PIK OCR</h1>
+            <p>Интеллектуальное распознавание и анализ PIK документов</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Секция загрузки -->
+            <div class="upload-section">
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-icon">📄</div>
+                    <div class="upload-text">Перетащите PDF файл сюда или нажмите для выбора</div>
+                    <div class="upload-hint">Поддерживаются PDF файлы до 100 MB</div>
+                </div>
+                <input type="file" id="fileInput" accept=".pdf" />
+            </div>
+
+            <!-- Настройки OCR -->
+            <div class="ocr-options">
+                <div class="options-grid">
+                    <div class="option-group">
+                        <h4>🔧 Движок OCR</h4>
+                        <label for="ocrEngine">Выберите движок:</label>
+                        <select id="ocrEngine">
+                            <option value="multi">Мульти-движок (рекомендуется)</option>
+                            <option value="tesseract">Tesseract</option>
+                            <option value="easyocr">EasyOCR</option>
+                        </select>
+                    </div>
+
+                    <div class="option-group">
+                        <h4>📋 Тип документа</h4>
+                        <label for="documentType">Оптимизация для:</label>
+                        <select id="documentType">
+                            <option value="pik_diagram">PIK Диаграмма</option>
+                            <option value="table">Таблица</option>
+                            <option value="general">Общий текст</option>
+                        </select>
+                    </div>
+
+                    <div class="option-group">
+                        <h4>🎯 Качество обработки</h4>
+                        <label for="qualityLevel">Уровень качества:</label>
+                        <input type="range" id="qualityLevel" min="1" max="3" value="2" />
+                        <span class="range-value" id="qualityValue">Высокое</span>
+                    </div>
+
+                    <div class="option-group">
+                        <h4>⚡ Дополнительные опции</h4>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="useCache" checked />
+                                <label for="useCache">Использовать кэш</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="extractImages" checked />
+                                <label for="extractImages">Извлекать изображения</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="semanticAnalysis" checked />
+                                <label for="semanticAnalysis">Семантический анализ</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="process-button" id="processButton" disabled>
+                    🚀 Начать обработку
+                </button>
+            </div>
+
+            <!-- Секция результатов -->
+            <div class="results-section" id="resultsSection">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="status-message" id="statusMessage">Подготовка к обработке...</div>
+
+                <div class="results-grid" id="resultsGrid" style="display: none;">
+                    <!-- Статистика -->
+                    <div class="result-panel">
+                        <h3>📊 Статистика обработки</h3>
+                        <div class="stats-grid" id="statsGrid">
+                            <!-- Заполняется динамически -->
+                        </div>
+                        <div id="qualityIndicator"></div>
+                    </div>
+
+                    <!-- PIK Категории -->
+                    <div class="result-panel">
+                        <h3>🎯 PIK Структура</h3>
+                        <ul class="category-list" id="categoryList">
+                            <!-- Заполняется динамически -->
+                        </ul>
+                    </div>
+
+                    <!-- Превью текста -->
+                    <div class="result-panel">
+                        <h3>📝 Распознанный текст</h3>
+                        <div class="text-preview" id="textPreview">
+                            <!-- Заполняется динамически -->
+                        </div>
+                    </div>
+
+                    <!-- Кнопки скачивания -->
+                    <div class="result-panel">
+                        <h3>💾 Экспорт результатов</h3>
+                        <div class="download-buttons">
+                            <button class="download-btn" id="downloadMd">📄 Markdown</button>
+                            <button class="download-btn" id="downloadJson">📋 JSON</button>
+                            <button class="download-btn" id="downloadImages">🖼️ Изображения</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class PIKOCRInterface {
+            constructor() {
+                this.selectedFile = null;
+                this.processedResults = null;
+                this.initializeEventListeners();
+                this.updateQualityLabel();
+            }
+
+            initializeEventListeners() {
+                // Загрузка файлов
+                const uploadZone = document.getElementById('uploadZone');
+                const fileInput = document.getElementById('fileInput');
+                
+                uploadZone.addEventListener('click', () => fileInput.click());
+                uploadZone.addEventListener('dragover', this.handleDragOver.bind(this));
+                uploadZone.addEventListener('drop', this.handleDrop.bind(this));
+                uploadZone.addEventListener('dragleave', this.handleDragLeave.bind(this));
+                
+                fileInput.addEventListener('change', this.handleFileSelect.bind(this));
+                
+                // Ползунок качества
+                document.getElementById('qualityLevel').addEventListener('input', this.updateQualityLabel.bind(this));
+                
+                // Кнопка обработки
+                document.getElementById('processButton').addEventListener('click', this.processDocument.bind(this));
+                
+                // Кнопки скачивания
+                document.getElementById('downloadMd').addEventListener('click', () => this.downloadResult('markdown'));
+                document.getElementById('downloadJson').addEventListener('click', () => this.downloadResult('json'));
+                document.getElementById('downloadImages').addEventListener('click', () => this.downloadResult('images'));
+            }
+
+            handleDragOver(e) {
+                e.preventDefault();
+                e.currentTarget.classList.add('dragover');
+            }
+
+            handleDragLeave(e) {
+                e.currentTarget.classList.remove('dragover');
+            }
+
+            handleDrop(e) {
+                e.preventDefault();
+                e.currentTarget.classList.remove('dragover');
+                
+                const files = e.dataTransfer.files;
+                if (files.length > 0 && files[0].type === 'application/pdf') {
+                    this.selectFile(files[0]);
+                }
+            }
+
+            handleFileSelect(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    this.selectFile(file);
+                }
+            }
+
+            selectFile(file) {
+                this.selectedFile = file;
+                
+                const uploadZone = document.getElementById('uploadZone');
+                uploadZone.innerHTML = `
+                    <div class="upload-icon">✅</div>
+                    <div class="upload-text">Файл выбран: ${file.name}</div>
+                    <div class="upload-hint">Размер: ${(file.size / 1024 / 1024).toFixed(1)} MB</div>
+                `;
+                
+                document.getElementById('processButton').disabled = false;
+            }
+
+            updateQualityLabel() {
+                const level = document.getElementById('qualityLevel').value;
+                const valueSpan = document.getElementById('qualityValue');
+                
+                const labels = {
+                    '1': 'Быстрое',
+                    '2': 'Высокое',
+                    '3': 'Максимальное'
+                };
+                
+                valueSpan.textContent = labels[level];
+            }
+
+            async processDocument() {
+                if (!this.selectedFile) return;
+                
+                // Показываем секцию результатов
+                const resultsSection = document.getElementById('resultsSection');
+                resultsSection.style.display = 'block';
+                
+                // Скрываем результаты, показываем прогресс
+                document.getElementById('resultsGrid').style.display = 'none';
+                
+                try {
+                    await this.simulateProcessing();
+                    this.displayResults();
+                } catch (error) {
+                    this.showError(error.message);
+                }
+            }
+
+            async simulateProcessing() {
+                const steps = [
+                    { progress: 10, message: '📄 Загрузка документа...' },
+                    { progress: 25, message: '🖼️ Извлечение изображений...' },
+                    { progress: 45, message: '🔍 OCR обработка...' },
+                    { progress: 70, message: '🎯 Семантический анализ...' },
+                    { progress: 90, message: '📊 Формирование результатов...' },
+                    { progress: 100, message: '✅ Обработка завершена!' }
+                ];
+                
+                for (const step of steps) {
+                    await this.updateProgress(step.progress, step.message);
+                    await new Promise(resolve => setTimeout(resolve, 800));
+                }
+                
+                // Имитация результатов
+                this.processedResults = {
+                    statistics: {
+                        processingTime: 12.5,
+                        qualityScore: 89,
+                        imagesExtracted: 6,
+                        tablesFound: 3,
+                        categoriesFound: 7,
+                        textLength: 2459
+                    },
+                    categories: [
+                        { name: 'ENVIRONMENT', items: ['Societal forces', 'Regulatory trends', 'Technology trends'] },
+                        { name: 'MARKET', items: ['Market issues', 'Competition', 'Customer segments'] },
+                        { name: 'VALUE CHAIN', items: ['Partners', 'Resources', 'Activities'] },
+                        { name: 'MACROECONOMIC', items: ['Economic conditions', 'Capital markets', 'Infrastructure'] }
+                    ],
+                    extractedText: `ENVIRONMENT MARKET Societal and cultural forces. Regulatory trends Socialeconomic forces Key technology trends Natural forces Market issues EMERGING VALUE CHAIN MACROECONOMIC Forces from other value chain actors Forces from global market conditions Examples of stakeholders. Capital markets Competitors (Incumbents) Economic infrastructure New entrants (Insurgents) Commodities and other resources...`,
+                    qualityScore: 89
+                };
+            }
+
+            async updateProgress(percentage, message) {
+                document.getElementById('progressFill').style.width = percentage + '%';
+                document.getElementById('statusMessage').textContent = message;
+            }
+
+            displayResults() {
+                const results = this.processedResults;
+                
+                // Показываем результаты
+                document.getElementById('resultsGrid').style.display = 'grid';
+                
+                // Статистика
+                this.renderStatistics(results.statistics);
+                
+                // Категории
+                this.renderCategories(results.categories);
+                
+                // Превью текста
+                this.renderTextPreview(results.extractedText);
+                
+                // Индикатор качества
+                this.renderQualityIndicator(results.qualityScore);
+            }
+
+            renderStatistics(stats) {
+                const statsGrid = document.getElementById('statsGrid');
+                statsGrid.innerHTML = `
+                    <div class="stat-item">
+                        <div class="stat-value">${stats.processingTime}с</div>
+                        <div class="stat-label">Время обработки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">${stats.qualityScore}%</div>
+                        <div class="stat-label">Качество OCR</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">${stats.imagesExtracted}</div>
+                        <div class="stat-label">Изображений</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">${stats.categoriesFound}</div>
+                        <div class="stat-label">PIK категорий</div>
+                    </div>
+                `;
+            }
+
+            renderCategories(categories) {
+                const categoryList = document.getElementById('categoryList');
+                categoryList.innerHTML = categories.map(category => `
+                    <li class="category-item">
+                        <div class="category-name">${category.name}</div>
+                        <div class="category-items">${category.items.join(', ')}</div>
+                    </li>
+                `).join('');
+            }
+
+            renderTextPreview(text) {
+                const textPreview = document.getElementById('textPreview');
+                textPreview.textContent = text.substring(0, 500) + (text.length > 500 ? '...' : '');
+            }
+
+            renderQualityIndicator(score) {
+                const indicator = document.getElementById('qualityIndicator');
+                let className = 'quality-fair';
+                let text = '🔴 Требует улучшения';
+                
+                if (score >= 80) {
+                    className = 'quality-excellent';
+                    text = '🟢 Отличное качество';
+                } else if (score >= 60) {
+                    className = 'quality-good';
+                    text = '🟡 Хорошее качество';
+                }
+                
+                indicator.innerHTML = `<span class="quality-indicator ${className}">${text}</span>`;
+            }
+
+            downloadResult(format) {
+                // Имитация скачивания
+                const filename = `ocr_result_${Date.now()}.${format === 'images' ? 'zip' : format}`;
+                
+                let content;
+                if (format === 'markdown') {
+                    content = this.generateMarkdown();
+                } else if (format === 'json') {
+                    content = JSON.stringify(this.processedResults, null, 2);
+                } else {
+                    // Для изображений создаем фиктивный архив
+                    content = 'Архив с изображениями будет скачан...';
+                }
+                
+                this.downloadFile(content, filename, format === 'json' ? 'application/json' : 'text/plain');
+            }
+
+            generateMarkdown() {
+                const results = this.processedResults;
+                return `# PIK OCR Результат
+
+## Статистика
+- Время обработки: ${results.statistics.processingTime}с
+- Качество: ${results.statistics.qualityScore}%
+- Изображений: ${results.statistics.imagesExtracted}
+- Категорий: ${results.statistics.categoriesFound}
+
+## PIK Категории
+${results.categories.map(cat => 
+    `### ${cat.name}\n${cat.items.map(item => `- ${item}`).join('\n')}`
+).join('\n\n')}
+
+## Распознанный текст
+\`\`\`
+${results.extractedText}
+\`\`\`
+`;
+            }
+
+            downloadFile(content, filename, mimeType) {
+                const blob = new Blob([content], { type: mimeType });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                this.showSuccess(`Файл ${filename} загружен`);
+            }
+
+            showError(message) {
+                const resultsSection = document.getElementById('resultsSection');
+                resultsSection.innerHTML = `<div class="error-message">❌ Ошибка: ${message}</div>`;
+            }
+
+            showSuccess(message) {
+                const statusMessage = document.getElementById('statusMessage');
+                const originalMessage = statusMessage.textContent;
+                statusMessage.innerHTML = `<div class="success-message">✅ ${message}</div>`;
+                setTimeout(() => {
+                    statusMessage.textContent = originalMessage;
+                }, 3000);
+            }
+        }
+
+        // Инициализация интерфейса
+        document.addEventListener('DOMContentLoaded', () => {
+            new PIKOCRInterface();
+        });
+    </script>
+</body>
+</html>

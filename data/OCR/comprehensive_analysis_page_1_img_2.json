@@ -1,0 +1,128 @@
+{
+  "source_image": "OCR/PIK 5-0 - Ecosystem Forces Scan - ENG/images/page_1_img_2.png",
+  "regions": {
+    "top_right": {
+      "text": "™",
+      "confidence": 76.0,
+      "elements": [
+        "™"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "bottom_right": {
+      "text": "№",
+      "confidence": 61.0,
+      "elements": [
+        "№"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "center": {
+      "text": "PIK",
+      "confidence": 91.0,
+      "elements": [
+        "PIK"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "header": {
+      "text": "i,",
+      "confidence": 52.0,
+      "elements": [
+        "i,"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "footer": {
+      "text": "+",
+      "confidence": 55.0,
+      "elements": [
+        "+"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "left_side": {
+      "text": "{",
+      "confidence": 91.0,
+      "elements": [
+        "{"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "right_side": {
+      "text": "}",
+      "confidence": 77.0,
+      "elements": [
+        "}"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "top_center": {
+      "text": "gue Ч",
+      "confidence": 48.5,
+      "elements": [
+        "gue",
+        "Ч"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "bottom_center": {
+      "text": "Ne nag",
+      "confidence": 33.5,
+      "elements": [
+        "Ne",
+        "nag"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 6 --oem 3"
+    }
+  },
+  "comprehensive_text": "[TOP_RIGHT] ™ [BOTTOM_RIGHT] № [CENTER] PIK [HEADER] i, [FOOTER] + [LEFT_SIDE] { [RIGHT_SIDE] } [TOP_CENTER] gue Ч [BOTTOM_CENTER] Ne nag ",
+  "detected_icons": [],
+  "pik_structure": {
+    "categories": {
+      "MARKET": {
+        "region": "top_right",
+        "elements": [
+          "™"
+        ],
+        "confidence": 76.0
+      },
+      "MACROECONOMIC": {
+        "region": "bottom_right",
+        "elements": [
+          "№"
+        ],
+        "confidence": 61.0
+      },
+      "CORE FRAMEWORK": {
+        "region": "center",
+        "elements": [
+          "PIK"
+        ],
+        "confidence": 91.0
+      }
+    },
+    "stakeholders": [],
+    "metadata": {
+      "version": null,
+      "title": null
+    },
+    "quality_indicators": {
+      "total_regions_analyzed": 9,
+      "successful_extractions": 7,
+      "overall_confidence": 77.77777777777779,
+      "total_text_length": 138,
+      "categories_found": 3,
+      "stakeholders_found": 0
+    }
+  }
+}

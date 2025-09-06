@@ -1,0 +1,487 @@
+{
+  "source_image": "OCR/PIK 5-0 - Ecosystem Forces Scan - ENG/images/full_page_1.png",
+  "regions": {
+    "top_left": {
+      "text": "- jos ENVIRONMENT \" Societal and cultural forces \" Socialeconomic forces „ Natural forces",
+      "confidence": 86.21428571428571,
+      "elements": [
+        "-",
+        "jos",
+        "ENVIRONMENT",
+        "\"",
+        "Societal",
+        "and",
+        "cultural",
+        "forces",
+        "\"",
+        "Socialeconomic",
+        "forces",
+        "„",
+        "Natural",
+        "forces"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "top_right": {
+      "text": "| | о @ МАВКЕТ « Regulatory trends » Key technology trends « Market issues",
+      "confidence": 85.66666666666667,
+      "elements": [
+        "|",
+        "|",
+        "о",
+        "@",
+        "МАВКЕТ",
+        "«",
+        "Regulatory",
+        "trends",
+        "»",
+        "Key",
+        "technology",
+        "trends",
+        "«",
+        "Market",
+        "issues"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "bottom_left": {
+      "text": "EMERGIN | | a VALUE CHAIN Forces from other value chain actors Examples of stakeholders: = Competitors (Incumbents) «= New entrants (Insurgents) \" Substitute product & services a az OE № ECOSYSTEM FORCES SCAN vs.0 Part of the Platform Innovation Kit - the toolset for the platform generation BY SA Download at www.platforminnovationkit.com Created by fastbreak.one ENG",
+      "confidence": 90.64912280701755,
+      "elements": [
+        "EMERGIN",
+        "|",
+        "|",
+        "a",
+        "VALUE",
+        "CHAIN",
+        "Forces",
+        "from",
+        "other",
+        "value",
+        "chain",
+        "actors",
+        "Examples",
+        "of",
+        "stakeholders:",
+        "=",
+        "Competitors",
+        "(Incumbents)",
+        "«=",
+        "New",
+        "entrants",
+        "(Insurgents)",
+        "\"",
+        "Substitute",
+        "product",
+        "&",
+        "services",
+        "a",
+        "az",
+        "OE",
+        "№",
+        "ECOSYSTEM",
+        "FORCES",
+        "SCAN",
+        "vs.0",
+        "Part",
+        "of",
+        "the",
+        "Platform",
+        "Innovation",
+        "Kit",
+        "-",
+        "the",
+        "toolset",
+        "for",
+        "the",
+        "platform",
+        "generation",
+        "BY",
+        "SA",
+        "Download",
+        "at",
+        "www.platforminnovationkit.com",
+        "Created",
+        "by",
+        "fastbreak.one",
+        "ENG"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "bottom_right": {
+      "text": "G NEEDS © MACROECONOMIC Forces from global market conditions: Capital markets Economic infrastructure Commodities and other resources (Ok Ta Bo ат. TITLE",
+      "confidence": 85.5909090909091,
+      "elements": [
+        "G",
+        "NEEDS",
+        "©",
+        "MACROECONOMIC",
+        "Forces",
+        "from",
+        "global",
+        "market",
+        "conditions:",
+        "Capital",
+        "markets",
+        "Economic",
+        "infrastructure",
+        "Commodities",
+        "and",
+        "other",
+        "resources",
+        "(Ok",
+        "Ta",
+        "Bo",
+        "ат.",
+        "TITLE"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "center": {
+      "text": "|",
+      "confidence": 86.0,
+      "elements": [
+        "|"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "header": {
+      "text": "~C)- о ©",
+      "confidence": 66.33333333333333,
+      "elements": [
+        "~C)-",
+        "о",
+        "©"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "footer": {
+      "text": "a OE HO) az № ECOSYSTEM FORCES SCAN vs.0 PIK ЕЕ \\ PI К } Part of the Platform Innovation Kit - the toolset for the platform generation © 00 BY SA Download at www.platforminnovationkit.com Created Бу fastbreak.one TITLE ENG",
+      "confidence": 87.05,
+      "elements": [
+        "a",
+        "OE",
+        "HO)",
+        "az",
+        "№",
+        "ECOSYSTEM",
+        "FORCES",
+        "SCAN",
+        "vs.0",
+        "PIK",
+        "ЕЕ",
+        "\\",
+        "PI",
+        "К",
+        "}",
+        "Part",
+        "of",
+        "the",
+        "Platform",
+        "Innovation",
+        "Kit",
+        "-",
+        "the",
+        "toolset",
+        "for",
+        "the",
+        "platform",
+        "generation",
+        "©",
+        "00",
+        "BY",
+        "SA",
+        "Download",
+        "at",
+        "www.platforminnovationkit.com",
+        "Created",
+        "Бу",
+        "fastbreak.one",
+        "TITLE",
+        "ENG"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "left_side": {
+      "text": "|",
+      "confidence": 81.0,
+      "elements": [
+        "|"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "right_side": {
+      "text": "|",
+      "confidence": 95.0,
+      "elements": [
+        "|"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "top_center": {
+      "text": "— | =",
+      "confidence": 70.66666666666667,
+      "elements": [
+        "—",
+        "|",
+        "="
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "bottom_center": {
+      "text": "ОВСЕ$ SCAN v5.0 m Innovation Kit - the toolset for the platform generation platforminnovationkit.com TITLE",
+      "confidence": 90.6,
+      "elements": [
+        "ОВСЕ$",
+        "SCAN",
+        "v5.0",
+        "m",
+        "Innovation",
+        "Kit",
+        "-",
+        "the",
+        "toolset",
+        "for",
+        "the",
+        "platform",
+        "generation",
+        "platforminnovationkit.com",
+        "TITLE"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "corner_tl": {
+      "text": "-O-",
+      "confidence": 46.0,
+      "elements": [
+        "-O-"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "corner_tr": {
+      "text": "{7} оо",
+      "confidence": 65.5,
+      "elements": [
+        "{7}",
+        "оо"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "corner_bl": {
+      "text": "2= ЕМС",
+      "confidence": 80.0,
+      "elements": [
+        "2=",
+        "ЕМС"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "corner_br": {
+      "text": "b в",
+      "confidence": 61.5,
+      "elements": [
+        "b",
+        "в"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 7 --oem 3"
+    }
+  },
+  "comprehensive_text": "[TOP_LEFT] - jos ENVIRONMENT \" Societal and cultural forces \" Socialeconomic forces „ Natural forces [TOP_RIGHT] | | о @ МАВКЕТ « Regulatory trends » Key technology trends « Market issues [BOTTOM_LEFT] EMERGIN | | a VALUE CHAIN Forces from other value chain actors Examples of stakeholders: = Competitors (Incumbents) «= New entrants (Insurgents) \" Substitute product & services a az OE № ECOSYSTEM FORCES SCAN vs.0 Part of the Platform Innovation Kit - the toolset for the platform generation BY SA Download at www.platforminnovationkit.com Created by fastbreak.one ENG [BOTTOM_RIGHT] G NEEDS © MACROECONOMIC Forces from global market conditions: Capital markets Economic infrastructure Commodities and other resources (Ok Ta Bo ат. TITLE [CENTER] | [HEADER] ~C)- о © [FOOTER] a OE HO) az № ECOSYSTEM FORCES SCAN vs.0 PIK ЕЕ \\ PI К } Part of the Platform Innovation Kit - the toolset for the platform generation © 00 BY SA Download at www.platforminnovationkit.com Created Бу fastbreak.one TITLE ENG [LEFT_SIDE] | [RIGHT_SIDE] | [TOP_CENTER] — | = [BOTTOM_CENTER] ОВСЕ$ SCAN v5.0 m Innovation Kit - the toolset for the platform generation platforminnovationkit.com TITLE [CORNER_TL] -O- [CORNER_TR] {7} оо [CORNER_BL] 2= ЕМС [CORNER_BR] b в ",
+  "detected_icons": [],
+  "pik_structure": {
+    "categories": {
+      "ENVIRONMENT": {
+        "region": "top_left",
+        "elements": [
+          "„",
+          "ENVIRONMENT",
+          "jos",
+          "Societal",
+          "\"",
+          "cultural",
+          "Socialeconomic",
+          "-",
+          "forces",
+          "and",
+          "Natural"
+        ],
+        "confidence": 86.21428571428571
+      },
+      "MARKET": {
+        "region": "top_right",
+        "elements": [
+          "МАВКЕТ",
+          "trends",
+          "technology",
+          "Market",
+          "»",
+          "|",
+          "о",
+          "«",
+          "Key",
+          "@",
+          "Regulatory",
+          "issues"
+        ],
+        "confidence": 85.66666666666667
+      },
+      "VALUE CHAIN": {
+        "region": "bottom_left",
+        "elements": [
+          "Examples",
+          "New",
+          "generation",
+          "vs.0",
+          "actors",
+          "chain",
+          "Competitors",
+          "EMERGIN",
+          "(Incumbents)",
+          "OE",
+          "SA",
+          "services",
+          "Platform",
+          "«=",
+          "Forces",
+          "a",
+          "SCAN",
+          "Kit",
+          "by",
+          "of",
+          "product",
+          "ENG",
+          "Download",
+          "ECOSYSTEM",
+          "BY",
+          "fastbreak.one",
+          "Substitute",
+          "from",
+          "=",
+          "www.platforminnovationkit.com",
+          "\"",
+          "|",
+          "az",
+          "at",
+          "for",
+          "VALUE",
+          "№",
+          "other",
+          "FORCES",
+          "Innovation",
+          "Part",
+          "the",
+          "&",
+          "toolset",
+          "CHAIN",
+          "entrants",
+          "value",
+          "stakeholders:",
+          "-",
+          "(Insurgents)",
+          "platform",
+          "Created"
+        ],
+        "confidence": 90.64912280701755
+      },
+      "MACROECONOMIC": {
+        "region": "bottom_right",
+        "elements": [
+          "Ta",
+          "(Ok",
+          "conditions:",
+          "Economic",
+          "infrastructure",
+          "ат.",
+          "Forces",
+          "Commodities",
+          "©",
+          "TITLE",
+          "markets",
+          "and",
+          "resources",
+          "from",
+          "MACROECONOMIC",
+          "global",
+          "Bo",
+          "other",
+          "G",
+          "Capital",
+          "market",
+          "NEEDS"
+        ],
+        "confidence": 85.5909090909091
+      },
+      "CORE FRAMEWORK": {
+        "region": "center",
+        "elements": [
+          "|"
+        ],
+        "confidence": 86.0
+      }
+    },
+    "stakeholders": [
+      {
+        "name": "competitors",
+        "region": "bottom_left",
+        "confidence": 90.64912280701755
+      },
+      {
+        "name": "incumbents",
+        "region": "bottom_left",
+        "confidence": 90.64912280701755
+      },
+      {
+        "name": "insurgents",
+        "region": "bottom_left",
+        "confidence": 90.64912280701755
+      },
+      {
+        "name": "new entrants",
+        "region": "bottom_left",
+        "confidence": 90.64912280701755
+      },
+      {
+        "name": "capital markets",
+        "region": "bottom_right",
+        "confidence": 85.5909090909091
+      },
+      {
+        "name": "infrastructure",
+        "region": "bottom_right",
+        "confidence": 85.5909090909091
+      },
+      {
+        "name": "commodities",
+        "region": "bottom_right",
+        "confidence": 85.5909090909091
+      }
+    ],
+    "metadata": {
+      "version": null,
+      "title": null
+    },
+    "quality_indicators": {
+      "total_regions_analyzed": 15,
+      "successful_extractions": 14,
+      "overall_confidence": 93.33333333333333,
+      "total_text_length": 1242,
+      "categories_found": 5,
+      "stakeholders_found": 7
+    }
+  }
+}

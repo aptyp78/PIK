@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Intelligent PIK Parser - Визуализация результатов</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-json.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            color: #666;
+        }
+        
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .framework-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .framework-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .framework-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+        
+        .type-ecosystem_forces { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+        .type-nfx_engines { background: linear-gradient(135deg, #4834d4, #686de0); }
+        .type-business_model { background: linear-gradient(135deg, #00d2d3, #01a3a4); }
+        .type-platform_experience { background: linear-gradient(135deg, #ff9ff3, #f368e0); }
+        .type-value_network { background: linear-gradient(135deg, #5f27cd, #00d2d3); }
+        
+        .framework-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .info-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .info-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .info-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .framework-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            color: #333;
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            color: #333;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .visualization-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .panel-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 20px 0;
+        }
+        
+        .network-container {
+            height: 500px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .tab {
+            padding: 12px 25px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-weight: bold;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 20px 0;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .element-list {
+            max-height: 300px;
+            overflow-y: auto;
+            margin: 20px 0;
+        }
+        
+        .element-item {
+            background: #f8f9fa;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .element-type {
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .element-text {
+            margin: 5px 0;
+            font-style: italic;
+        }
+        
+        .element-confidence {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+        
+        .methodology-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .flow-step {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .flow-step:hover {
+            transform: scale(1.05);
+        }
+        
+        .flow-step.completed {
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+        }
+        
+        .flow-step.current {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .flow-arrow {
+            font-size: 2em;
+            color: #667eea;
+            margin: 0 10px;
+        }
+        
+        .insights-panel {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .insight-item {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .framework-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            
+            .methodology-flow {
+                flex-direction: column;
+            }
+            
+            .flow-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Заголовок -->
+        <div class="header">
+            <h1>🧠 Intelligent PIK Parser</h1>
+            <p>Визуализация результатов семантического анализа PIK методологии</p>
+            <p><strong>Анализ от:</strong> <span id="analysisDate">06 сентября 2025</span></p>
+        </div>
+
+        <!-- Общая статистика -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalFrameworks">5</div>
+                <div class="stat-label">Проанализировано фреймворков</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalElements">1,233</div>
+                <div class="stat-label">Элементов извлечено</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalRelationships">9,052</div>
+                <div class="stat-label">Связей обнаружено</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="avgConfidence">83.0%</div>
+                <div class="stat-label">Средняя уверенность</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="lifecycleCoverage">80%</div>
+                <div class="stat-label">Покрытие PIK цикла</div>
+            </div>
+        </div>
+
+        <!-- PIK Methodology Flow -->
+        <div class="visualization-panel">
+            <h2 class="panel-title">🔄 PIK Methodology Lifecycle</h2>
+            <div class="methodology-flow">
+                <div class="flow-step completed" data-stage="1">
+                    <h3>1️⃣ Ecosystem Forces</h3>
+                    <p>Сканирование экосистемы</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step completed" data-stage="2">
+                    <h3>2️⃣ NFX Engines</h3>
+                    <p>Сетевые эффекты</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step completed" data-stage="3">
+                    <h3>3️⃣ Business Model</h3>
+                    <p>Бизнес-модель</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step current" data-stage="4">
+                    <h3>4️⃣ Experience</h3>
+                    <p>Пользовательский опыт</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step completed" data-stage="5">
+                    <h3>5️⃣ Value Network</h3>
+                    <p>Сеть ценности</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Фреймворки -->
+        <div class="framework-grid" id="frameworksGrid">
+            <!-- Фреймворки будут загружены динамически -->
+        </div>
+
+        <!-- Панель визуализации -->
+        <div class="visualization-panel">
+            <h2 class="panel-title">📊 Аналитика и визуализация</h2>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('overview')">Обзор</button>
+                <button class="tab" onclick="showTab('elements')">Элементы</button>
+                <button class="tab" onclick="showTab('network')">Сетевой граф</button>
+                <button class="tab" onclick="showTab('drawio')">Draw.io XML</button>
+                <button class="tab" onclick="showTab('insights')">Инсайты</button>
+            </div>
+
+            <!-- Вкладка Обзор -->
+            <div id="tab-overview" class="tab-content active">
+                <div class="chart-container">
+                    <canvas id="elementsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="confidenceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Вкладка Элементы -->
+            <div id="tab-elements" class="tab-content">
+                <div class="element-list" id="elementsList">
+                    <!-- Элементы будут загружены динамически -->
+                </div>
+            </div>
+
+            <!-- Вкладка Сетевой граф -->
+            <div id="tab-network" class="tab-content">
+                <div class="network-container" id="networkVisualization"></div>
+            </div>
+
+            <!-- Вкладка Draw.io XML -->
+            <div id="tab-drawio" class="tab-content">
+                <div class="code-block">
+                    <pre><code id="drawioXML" class="language-xml">Загрузка XML...</code></pre>
+                </div>
+            </div>
+
+            <!-- Вкладка Инсайты -->
+            <div id="tab-insights" class="tab-content">
+                <div class="insights-panel" id="insightsPanel">
+                    <!-- Инсайты будут загружены динамически -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Данные фреймворков (будут загружены из API)
+        const frameworksData = [
+            {
+                id: "pik_20250906_164101_2ed9d0bf",
+                type: "business_model",
+                title: "TOUCHPOINTS",
+                elements: 545,
+                relationships: 4490,
+                confidence: 86.4,
+                completeness: 100.0,
+                alignment: 100.0
+            },
+            {
+                id: "pik_20250906_164104_9f20687b", 
+                type: "ecosystem_forces",
+                title: "MOTIVATION",
+                elements: 346,
+                relationships: 2760,
+                confidence: 86.6,
+                completeness: 100.0,
+                alignment: 100.0
+            },
+            {
+                id: "pik_20250906_164107_43f6d2f9",
+                type: "nfx_engines", 
+                title: "SUSTAINABILITY",
+                elements: 80,
+                relationships: 207,
+                confidence: 80.5,
+                completeness: 100.0,
+                alignment: 100.0
+            },
+            {
+                id: "pik_20250906_164110_fab9493e",
+                type: "ecosystem_forces",
+                title: "ENVIRONMENT", 
+                elements: 191,
+                relationships: 1420,
+                confidence: 82.5,
+                completeness: 100.0,
+                alignment: 100.0
+            },
+            {
+                id: "pik_20250906_164112_d4b8a70e",
+                type: "value_network",
+                title: "CONSUMERS",
+                elements: 71,
+                relationships: 175,
+                confidence: 79.1,
+                completeness: 50.0,
+                alignment: 100.0
+            }
+        ];
+
+        // Инициализация
+        document.addEventListener('DOMContentLoaded', function() {
+            renderFrameworks();
+            initCharts();
+            loadFrameworkData();
+        });
+
+        function renderFrameworks() {
+            const grid = document.getElementById('frameworksGrid');
+            grid.innerHTML = '';
+
+            frameworksData.forEach(framework => {
+                const card = document.createElement('div');
+                card.className = 'framework-card';
+                card.innerHTML = `
+                    <div class="framework-title type-${framework.type}">
+                        ${framework.title}
+                    </div>
+                    <div class="framework-info">
+                        <div class="info-item">
+                            <div class="info-value">${framework.elements}</div>
+                            <div class="info-label">Элементов</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">${framework.relationships}</div>
+                            <div class="info-label">Связей</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">${framework.confidence}%</div>
+                            <div class="info-label">Уверенность</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">${framework.completeness}%</div>
+                            <div class="info-label">Полнота</div>
+                        </div>
+                    </div>
+                    <div class="framework-actions">
+                        <button class="btn btn-primary" onclick="viewFramework('${framework.id}')">
+                            📊 Анализ
+                        </button>
+                        <button class="btn btn-secondary" onclick="openDrawio('${framework.id}')">
+                            🎨 Draw.io
+                        </button>
+                        <button class="btn btn-success" onclick="downloadJSON('${framework.id}')">
+                            📄 JSON
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function initCharts() {
+            // График распределения элементов
+            const elementsCtx = document.getElementById('elementsChart').getContext('2d');
+            new Chart(elementsCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Business Model', 'Ecosystem Forces', 'NFX Engines', 'Value Network'],
+                    datasets: [{
+                        data: [545, 537, 80, 71],
+                        backgroundColor: [
+                            'rgba(0, 210, 211, 0.8)',
+                            'rgba(255, 107, 107, 0.8)', 
+                            'rgba(72, 52, 212, 0.8)',
+                            'rgba(95, 39, 205, 0.8)'
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Распределение элементов по типам фреймворков'
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // График уверенности
+            const confidenceCtx = document.getElementById('confidenceChart').getContext('2d');
+            new Chart(confidenceCtx, {
+                type: 'bar',
+                data: {
+                    labels: frameworksData.map(f => f.title),
+                    datasets: [{
+                        label: 'Уверенность (%)',
+                        data: frameworksData.map(f => f.confidence),
+                        backgroundColor: 'rgba(102, 126, 234, 0.8)',
+                        borderColor: 'rgba(102, 126, 234, 1)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Уверенность распознавания по фреймворкам'
+                        }
+                    }
+                }
+            });
+        }
+
+        function showTab(tabName) {
+            // Скрыть все вкладки
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Показать выбранную вкладку
+            document.getElementById(`tab-${tabName}`).classList.add('active');
+            event.target.classList.add('active');
+
+            // Специальная обработка для сетевого графа
+            if (tabName === 'network') {
+                initNetworkVisualization();
+            } else if (tabName === 'drawio') {
+                loadDrawioXML();
+            } else if (tabName === 'insights') {
+                loadInsights();
+            } else if (tabName === 'elements') {
+                loadElementsList();
+            }
+        }
+
+        function viewFramework(frameworkId) {
+            alert(`Просмотр детального анализа фреймворка: ${frameworkId}`);
+            // Здесь будет переход к детальному анализу
+        }
+
+        function openDrawio(frameworkId) {
+            const drawioUrl = `output/drawio/${frameworkId}_diagram.drawio`;
+            window.open(`https://app.diagrams.net/?url=${encodeURIComponent(window.location.origin + '/' + drawioUrl)}`, '_blank');
+        }
+
+        function downloadJSON(frameworkId) {
+            const jsonUrl = `output/analysis/${frameworkId}_analysis.json`;
+            const a = document.createElement('a');
+            a.href = jsonUrl;
+            a.download = `${frameworkId}_analysis.json`;
+            a.click();
+        }
+
+        function initNetworkVisualization() {
+            // Создаем упрощенный граф связей
+            const container = document.getElementById('networkVisualization');
+            
+            const nodes = new vis.DataSet([
+                {id: 1, label: 'TOUCHPOINTS\n(Business Model)', color: '#00d2d3', size: 30},
+                {id: 2, label: 'MOTIVATION\n(Experience)', color: '#ff6b6b', size: 25}, 
+                {id: 3, label: 'SUSTAINABILITY\n(NFX Engines)', color: '#4834d4', size: 15},
+                {id: 4, label: 'ENVIRONMENT\n(Ecosystem)', color: '#ff6b6b', size: 20},
+                {id: 5, label: 'CONSUMERS\n(Value Network)', color: '#5f27cd', size: 12}
+            ]);
+
+            const edges = new vis.DataSet([
+                {from: 4, to: 3, label: 'влияет'},
+                {from: 3, to: 1, label: 'обеспечивает'},
+                {from: 1, to: 2, label: 'создает'},
+                {from: 2, to: 5, label: 'доставляет'}
+            ]);
+
+            const data = { nodes, edges };
+            const options = {
+                physics: {
+                    enabled: true,
+                    stabilization: true
+                },
+                nodes: {
+                    shape: 'circle',
+                    font: { size: 12, color: '#333' }
+                },
+                edges: {
+                    arrows: 'to',
+                    font: { size: 10 }
+                }
+            };
+
+            new vis.Network(container, data, options);
+        }
+
+        function loadDrawioXML() {
+            // Загружаем примерный XML фрагмент
+            const xmlContent = `<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net" modified="2025-09-06T16:41:12.449613" agent="PIK-Parser">
+  <diagram name="SUSTAINABILITY" id="55931513-7a84-4593-b136-1727e94a700f">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="SUSTAINABILITY" style="text;strokeColor=none;fillColor=none;html=1;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="300" height="30" as="geometry"/>
+        </mxCell>
+        <!-- ... больше элементов ... -->
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>`;
+
+            document.getElementById('drawioXML').textContent = xmlContent;
+            if (typeof Prism !== 'undefined') {
+                Prism.highlightElement(document.getElementById('drawioXML'));
+            }
+        }
+
+        function loadInsights() {
+            const insights = [
+                "🎯 Обнаружено 85 стейкхолдеров в экосистеме - высокая сложность взаимодействий",
+                "⚡ 9,052 связи между элементами указывают на плотную сеть отношений",
+                "📊 100% соответствие PIK методологии во всех проанализированных фреймворках",
+                "🔄 80% покрытие жизненного цикла PIK - отсутствует только Platform Experience",
+                "🚀 Высокий потенциал автоматизации: выявлено 10 возможностей для улучшения",
+                "💡 Средняя уверенность 83% говорит о высоком качестве извлечения данных"
+            ];
+
+            const panel = document.getElementById('insightsPanel');
+            panel.innerHTML = insights.map(insight => 
+                `<div class="insight-item">${insight}</div>`
+            ).join('');
+        }
+
+        function loadElementsList() {
+            const elements = [
+                { type: 'stakeholder', text: 'ECOSYSTEM PARTICIPANTS', confidence: 89 },
+                { type: 'force', text: 'MARKET PRESSURES', confidence: 94 },
+                { type: 'nfx_engine', text: 'VIRAL GROWTH MECHANISM', confidence: 87 },
+                { type: 'value_proposition', text: 'SUSTAINABILITY BENEFITS', confidence: 91 },
+                { type: 'process', text: 'USER JOURNEY STEPS', confidence: 85 }
+            ];
+
+            const list = document.getElementById('elementsList');
+            list.innerHTML = elements.map(element => `
+                <div class="element-item">
+                    <div class="element-type">${element.type.toUpperCase()}</div>
+                    <div class="element-text">"${element.text}"</div>
+                    <div class="element-confidence">Уверенность: ${element.confidence}%</div>
+                </div>
+            `).join('');
+        }
+
+        async function loadFrameworkData() {
+            // Здесь будет загрузка реальных данных из файлов
+            console.log('Загрузка данных фреймворков...');
+        }
+    </script>
+</body>
+</html>

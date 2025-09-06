@@ -1,0 +1,21 @@
+# Основные зависимости для OCR сервера
+fastapi>=0.104.1
+uvicorn>=0.24.0
+python-multipart>=0.0.6
+requests>=2.31.0
+
+# PDF обработка
+pdfplumber>=0.10.3
+pypdfium2>=4.25.0
+
+# OCR и обработка изображений
+pytesseract>=0.3.10
+Pillow>=10.0.1
+
+# Продвинутая обработка изображений (опционально)
+opencv-python>=4.8.1.78
+numpy>=1.24.3
+scikit-learn>=1.3.2
+
+# Дополнительные зависимости
+aiofiles>=23.2.1

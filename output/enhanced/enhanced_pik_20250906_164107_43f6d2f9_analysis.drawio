@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2025-09-06T12:00:00.000Z">
+  <diagram id="PIK_Canvas" name="PIK Business Model">
+    <mxGraphModel dx="1426" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="&amp;lt;b&amp;gt;CORE | VALUE&amp;lt;/b&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f8e6;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="680" y="600" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="&amp;lt;b&amp;gt;DEMAND-SIDE | LOYALITY | rm inn | ion Kit&amp;lt;/b&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9e6;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="740" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&amp;lt;b&amp;gt;ENGINES | мот&amp;lt;/b&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9e6;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="360" y="740" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="&amp;lt;b&amp;gt;SUPPLY-SIDE | TECH | INFRASTRUCTURE | DATA | INTELLIGENCE | узо | Orr | generation | ПОС&amp;lt;/b&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9e6;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="680" y="740" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="PLATFORM BUSINESS MODEL v5.0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="10" width="400" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
