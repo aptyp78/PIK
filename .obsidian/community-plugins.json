@@ -10,8 +10,5 @@
   "obsidian-kanban",
   "omnisearch",
   "text-extractor",
-  "extract-url",
-  "marker-api",
-  "ai-image-analyzer",
-  "ai-image-ocr"
+  "extract-url"
 ]
