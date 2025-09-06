@@ -1,0 +1,101 @@
+{
+  "source_image": "OCR/PIK 5-0 - Ecosystem Forces Scan - ENG/images/page_1_img_4.png",
+  "regions": {
+    "top_left": {
+      "text": "Г",
+      "confidence": 53.0,
+      "elements": [
+        "Г"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "top_right": {
+      "text": "—",
+      "confidence": 75.0,
+      "elements": [
+        "—"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "bottom_left": {
+      "text": "a",
+      "confidence": 79.0,
+      "elements": [
+        "a"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "bottom_right": {
+      "text": "ia",
+      "confidence": 65.0,
+      "elements": [
+        "ia"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 7 --oem 3"
+    },
+    "center": {
+      "text": "re",
+      "confidence": 78.0,
+      "elements": [
+        "re"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 8 --oem 3"
+    }
+  },
+  "comprehensive_text": "[TOP_LEFT] Г [TOP_RIGHT] — [BOTTOM_LEFT] a [BOTTOM_RIGHT] ia [CENTER] re ",
+  "detected_icons": [],
+  "pik_structure": {
+    "categories": {
+      "ENVIRONMENT": {
+        "region": "top_left",
+        "elements": [
+          "Г"
+        ],
+        "confidence": 53.0
+      },
+      "MARKET": {
+        "region": "top_right",
+        "elements": [
+          "—"
+        ],
+        "confidence": 75.0
+      },
+      "VALUE CHAIN": {
+        "region": "bottom_left",
+        "elements": [
+          "a"
+        ],
+        "confidence": 79.0
+      },
+      "MACROECONOMIC": {
+        "region": "bottom_right",
+        "elements": [
+          "ia"
+        ],
+        "confidence": 65.0
+      },
+      "CORE FRAMEWORK": {
+        "region": "center",
+        "elements": [
+          "re"
+        ],
+        "confidence": 78.0
+      }
+    },
+    "stakeholders": [],
+    "metadata": {},
+    "quality_indicators": {
+      "total_regions_analyzed": 5,
+      "successful_extractions": 5,
+      "overall_confidence": 100.0,
+      "total_text_length": 73,
+      "categories_found": 5,
+      "stakeholders_found": 0
+    }
+  }
+}

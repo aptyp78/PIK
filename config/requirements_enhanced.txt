@@ -1,0 +1,47 @@
+# PIK OCR System - Enhanced Requirements
+# Основные зависимости для базовой функциональности
+pypdfium2>=4.20.0
+pdfplumber>=0.10.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# FastAPI и веб-сервер
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+python-multipart>=0.0.6
+aiofiles>=23.1.0
+
+# Дополнительные зависимости для улучшений
+easyocr>=1.7.0  # Альтернативный OCR движок (опционально)
+torch>=2.0.0  # Для EasyOCR (опционально)
+torchvision>=0.15.0  # Для EasyOCR (опционально)
+
+# Работа с данными и форматами
+pandas>=2.0.0
+openpyxl>=3.1.0  # Для экспорта в Excel
+requests>=2.31.0
+
+# Машинное обучение (для будущих улучшений)
+scikit-learn>=1.3.0
+transformers>=4.30.0
+
+# Утилиты
+tqdm>=4.65.0  # Прогресс-бары
+colorama>=0.4.6  # Цветной вывод
+psutil>=5.9.0  # Системная информация
+
+# Разработка и тестирование
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0  # Форматирование кода
+flake8>=6.0.0  # Линтер
+
+# Безопасность
+cryptography>=41.0.0
+python-jose[cryptography]>=3.3.0
+
+# Логирование и мониторинг
+structlog>=23.1.0
+prometheus-client>=0.17.0

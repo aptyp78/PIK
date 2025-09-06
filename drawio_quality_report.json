@@ -1,0 +1,852 @@
+[
+  {
+    "filename": "pik_20250906_192036_2ed9d0bf_diagram.drawio",
+    "overall_score": 38.0,
+    "issues": [
+      {
+        "severity": "medium",
+        "category": "visual",
+        "issue_type": "unescaped_entities",
+        "description": "Неэкранированные HTML сущности",
+        "location": "mxCell[id=6]",
+        "suggestion": "Экранировать HTML сущности",
+        "auto_fixable": true
+      },
+      {
+        "severity": "medium",
+        "category": "visual",
+        "issue_type": "unescaped_entities",
+        "description": "Неэкранированные HTML сущности",
+        "location": "mxCell[id=12]",
+        "suggestion": "Экранировать HTML сущности",
+        "auto_fixable": true
+      },
+      {
+        "severity": "medium",
+        "category": "visual",
+        "issue_type": "unescaped_entities",
+        "description": "Неэкранированные HTML сущности",
+        "location": "mxCell[id=26]",
+        "suggestion": "Экранировать HTML сущности",
+        "auto_fixable": true
+      },
+      {
+        "severity": "medium",
+        "category": "visual",
+        "issue_type": "unescaped_entities",
+        "description": "Неэкранированные HTML сущности",
+        "location": "mxCell[id=50]",
+        "suggestion": "Экранировать HTML сущности",
+        "auto_fixable": true
+      },
+      {
+        "severity": "medium",
+        "category": "visual",
+        "issue_type": "unescaped_entities",
+        "description": "Неэкранированные HTML сущности",
+        "location": "mxCell[id=58]",
+        "suggestion": "Экранировать HTML сущности",
+        "auto_fixable": true
+      },
+      {
+        "severity": "medium",
+        "category": "visual",
+        "issue_type": "unescaped_entities",
+        "description": "Неэкранированные HTML сущности",
+        "location": "mxCell[id=232]",
+        "suggestion": "Экранировать HTML сущности",
+        "auto_fixable": true
+      },
+      {
+        "severity": "low",
+        "category": "visual",
+        "issue_type": "overlapping_elements",
+        "description": "Найдено 4673 перекрывающихся элементов",
+        "location": "diagram_layout",
+        "suggestion": "Переместить элементы для лучшей читаемости",
+        "auto_fixable": false
+      },
+      {
+        "severity": "medium",
+        "category": "semantic",
+        "issue_type": "poor_grouping",
+        "description": "Нет логической группировки для большой диаграммы",
+        "location": "diagram_structure",
+        "suggestion": "Улучшить логическую группировку элементов",
+        "auto_fixable": false
+      },
+      {
+        "severity": "low",
+        "category": "performance",
+        "issue_type": "too_many_elements",
+        "description": "Слишком много элементов: 5038",
+        "location": "diagram_content",
+        "suggestion": "Рассмотреть разбиение на несколько диаграмм",
+        "auto_fixable": false
+      }
+    ],
+    "stats": {
+      "file_size": 1297524,
+      "file_name": "pik_20250906_192036_2ed9d0bf_diagram.drawio",
+      "total_elements": 10077,
+      "diagram_count": 1,
+      "cell_count": 5038,
+      "vertex_count": 546,
+      "edge_count": 4490,
+      "total_text_length": 2391,
+      "word_count": 378
+    },
+    "backend_tests": {
+      "status": "passed",
+      "issues": [],
+      "tests": {
+        "xml_validity": {
+          "passed": true,
+          "error": null
+        },
+        "encoding": {
+          "passed": true,
+          "detected": "UTF-8"
+        },
+        "structure": {
+          "passed": true,
+          "error": null
+        },
+        "compression": {
+          "passed": true,
+          "error": null
+        },
+        "elements": {
+          "passed": true,
+          "issues": [],
+          "element_count": 5038
+        }
+      }
+    },
+    "frontend_tests": {
+      "status": "failed",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "visual",
+          "issue_type": "unescaped_entities",
+          "description": "Неэкранированные HTML сущности",
+          "location": "mxCell[id=6]",
+          "suggestion": "Экранировать HTML сущности",
+          "auto_fixable": true
+        },
+        {
+          "severity": "medium",
+          "category": "visual",
+          "issue_type": "unescaped_entities",
+          "description": "Неэкранированные HTML сущности",
+          "location": "mxCell[id=12]",
+          "suggestion": "Экранировать HTML сущности",
+          "auto_fixable": true
+        },
+        {
+          "severity": "medium",
+          "category": "visual",
+          "issue_type": "unescaped_entities",
+          "description": "Неэкранированные HTML сущности",
+          "location": "mxCell[id=26]",
+          "suggestion": "Экранировать HTML сущности",
+          "auto_fixable": true
+        },
+        {
+          "severity": "medium",
+          "category": "visual",
+          "issue_type": "unescaped_entities",
+          "description": "Неэкранированные HTML сущности",
+          "location": "mxCell[id=50]",
+          "suggestion": "Экранировать HTML сущности",
+          "auto_fixable": true
+        },
+        {
+          "severity": "medium",
+          "category": "visual",
+          "issue_type": "unescaped_entities",
+          "description": "Неэкранированные HTML сущности",
+          "location": "mxCell[id=58]",
+          "suggestion": "Экранировать HTML сущности",
+          "auto_fixable": true
+        },
+        {
+          "severity": "medium",
+          "category": "visual",
+          "issue_type": "unescaped_entities",
+          "description": "Неэкранированные HTML сущности",
+          "location": "mxCell[id=232]",
+          "suggestion": "Экранировать HTML сущности",
+          "auto_fixable": true
+        },
+        {
+          "severity": "low",
+          "category": "visual",
+          "issue_type": "overlapping_elements",
+          "description": "Найдено 4673 перекрывающихся элементов",
+          "location": "diagram_layout",
+          "suggestion": "Переместить элементы для лучшей читаемости",
+          "auto_fixable": false
+        }
+      ],
+      "tests": {
+        "visual_dimensions": {
+          "passed": true,
+          "error": null
+        },
+        "styles": {
+          "passed": true,
+          "issues": []
+        },
+        "readability": {
+          "passed": false,
+          "issues": [
+            {
+              "severity": "medium",
+              "category": "visual",
+              "issue_type": "unescaped_entities",
+              "description": "Неэкранированные HTML сущности",
+              "location": "mxCell[id=6]",
+              "suggestion": "Экранировать HTML сущности",
+              "auto_fixable": true
+            },
+            {
+              "severity": "medium",
+              "category": "visual",
+              "issue_type": "unescaped_entities",
+              "description": "Неэкранированные HTML сущности",
+              "location": "mxCell[id=12]",
+              "suggestion": "Экранировать HTML сущности",
+              "auto_fixable": true
+            },
+            {
+              "severity": "medium",
+              "category": "visual",
+              "issue_type": "unescaped_entities",
+              "description": "Неэкранированные HTML сущности",
+              "location": "mxCell[id=26]",
+              "suggestion": "Экранировать HTML сущности",
+              "auto_fixable": true
+            },
+            {
+              "severity": "medium",
+              "category": "visual",
+              "issue_type": "unescaped_entities",
+              "description": "Неэкранированные HTML сущности",
+              "location": "mxCell[id=50]",
+              "suggestion": "Экранировать HTML сущности",
+              "auto_fixable": true
+            },
+            {
+              "severity": "medium",
+              "category": "visual",
+              "issue_type": "unescaped_entities",
+              "description": "Неэкранированные HTML сущности",
+              "location": "mxCell[id=58]",
+              "suggestion": "Экранировать HTML сущности",
+              "auto_fixable": true
+            },
+            {
+              "severity": "medium",
+              "category": "visual",
+              "issue_type": "unescaped_entities",
+              "description": "Неэкранированные HTML сущности",
+              "location": "mxCell[id=232]",
+              "suggestion": "Экранировать HTML сущности",
+              "auto_fixable": true
+            }
+          ]
+        },
+        "overlapping": {
+          "passed": false,
+          "count": 4673
+        },
+        "connectivity": {
+          "passed": true,
+          "error": null
+        },
+        "color_scheme": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    },
+    "performance_metrics": {
+      "status": "failed",
+      "issues": [
+        {
+          "severity": "low",
+          "category": "performance",
+          "issue_type": "too_many_elements",
+          "description": "Слишком много элементов: 5038",
+          "location": "diagram_content",
+          "suggestion": "Рассмотреть разбиение на несколько диаграмм",
+          "auto_fixable": false
+        }
+      ],
+      "metrics": {
+        "file_size_bytes": 1297524,
+        "file_size_mb": 1.24,
+        "parse_time_seconds": 0.011,
+        "element_count": 5038
+      }
+    },
+    "test_timestamp": "2025-09-06 19:20:54"
+  },
+  {
+    "filename": "pik_20250906_192040_9f20687b_diagram.drawio",
+    "overall_score": 83.0,
+    "issues": [
+      {
+        "severity": "medium",
+        "category": "visual",
+        "issue_type": "unescaped_entities",
+        "description": "Неэкранированные HTML сущности",
+        "location": "mxCell[id=206]",
+        "suggestion": "Экранировать HTML сущности",
+        "auto_fixable": true
+      },
+      {
+        "severity": "low",
+        "category": "visual",
+        "issue_type": "overlapping_elements",
+        "description": "Найдено 3104 перекрывающихся элементов",
+        "location": "diagram_layout",
+        "suggestion": "Переместить элементы для лучшей читаемости",
+        "auto_fixable": false
+      },
+      {
+        "severity": "medium",
+        "category": "semantic",
+        "issue_type": "poor_grouping",
+        "description": "Нет логической группировки для большой диаграммы",
+        "location": "diagram_structure",
+        "suggestion": "Улучшить логическую группировку элементов",
+        "auto_fixable": false
+      },
+      {
+        "severity": "low",
+        "category": "performance",
+        "issue_type": "too_many_elements",
+        "description": "Слишком много элементов: 3109",
+        "location": "diagram_content",
+        "suggestion": "Рассмотреть разбиение на несколько диаграмм",
+        "auto_fixable": false
+      }
+    ],
+    "stats": {
+      "file_size": 800046,
+      "file_name": "pik_20250906_192040_9f20687b_diagram.drawio",
+      "total_elements": 6219,
+      "diagram_count": 1,
+      "cell_count": 3109,
+      "vertex_count": 347,
+      "edge_count": 2760,
+      "total_text_length": 1575,
+      "word_count": 228
+    },
+    "backend_tests": {
+      "status": "passed",
+      "issues": [],
+      "tests": {
+        "xml_validity": {
+          "passed": true,
+          "error": null
+        },
+        "encoding": {
+          "passed": true,
+          "detected": "UTF-8"
+        },
+        "structure": {
+          "passed": true,
+          "error": null
+        },
+        "compression": {
+          "passed": true,
+          "error": null
+        },
+        "elements": {
+          "passed": true,
+          "issues": [],
+          "element_count": 3109
+        }
+      }
+    },
+    "frontend_tests": {
+      "status": "failed",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "visual",
+          "issue_type": "unescaped_entities",
+          "description": "Неэкранированные HTML сущности",
+          "location": "mxCell[id=206]",
+          "suggestion": "Экранировать HTML сущности",
+          "auto_fixable": true
+        },
+        {
+          "severity": "low",
+          "category": "visual",
+          "issue_type": "overlapping_elements",
+          "description": "Найдено 3104 перекрывающихся элементов",
+          "location": "diagram_layout",
+          "suggestion": "Переместить элементы для лучшей читаемости",
+          "auto_fixable": false
+        }
+      ],
+      "tests": {
+        "visual_dimensions": {
+          "passed": true,
+          "error": null
+        },
+        "styles": {
+          "passed": true,
+          "issues": []
+        },
+        "readability": {
+          "passed": false,
+          "issues": [
+            {
+              "severity": "medium",
+              "category": "visual",
+              "issue_type": "unescaped_entities",
+              "description": "Неэкранированные HTML сущности",
+              "location": "mxCell[id=206]",
+              "suggestion": "Экранировать HTML сущности",
+              "auto_fixable": true
+            }
+          ]
+        },
+        "overlapping": {
+          "passed": false,
+          "count": 3104
+        },
+        "connectivity": {
+          "passed": true,
+          "error": null
+        },
+        "color_scheme": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    },
+    "performance_metrics": {
+      "status": "failed",
+      "issues": [
+        {
+          "severity": "low",
+          "category": "performance",
+          "issue_type": "too_many_elements",
+          "description": "Слишком много элементов: 3109",
+          "location": "diagram_content",
+          "suggestion": "Рассмотреть разбиение на несколько диаграмм",
+          "auto_fixable": false
+        }
+      ],
+      "metrics": {
+        "file_size_bytes": 800046,
+        "file_size_mb": 0.76,
+        "parse_time_seconds": 0.007,
+        "element_count": 3109
+      }
+    },
+    "test_timestamp": "2025-09-06 19:20:54"
+  },
+  {
+    "filename": "pik_20250906_192042_43f6d2f9_diagram.drawio",
+    "overall_score": 94.0,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "visual",
+        "issue_type": "overlapping_elements",
+        "description": "Найдено 247 перекрывающихся элементов",
+        "location": "diagram_layout",
+        "suggestion": "Переместить элементы для лучшей читаемости",
+        "auto_fixable": false
+      },
+      {
+        "severity": "medium",
+        "category": "semantic",
+        "issue_type": "poor_grouping",
+        "description": "Нет логической группировки для большой диаграммы",
+        "location": "diagram_structure",
+        "suggestion": "Улучшить логическую группировку элементов",
+        "auto_fixable": false
+      }
+    ],
+    "stats": {
+      "file_size": 73795,
+      "file_name": "pik_20250906_192042_43f6d2f9_diagram.drawio",
+      "total_elements": 581,
+      "diagram_count": 1,
+      "cell_count": 290,
+      "vertex_count": 81,
+      "edge_count": 207,
+      "total_text_length": 320,
+      "word_count": 49
+    },
+    "backend_tests": {
+      "status": "passed",
+      "issues": [],
+      "tests": {
+        "xml_validity": {
+          "passed": true,
+          "error": null
+        },
+        "encoding": {
+          "passed": true,
+          "detected": "UTF-8"
+        },
+        "structure": {
+          "passed": true,
+          "error": null
+        },
+        "compression": {
+          "passed": true,
+          "error": null
+        },
+        "elements": {
+          "passed": true,
+          "issues": [],
+          "element_count": 290
+        }
+      }
+    },
+    "frontend_tests": {
+      "status": "failed",
+      "issues": [
+        {
+          "severity": "low",
+          "category": "visual",
+          "issue_type": "overlapping_elements",
+          "description": "Найдено 247 перекрывающихся элементов",
+          "location": "diagram_layout",
+          "suggestion": "Переместить элементы для лучшей читаемости",
+          "auto_fixable": false
+        }
+      ],
+      "tests": {
+        "visual_dimensions": {
+          "passed": true,
+          "error": null
+        },
+        "styles": {
+          "passed": true,
+          "issues": []
+        },
+        "readability": {
+          "passed": true,
+          "issues": []
+        },
+        "overlapping": {
+          "passed": false,
+          "count": 247
+        },
+        "connectivity": {
+          "passed": true,
+          "error": null
+        },
+        "color_scheme": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    },
+    "performance_metrics": {
+      "status": "passed",
+      "issues": [],
+      "metrics": {
+        "file_size_bytes": 73795,
+        "file_size_mb": 0.07,
+        "parse_time_seconds": 0.001,
+        "element_count": 290
+      }
+    },
+    "test_timestamp": "2025-09-06 19:20:54"
+  },
+  {
+    "filename": "pik_20250906_192047_d4b8a70e_diagram.drawio",
+    "overall_score": 79.0,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "visual",
+        "issue_type": "overlapping_elements",
+        "description": "Найдено 202 перекрывающихся элементов",
+        "location": "diagram_layout",
+        "suggestion": "Переместить элементы для лучшей читаемости",
+        "auto_fixable": false
+      },
+      {
+        "severity": "high",
+        "category": "semantic",
+        "issue_type": "pik_non_compliance",
+        "description": "Низкое соответствие PIK: 9.1%",
+        "location": "diagram_content",
+        "suggestion": "Добавить недостающие PIK элементы",
+        "auto_fixable": false
+      },
+      {
+        "severity": "medium",
+        "category": "semantic",
+        "issue_type": "poor_grouping",
+        "description": "Нет логической группировки для большой диаграммы",
+        "location": "diagram_structure",
+        "suggestion": "Улучшить логическую группировку элементов",
+        "auto_fixable": false
+      }
+    ],
+    "stats": {
+      "file_size": 63545,
+      "file_name": "pik_20250906_192047_d4b8a70e_diagram.drawio",
+      "total_elements": 499,
+      "diagram_count": 1,
+      "cell_count": 249,
+      "vertex_count": 72,
+      "edge_count": 175,
+      "total_text_length": 227,
+      "word_count": 31
+    },
+    "backend_tests": {
+      "status": "passed",
+      "issues": [],
+      "tests": {
+        "xml_validity": {
+          "passed": true,
+          "error": null
+        },
+        "encoding": {
+          "passed": true,
+          "detected": "UTF-8"
+        },
+        "structure": {
+          "passed": true,
+          "error": null
+        },
+        "compression": {
+          "passed": true,
+          "error": null
+        },
+        "elements": {
+          "passed": true,
+          "issues": [],
+          "element_count": 249
+        }
+      }
+    },
+    "frontend_tests": {
+      "status": "failed",
+      "issues": [
+        {
+          "severity": "low",
+          "category": "visual",
+          "issue_type": "overlapping_elements",
+          "description": "Найдено 202 перекрывающихся элементов",
+          "location": "diagram_layout",
+          "suggestion": "Переместить элементы для лучшей читаемости",
+          "auto_fixable": false
+        }
+      ],
+      "tests": {
+        "visual_dimensions": {
+          "passed": true,
+          "error": null
+        },
+        "styles": {
+          "passed": true,
+          "issues": []
+        },
+        "readability": {
+          "passed": true,
+          "issues": []
+        },
+        "overlapping": {
+          "passed": false,
+          "count": 202
+        },
+        "connectivity": {
+          "passed": true,
+          "error": null
+        },
+        "color_scheme": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    },
+    "performance_metrics": {
+      "status": "passed",
+      "issues": [],
+      "metrics": {
+        "file_size_bytes": 63545,
+        "file_size_mb": 0.06,
+        "parse_time_seconds": 0.0,
+        "element_count": 249
+      }
+    },
+    "test_timestamp": "2025-09-06 19:20:54"
+  },
+  {
+    "filename": "pik_20250906_192045_fab9493e_diagram.drawio",
+    "overall_score": 83.0,
+    "issues": [
+      {
+        "severity": "medium",
+        "category": "visual",
+        "issue_type": "unescaped_entities",
+        "description": "Неэкранированные HTML сущности",
+        "location": "mxCell[id=68]",
+        "suggestion": "Экранировать HTML сущности",
+        "auto_fixable": true
+      },
+      {
+        "severity": "low",
+        "category": "visual",
+        "issue_type": "overlapping_elements",
+        "description": "Найдено 1560 перекрывающихся элементов",
+        "location": "diagram_layout",
+        "suggestion": "Переместить элементы для лучшей читаемости",
+        "auto_fixable": false
+      },
+      {
+        "severity": "medium",
+        "category": "semantic",
+        "issue_type": "poor_grouping",
+        "description": "Нет логической группировки для большой диаграммы",
+        "location": "diagram_structure",
+        "suggestion": "Улучшить логическую группировку элементов",
+        "auto_fixable": false
+      },
+      {
+        "severity": "low",
+        "category": "performance",
+        "issue_type": "too_many_elements",
+        "description": "Слишком много элементов: 1614",
+        "location": "diagram_content",
+        "suggestion": "Рассмотреть разбиение на несколько диаграмм",
+        "auto_fixable": false
+      }
+    ],
+    "stats": {
+      "file_size": 414370,
+      "file_name": "pik_20250906_192045_fab9493e_diagram.drawio",
+      "total_elements": 3229,
+      "diagram_count": 1,
+      "cell_count": 1614,
+      "vertex_count": 192,
+      "edge_count": 1420,
+      "total_text_length": 790,
+      "word_count": 110
+    },
+    "backend_tests": {
+      "status": "passed",
+      "issues": [],
+      "tests": {
+        "xml_validity": {
+          "passed": true,
+          "error": null
+        },
+        "encoding": {
+          "passed": true,
+          "detected": "UTF-8"
+        },
+        "structure": {
+          "passed": true,
+          "error": null
+        },
+        "compression": {
+          "passed": true,
+          "error": null
+        },
+        "elements": {
+          "passed": true,
+          "issues": [],
+          "element_count": 1614
+        }
+      }
+    },
+    "frontend_tests": {
+      "status": "failed",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "visual",
+          "issue_type": "unescaped_entities",
+          "description": "Неэкранированные HTML сущности",
+          "location": "mxCell[id=68]",
+          "suggestion": "Экранировать HTML сущности",
+          "auto_fixable": true
+        },
+        {
+          "severity": "low",
+          "category": "visual",
+          "issue_type": "overlapping_elements",
+          "description": "Найдено 1560 перекрывающихся элементов",
+          "location": "diagram_layout",
+          "suggestion": "Переместить элементы для лучшей читаемости",
+          "auto_fixable": false
+        }
+      ],
+      "tests": {
+        "visual_dimensions": {
+          "passed": true,
+          "error": null
+        },
+        "styles": {
+          "passed": true,
+          "issues": []
+        },
+        "readability": {
+          "passed": false,
+          "issues": [
+            {
+              "severity": "medium",
+              "category": "visual",
+              "issue_type": "unescaped_entities",
+              "description": "Неэкранированные HTML сущности",
+              "location": "mxCell[id=68]",
+              "suggestion": "Экранировать HTML сущности",
+              "auto_fixable": true
+            }
+          ]
+        },
+        "overlapping": {
+          "passed": false,
+          "count": 1560
+        },
+        "connectivity": {
+          "passed": true,
+          "error": null
+        },
+        "color_scheme": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    },
+    "performance_metrics": {
+      "status": "failed",
+      "issues": [
+        {
+          "severity": "low",
+          "category": "performance",
+          "issue_type": "too_many_elements",
+          "description": "Слишком много элементов: 1614",
+          "location": "diagram_content",
+          "suggestion": "Рассмотреть разбиение на несколько диаграмм",
+          "auto_fixable": false
+        }
+      ],
+      "metrics": {
+        "file_size_bytes": 414370,
+        "file_size_mb": 0.4,
+        "parse_time_seconds": 0.003,
+        "element_count": 1614
+      }
+    },
+    "test_timestamp": "2025-09-06 19:20:54"
+  }
+]

@@ -1,0 +1,2494 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net" modified="2025-09-06T17:24:36.345080" agent="PIK-Parser" version="21.1.2">
+  <diagram name="TOUCHPOINTS" id="pik_20250906_164101_2ed9d0bf">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="TOUCHPOINTS" style="text;strokeColor=none;fillColor=none;html=1;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="300" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="SUPPLIERS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="71" y="80" width="233" height="33" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.96 | Связи: 6"/>
+        </mxCell>
+        <mxCell id="4" value="KEY" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="644" y="82" width="79" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 4"/>
+        </mxCell>
+        <mxCell id="5" value="PEOPLE" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="738" y="82" width="158" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.89 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="6" value="&amp;" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="911" y="82" width="26" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 9"/>
+        </mxCell>
+        <mxCell id="7" value="SKILLS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="951" y="82" width="139" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 5"/>
+        </mxCell>
+        <mxCell id="8" value="CORE" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1338" y="82" width="113" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="9" value="SERVICES" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1466" y="82" width="199" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="10" value="VALUE" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1865" y="82" width="140" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: value_proposition | Уверенность: 0.90 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="11" value="TOUCHPOINTS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2422" y="82" width="306" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="12" value="&amp;" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2743" y="82" width="26" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="13" value="EXPERIENCE" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2784" y="82" width="256" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="14" value="PARTNERS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3318" y="83" width="221" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.96 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="15" value="PROPOSITION" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1867" y="132" width="279" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: value_proposition | Уверенность: 0.96 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="16" value="Who" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="235" width="66" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 12"/>
+        </mxCell>
+        <mxCell id="17" value="are" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="147" y="240" width="43" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="18" value="your" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="201" y="240" width="61" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="19" value="key" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="274" y="234" width="47" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="20" value="suppliers" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="331" y="234" width="126" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.96 | Связи: 6"/>
+        </mxCell>
+        <mxCell id="21" value="What" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="642" y="240" width="77" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="22" value="are" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="730" y="246" width="44" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="23" value="key" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="785" y="240" width="48" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="24" value="people" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="844" y="240" width="98" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="25" value="resources" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="954" y="246" width="140" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="26" value="&amp;" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1105" y="240" width="18" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 9"/>
+        </mxCell>
+        <mxCell id="27" value="What" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="234" width="76" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="28" value="are" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1425" y="240" width="44" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="29" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1479" y="234" width="45" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="30" value="core" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1534" y="240" width="62" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="31" value="services" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1607" y="234" width="116" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.87 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="32" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="231" width="2" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 6"/>
+        </mxCell>
+        <mxCell id="33" value="What" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2423" y="240" width="77" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="34" value="are" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2510" y="246" width="44" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.97 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="35" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2564" y="240" width="45" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="36" value="key" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2620" y="240" width="48" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="37" value="touchpoints" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2678" y="240" width="170" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.97 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="38" value="of the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2858" y="240" width="81" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="39" value="users" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2950" y="246" width="75" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.96 | Связи: 4"/>
+        </mxCell>
+        <mxCell id="40" value="with" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3036" y="240" width="58" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="41" value="your" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3105" y="246" width="63" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 2"/>
+        </mxCell>
+        <mxCell id="42" value="for e.g." style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="272" width="86" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="43" value="to" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="175" y="274" width="25" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="44" value="develop" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="211" y="272" width="113" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="45" value="your" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="335" y="278" width="63" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="46" value="skills" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="643" y="278" width="69" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="47" value="required" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="724" y="278" width="119" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="48" value="for" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="854" y="278" width="38" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="49" value="running" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="902" y="278" width="106" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="50" value="&amp;" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1021" y="278" width="17" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="51" value="emerging" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1049" y="278" width="136" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.97 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="52" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="270" width="45" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="53" value="platform" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1394" y="270" width="120" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="54" value="offers?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1526" y="270" width="96" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.54 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="55" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="275" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="56" value="platform" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2424" y="278" width="121" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="57" value="(online" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2557" y="278" width="95" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="58" value="&amp;" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2662" y="278" width="18" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="59" value="offline)?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2690" y="278" width="113" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="60" value="platform" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="71" y="308" width="118" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.94 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="61" value="IT?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="202" y="308" width="37" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="62" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="642" y="314" width="46" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="63" value="ecosystem" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="698" y="315" width="155" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="64" value="/" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="865" y="314" width="16" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="65" value="platform?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="893" y="314" width="135" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="66" value="MISSION" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1986" y="304" width="170" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="67" value="Which" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="344" width="89" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="68" value="services" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1439" y="344" width="116" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 30"/>
+        </mxCell>
+        <mxCell id="69" value="are" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1565" y="350" width="44" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="70" value="key" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1621" y="345" width="49" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="71" value="Are" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2423" y="351" width="48" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="72" value="there" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2482" y="351" width="74" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.88 | Связи: 28"/>
+        </mxCell>
+        <mxCell id="73" value="loT" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2568" y="351" width="41" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="74" value="differentiators" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="380" width="201" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 30"/>
+        </mxCell>
+        <mxCell id="75" value="to the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="381" width="81" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.68 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="76" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="374" width="2" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.55 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="77" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2334" y="374" width="2" height="42" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="78" value="devices" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2423" y="389" width="109" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="79" value="or" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2544" y="394" width="27" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.97 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="80" value="other" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2581" y="389" width="75" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 28"/>
+        </mxCell>
+        <mxCell id="81" value="competition?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="412" width="185" height="46" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.75 | Связи: 30"/>
+        </mxCell>
+        <mxCell id="82" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="418" width="2" height="43" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="83" value="What" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1896" y="426" width="76" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="84" value="is the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1984" y="425" width="74" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.97 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="85" value="core" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2068" y="431" width="62" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="86" value="mission" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2141" y="425" width="106" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="87" value="hardware" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2424" y="415" width="135" height="44" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 26"/>
+        </mxCell>
+        <mxCell id="88" value="CONSUMERS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3110" y="424" width="269" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.35 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="89" value="}" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1391" y="492" width="2" height="2" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.38 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="90" value="}" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1502" y="492" width="2" height="2" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.72 | Связи: 31"/>
+        </mxCell>
+        <mxCell id="91" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="464" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="92" value="of the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1896" y="461" width="82" height="23" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="93" value="ecosystem" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1988" y="462" width="155" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="94" value="-&gt;" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2155" y="468" width="25" height="15" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="95" value="This" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2190" y="462" width="58" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.79 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="96" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2334" y="464" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="97" value="interfaces" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2424" y="462" width="140" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="98" value="/" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2576" y="462" width="16" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="99" value="Which" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="492" width="89" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="100" value="services" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1439" y="498" width="116" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 31"/>
+        </mxCell>
+        <mxCell id="101" value="help" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1566" y="492" width="61" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="102" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1638" y="492" width="45" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.67 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="103" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="497" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="104" value="expresses" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1928" y="506" width="144" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="105" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2082" y="500" width="44" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="106" value="WHY." style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2136" y="500" width="79" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.42 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="107" value="'" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2334" y="497" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="108" value="connections?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2423" y="500" width="190" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="109" value="users" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="534" width="74" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="110" value="to" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1425" y="529" width="26" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.31 | Связи: 31"/>
+        </mxCell>
+        <mxCell id="111" value="Po" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="541" width="526" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="112" value="Segments" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2878" y="527" width="161" height="47" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="113" value="Needs" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3450" y="538" width="103" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.76 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="114" value="=" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="609" width="9" height="8" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="115" value="Get" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1372" y="602" width="49" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.91 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="116" value="onboarded" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1431" y="602" width="155" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.84 | Связи: 35"/>
+        </mxCell>
+        <mxCell id="117" value="*" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="645" width="9" height="8" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="118" value="For" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1374" y="638" width="43" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 28"/>
+        </mxCell>
+        <mxCell id="119" value="Matchmaking" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1429" y="638" width="191" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.71 | Связи: 32"/>
+        </mxCell>
+        <mxCell id="120" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="638" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.51 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="121" value="\" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2332" y="640" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.60 | Связи: 6"/>
+        </mxCell>
+        <mxCell id="122" value="* To" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1341" y="676" width="65" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="123" value="exchange" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1417" y="676" width="139" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 34"/>
+        </mxCell>
+        <mxCell id="124" value="/" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1559" y="667" width="14" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 28"/>
+        </mxCell>
+        <mxCell id="125" value="transfer" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1594" y="676" width="110" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.72 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="126" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="671" width="2" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="127" value="CORE" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2014" y="678" width="112" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="128" value="goods" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1372" y="713" width="88" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="129" value="/" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1471" y="713" width="15" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 31"/>
+        </mxCell>
+        <mxCell id="130" value="services" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1498" y="713" width="116" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="131" value="/" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1625" y="713" width="15" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.74 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="132" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="715" width="2" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.48 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="133" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2332" y="706" width="2" height="42" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.82 | Связи: 4"/>
+        </mxCell>
+        <mxCell id="134" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="748" width="2" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="135" value="VALUE" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2001" y="729" width="138" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: value_proposition | Уверенность: 0.94 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="136" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2332" y="751" width="2" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.50 | Связи: 6"/>
+        </mxCell>
+        <mxCell id="137" value="* To" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1341" y="788" width="65" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.78 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="138" value="stay" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1417" y="789" width="58" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="139" value="engaged" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1484" y="788" width="126" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="140" value="wi" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1622" y="788" width="29" height="19" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="141" value="PROPOSITIONS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1917" y="777" width="308" height="45" as="geometry"/>
+          <mxCell tooltip="Тип: value_proposition | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="142" value="INVESTORS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="72" y="816" width="242" height="49" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="143" value="KEY" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="644" y="821" width="79" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 4"/>
+        </mxCell>
+        <mxCell id="144" value="DATA" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="738" y="821" width="112" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="145" value="your" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1372" y="830" width="63" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="146" value="platform" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1445" y="824" width="120" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.54 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="147" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="860" width="2" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="148" value="What" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1910" y="866" width="77" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="149" value="is the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1998" y="866" width="74" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="150" value="core" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2081" y="872" width="63" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="151" value="value" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2154" y="866" width="77" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: value_proposition | Уверенность: 0.39 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="152" value="\" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2332" y="862" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.67 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="153" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="904" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 12"/>
+        </mxCell>
+        <mxCell id="154" value="transferred" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1887" y="902" width="159" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="155" value="ог" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2057" y="908" width="27" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="156" value="exchanged" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2094" y="902" width="159" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.77 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="157" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2332" y="895" width="2" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.68 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="158" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="937" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 12"/>
+        </mxCell>
+        <mxCell id="159" value="inside" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1912" y="940" width="83" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="160" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2004" y="940" width="45" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="161" value="ecosystem?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2059" y="940" width="170" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="162" value="Who" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="973" width="66" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="163" value="are" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="147" y="978" width="43" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="164" value="core" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="201" y="978" width="61" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 28"/>
+        </mxCell>
+        <mxCell id="165" value="and" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="272" y="973" width="50" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="166" value="strategic" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="334" y="974" width="120" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="167" value="What" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="642" y="979" width="76" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="168" value="data" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="730" y="979" width="61" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="169" value="is" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="802" y="979" width="20" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="170" value="required" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="833" y="979" width="118" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="171" value="to" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="962" y="980" width="26" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="172" value="optimize" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="999" y="979" width="123" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="173" value="user" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1132" y="984" width="61" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.84 | Связи: 5"/>
+        </mxCell>
+        <mxCell id="174" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="970" width="2" height="42" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="175" value="Segments" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3870" y="974" width="162" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="176" value="investors?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="71" y="1012" width="141" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="177" value="Interested" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="223" y="1011" width="140" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="178" value="in the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="375" y="1012" width="75" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="179" value="experience" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="643" y="1023" width="159" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="180" value="and" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="812" y="1017" width="52" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="181" value="enhance" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="874" y="1017" width="122" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="182" value="value" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1007" y="1018" width="77" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: value_proposition | Уверенность: 0.72 | Связи: 12"/>
+        </mxCell>
+        <mxCell id="183" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="1015" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="184" value="longterm" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="71" y="1049" width="127" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="185" value="success" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1054" width="112" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="186" value="of the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="332" y="1048" width="80" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="187" value="proposition?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="644" y="1045" width="175" height="40" as="geometry"/>
+          <mxCell tooltip="Тип: value_proposition | Уверенность: 0.64 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="188" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="1048" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.39 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="189" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2332" y="1051" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 6"/>
+        </mxCell>
+        <mxCell id="190" value="ecosystem," style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1086" width="160" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="191" value="regulation" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="243" y="1084" width="139" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="192" value="and" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="394" y="1090" width="50" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.70 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="193" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="1081" width="2" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.63 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="194" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2332" y="1084" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 4"/>
+        </mxCell>
+        <mxCell id="195" value="CORE" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3189" y="1080" width="109" height="29" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="196" value="governance." style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1124" width="174" height="37" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="197" value="What" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="642" y="1128" width="77" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="198" value="data" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1128" width="61" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="199" value="needs" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="803" y="1128" width="85" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 31"/>
+        </mxCell>
+        <mxCell id="200" value="to be" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="898" y="1128" width="72" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="201" value="protected?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="981" y="1128" width="155" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.68 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="202" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="1126" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.52 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="203" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2332" y="1117" width="2" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="204" value="NETWORK" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3041" y="1130" width="214" height="29" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 2"/>
+        </mxCell>
+        <mxCell id="205" value="EFFECTS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3270" y="1130" width="177" height="29" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 2"/>
+        </mxCell>
+        <mxCell id="206" value="Which" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="642" y="1200" width="91" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="207" value="insights" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="744" y="1200" width="108" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="208" value="help" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="863" y="1200" width="61" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="209" value="you" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="934" y="1206" width="51" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="210" value="to" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="996" y="1201" width="26" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.70 | Связи: 9"/>
+        </mxCell>
+        <mxCell id="211" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="1192" width="2" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 5"/>
+        </mxCell>
+        <mxCell id="212" value="differentiate?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="643" y="1238" width="189" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.76 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="213" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="1236" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.48 | Связи: 4"/>
+        </mxCell>
+        <mxCell id="214" value="\" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2332" y="1238" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="215" value="Needs" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3900" y="1239" width="104" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="216" value="SUPPORTERS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1516" width="286" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="217" value="KEY" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="644" y="1518" width="79" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 6"/>
+        </mxCell>
+        <mxCell id="218" value="INFRASTRUCTURE" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="738" y="1518" width="379" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.75 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="219" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="1513" width="2" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="220" value="Who" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1670" width="67" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="221" value="are" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="148" y="1676" width="44" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="222" value="your" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="202" y="1676" width="63" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="223" value="core" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="274" y="1676" width="63" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="224" value="What" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="642" y="1676" width="77" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 12"/>
+        </mxCell>
+        <mxCell id="225" value="are" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1682" width="44" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="226" value="key" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="785" y="1676" width="47" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="227" value="infrastructure" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="844" y="1676" width="192" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="228" value="elements" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1046" y="1672" width="134" height="37" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="229" value="Segments" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2878" y="1675" width="161" height="47" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="230" value="Needs" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3450" y="1688" width="103" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="231" value="supporters" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1709" width="156" height="38" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="232" value="&amp;" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="236" y="1708" width="18" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="233" value="enablers" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="264" y="1708" width="123" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="234" value="you" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="642" y="1720" width="52" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 12"/>
+        </mxCell>
+        <mxCell id="235" value="have" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="705" y="1714" width="67" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="236" value="to put" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="783" y="1715" width="83" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="237" value="in" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="877" y="1720" width="21" height="16" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="238" value="place" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="910" y="1714" width="76" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="239" value="to" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="997" y="1715" width="27" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="240" value="make" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1035" y="1714" width="77" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="241" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1122" y="1714" width="45" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 6"/>
+        </mxCell>
+        <mxCell id="242" value="providing" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="71" y="1745" width="133" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="243" value="e.g." style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="215" y="1750" width="47" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="244" value="key" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="273" y="1744" width="49" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="245" value="ecosystem" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="643" y="1751" width="155" height="27" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="246" value="work." style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="809" y="1750" width="75" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="247" value="infrastructure" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="71" y="1780" width="193" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="248" value="elements." style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="274" y="1780" width="138" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.73 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="249" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1812" y="1779" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 2"/>
+        </mxCell>
+        <mxCell id="250" value="PRODUCERS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3118" y="1775" width="255" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="251" value="USP" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2033" y="1852" width="81" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.86 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="252" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1812" y="1923" width="2" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="253" value="What" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1927" y="1938" width="76" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="254" value="is" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2014" y="1938" width="20" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="255" value="your" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2044" y="1944" width="62" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="256" value="Unique" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2117" y="1938" width="101" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.68 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="257" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1812" y="1968" width="2" height="40" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="258" value="Selling" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1939" y="1974" width="96" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="259" value="Proposition" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2047" y="1974" width="158" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: value_proposition | Уверенность: 0.52 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="260" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2336" y="1968" width="2" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.69 | Связи: 4"/>
+        </mxCell>
+        <mxCell id="261" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1812" y="2012" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="262" value="compared" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="2010" width="146" height="28" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="263" value="to" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2057" y="2011" width="27" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="264" value="alternative" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2094" y="2010" width="152" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.43 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="265" value="\" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2336" y="2012" width="2" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.72 | Связи: 5"/>
+        </mxCell>
+        <mxCell id="266" value="|" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1812" y="2044" width="2" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="267" value="solutions?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2002" y="2048" width="142" height="22" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="268" value="IMPACT" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1995" y="2274" width="159" height="33" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="269" value="The" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3814" y="2305" width="38" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="270" value="enti" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3925" y="2305" width="17" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="271" value="Others" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="173" y="2319" width="105" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.73 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="272" value="infrastructure" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="566" y="2318" width="216" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="273" value="User" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="990" y="2320" width="73" height="24" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.95 | Связи: 2"/>
+        </mxCell>
+        <mxCell id="274" value="Acquisition" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1073" y="2319" width="175" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 2"/>
+        </mxCell>
+        <mxCell id="275" value="Sales" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1426" y="2319" width="85" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.92 | Связи: 2"/>
+        </mxCell>
+        <mxCell id="276" value="/" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1521" y="2320" width="19" height="24" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 2"/>
+        </mxCell>
+        <mxCell id="277" value="Marketing" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1554" y="2319" width="158" height="33" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 2"/>
+        </mxCell>
+        <mxCell id="278" value="Monetization" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2438" y="2307" width="204" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 1"/>
+        </mxCell>
+        <mxCell id="279" value="Strategies" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2654" y="2307" width="162" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 1"/>
+        </mxCell>
+        <mxCell id="280" value="The" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3056" y="2309" width="61" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="281" value="share" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3127" y="2309" width="88" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="282" value="and" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3226" y="2309" width="58" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="283" value="The" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3428" y="2307" width="61" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="284" value="users" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3501" y="2314" width="84" height="18" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.95 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="285" value="you" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3595" y="2314" width="58" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.90 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="286" value="e" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3855" y="2312" width="18" height="18" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="287" value="entire" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3884" y="2312" width="92" height="38" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="288" value="portion" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3058" y="2351" width="112" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="289" value="of" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3182" y="2350" width="32" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="290" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3223" y="2351" width="50" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="291" value="can" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3429" y="2356" width="55" height="18" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="292" value="actual" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3496" y="2349" width="99" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="293" value="serve" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3604" y="2356" width="87" height="18" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="294" value="potential" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3815" y="2347" width="141" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="295" value="market" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3968" y="2347" width="111" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.94 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="296" value="What" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1925" y="2397" width="80" height="24" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.94 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="297" value="is the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2013" y="2397" width="76" height="24" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="298" value="platform" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2098" y="2397" width="122" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="299" value="market" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3058" y="2393" width="112" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="300" value="that" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3181" y="2393" width="61" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="301" value="you" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3253" y="2400" width="57" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="302" value="and" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3429" y="2391" width="59" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="303" value="reach" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3500" y="2391" width="86" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="304" value="with" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3598" y="2391" width="65" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="305" value="independently" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3815" y="2389" width="232" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="306" value="contributing" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1939" y="2433" width="175" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="307" value="to the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2122" y="2433" width="86" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="308" value="can" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3057" y="2440" width="55" height="18" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="309" value="capture" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3124" y="2434" width="123" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="310" value="your" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3429" y="2438" width="70" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="311" value="business" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3511" y="2431" width="139" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="312" value="from" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3814" y="2429" width="74" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="313" value="your" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3899" y="2436" width="71" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="314" value="ability" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3981" y="2429" width="95" height="33" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="315" value="ecosystem" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1899" y="2470" width="158" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="316" value="in" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2067" y="2469" width="23" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="317" value="regards" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2100" y="2469" width="111" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="318" value="to" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2218" y="2470" width="30" height="24" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.94 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="319" value="to" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3815" y="2472" width="29" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.94 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="320" value="reach" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3856" y="2472" width="87" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="321" value="and" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3956" y="2472" width="58" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="322" value="Sustainability" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1901" y="2507" width="192" height="32" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="323" value="or" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2101" y="2514" width="30" height="19" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="324" value="Society" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2139" y="2508" width="107" height="31" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="325" value="serve" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3814" y="2519" width="86" height="19" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="326" value="it" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3912" y="2512" width="17" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="327" value="aspects?" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2009" y="2545" width="128" height="30" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="328" value="PLATFORM" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="481" y="2704" width="390" height="55" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="329" value="BUSINESS" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="901" y="2704" width="361" height="55" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="330" value="MODEL" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1288" y="2704" width="257" height="55" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.51 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="331" value="vs.0" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1566" y="2725" width="102" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.55 | Связи: 4"/>
+        </mxCell>
+        <mxCell id="332" value="fin" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3658" y="2700" width="116" height="111" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.62 | Связи: 4"/>
+        </mxCell>
+        <mxCell id="333" value="у" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="2767" width="24" height="19" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.50 | Связи: 5"/>
+        </mxCell>
+        <mxCell id="334" value="a" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3669" y="2784" width="12" height="21" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.62 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="335" value="8" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="2788" width="24" height="41" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.68 | Связи: 5"/>
+        </mxCell>
+        <mxCell id="336" value="PI" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="251" y="2766" width="43" height="50" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.88 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="337" value="K" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="306" y="2766" width="34" height="50" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.64 | Связи: 4"/>
+        </mxCell>
+        <mxCell id="338" value="(cc)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="489" y="2807" width="53" height="63" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.71 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="339" value="оо" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="575" y="2818" width="85" height="34" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 9"/>
+        </mxCell>
+        <mxCell id="340" value="Part of" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="781" y="2816" width="80" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="341" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="869" y="2816" width="39" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="342" value="Platform" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="917" y="2816" width="104" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="343" value="Innovation" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1032" y="2816" width="127" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.87 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="344" value="Kit -" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="2816" width="52" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="345" value="the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1233" y="2816" width="39" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="346" value="toolset" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1281" y="2817" width="85" height="19" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 12"/>
+        </mxCell>
+        <mxCell id="347" value="for the" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1374" y="2816" width="81" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 9"/>
+        </mxCell>
+        <mxCell id="348" value="platform" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1464" y="2816" width="103" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="349" value="generation" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1578" y="2818" width="133" height="24" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.78 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="350" value="BY" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="580" y="2868" width="21" height="11" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.78 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="351" value="SA" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="632" y="2868" width="19" height="10" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="352" value="Download" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="781" y="2848" width="125" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="353" value="at" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="914" y="2850" width="23" height="18" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.90 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="354" value="www.platforminnovationkit.com" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="945" y="2848" width="397" height="25" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="355" value="TITLE" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2113" y="2867" width="69" height="19" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.58 | Связи: 0"/>
+        </mxCell>
+        <mxCell id="356" value="-" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3768" y="2847" width="6" height="5" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.55 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="357" value="Oras" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3889" y="2824" width="136" height="56" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.56 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="358" value="“." style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="4056" y="2854" width="18" height="12" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.95 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="359" value="ЕМС" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="2888" width="64" height="24" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.96 | Связи: 5"/>
+        </mxCell>
+        <mxCell id="360" value="Created" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="780" y="2880" width="98" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.93 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="361" value="by" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="888" y="2880" width="28" height="26" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.67 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="362" value="fastbreakone" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="925" y="2880" width="169" height="20" as="geometry"/>
+          <mxCell tooltip="Тип: label | Уверенность: 0.16 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="363" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="209" y="2707" width="174" height="174" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="364" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="484" y="2812" width="60" height="60" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="365" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3895" y="2691" width="166" height="166" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="366" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3818" y="2312" width="188" height="188" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="367" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="111" y="977" width="166" height="166" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="368" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1399" y="647" width="194" height="194" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="369" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1342" y="350" width="164" height="164" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 30"/>
+        </mxCell>
+        <mxCell id="370" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2002" y="2404" width="164" height="164" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="371" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2060" y="430" width="168" height="168" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="372" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="645" y="983" width="166" height="166" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="373" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2070" y="2402" width="164" height="164" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="374" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="610" width="164" height="164" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 32"/>
+        </mxCell>
+        <mxCell id="375" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1398" y="350" width="164" height="164" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 32"/>
+        </mxCell>
+        <mxCell id="376" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1392" y="276" width="160" height="160" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 30"/>
+        </mxCell>
+        <mxCell id="377" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1367" y="685" width="162" height="162" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="378" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3748" y="2350" width="184" height="184" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="379" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1997" y="785" width="194" height="194" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="380" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1344" y="242" width="156" height="156" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 26"/>
+        </mxCell>
+        <mxCell id="381" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1458" y="350" width="164" height="164" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="382" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="570" y="2812" width="44" height="44" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="383" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2433" y="281" width="166" height="166" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 28"/>
+        </mxCell>
+        <mxCell id="384" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2061" y="1983" width="166" height="166" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="385" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1942" y="802" width="156" height="156" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="386" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1498" y="608" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="387" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1951" y="433" width="166" height="166" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="388" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2451" y="355" width="146" height="146" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="389" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3921" y="2311" width="102" height="102" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="390" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3970" y="2760" width="100" height="100" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="391" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1347" y="2705" width="54" height="54" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 9"/>
+        </mxCell>
+        <mxCell id="392" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3057" y="2357" width="106" height="106" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="393" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="737" y="987" width="162" height="162" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="394" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1992" y="1954" width="124" height="124" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="395" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="270" y="978" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 26"/>
+        </mxCell>
+        <mxCell id="396" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="706" y="2706" width="52" height="52" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="397" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3" y="989" width="154" height="154" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="398" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3518" y="2322" width="132" height="132" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="399" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1986" y="2440" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="400" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2024" y="1872" width="156" height="156" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="401" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3104" y="2318" width="100" height="100" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="402" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1393" y="201" width="166" height="166" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="403" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1939" y="1983" width="166" height="166" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="404" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="218" y="1018" width="164" height="164" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="405" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="964" y="2760" width="136" height="136" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="406" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="780" y="244" width="104" height="104" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="407" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="924" y="2822" width="80" height="80" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="408" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="659" y="1059" width="170" height="170" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="409" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="690" y="244" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="410" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="348" y="980" width="88" height="88" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="411" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1052" y="2148" width="196" height="196" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 2"/>
+        </mxCell>
+        <mxCell id="412" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="74" y="1716" width="160" height="160" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="413" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2462" y="218" width="152" height="152" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="414" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="703" y="1685" width="86" height="86" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="415" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="2702" width="56" height="56" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 8"/>
+        </mxCell>
+        <mxCell id="416" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1962" y="1858" width="172" height="172" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="417" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="829" y="245" width="170" height="170" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="418" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2018" y="872" width="168" height="168" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="419" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1945" y="2403" width="90" height="90" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="420" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="68" y="1712" width="88" height="88" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="421" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="183" y="979" width="114" height="114" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="422" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3823" y="2313" width="102" height="102" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="423" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="78" y="976" width="100" height="100" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="424" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="913" y="247" width="86" height="86" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="425" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3481" y="2353" width="106" height="106" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="426" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="184" y="1710" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="427" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1928" y="872" width="88" height="88" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="428" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3884" y="2396" width="108" height="108" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="429" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="146" y="1674" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="430" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1054" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="431" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2060" y="1982" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="432" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2106" y="1946" width="84" height="84" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="433" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3708" y="2742" width="64" height="64" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 6"/>
+        </mxCell>
+        <mxCell id="434" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="779" y="2759" width="138" height="138" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="435" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="784" y="1682" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="436" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1382" y="606" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 31"/>
+        </mxCell>
+        <mxCell id="437" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2434" y="430" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="438" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2141" y="431" width="90" height="90" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="439" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="739" y="989" width="86" height="86" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 26"/>
+        </mxCell>
+        <mxCell id="440" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3902" y="2770" width="108" height="108" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="441" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3938" y="2386" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="442" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="218" y="1672" width="100" height="100" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="443" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1543" y="643" width="98" height="98" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="444" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1910" y="2444" width="88" height="88" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="445" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2013" y="875" width="86" height="86" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="446" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1448" y="282" width="156" height="156" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 31"/>
+        </mxCell>
+        <mxCell id="447" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="210" width="152" height="152" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="448" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1945" y="431" width="90" height="90" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="449" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2025" y="429" width="90" height="90" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="450" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1976" y="1946" width="76" height="76" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="451" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="622" y="2812" width="44" height="44" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="452" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="219" y="1713" width="166" height="166" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="453" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3856" y="2688" width="112" height="112" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="454" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3158" y="2316" width="108" height="108" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="455" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1936" y="1976" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="456" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="23" y="2631" width="190" height="190" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 7"/>
+        </mxCell>
+        <mxCell id="457" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="-48" y="2756" width="156" height="156" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 5"/>
+        </mxCell>
+        <mxCell id="458" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3963" y="2659" width="106" height="106" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="459" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2332" y="396" width="164" height="164" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="460" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3830" y="2438" width="108" height="108" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="461" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2093" y="873" width="86" height="86" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="462" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="202" y="1056" width="84" height="84" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 29"/>
+        </mxCell>
+        <mxCell id="463" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1065" y="2821" width="78" height="78" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="464" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="4004" y="2664" width="132" height="132" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 9"/>
+        </mxCell>
+        <mxCell id="465" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2074" y="2402" width="88" height="88" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="466" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1478" y="796" width="88" height="88" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="467" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="770" y="1134" width="152" height="152" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="468" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1946" y="2474" width="100" height="100" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="469" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="310" y="1046" width="100" height="100" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="470" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="992" y="246" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="471" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="349" width="94" height="94" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="472" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="101" y="181" width="138" height="138" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="473" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3004" y="2308" width="124" height="124" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="474" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="839" y="1677" width="90" height="90" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="475" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="742" y="1170" width="88" height="88" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="476" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2064" y="2482" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="477" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="273" y="187" width="114" height="114" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="478" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1507" y="717" width="98" height="98" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 26"/>
+        </mxCell>
+        <mxCell id="479" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3741" y="2289" width="150" height="150" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="480" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="997" y="2701" width="58" height="58" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="481" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3135" y="2363" width="94" height="94" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="482" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="654" y="1168" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="483" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3982" y="2358" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="484" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="906" y="942" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="485" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3453" y="2323" width="86" height="86" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="486" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1449" y="605" width="82" height="82" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 35"/>
+        </mxCell>
+        <mxCell id="487" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2500" y="434" width="88" height="88" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="488" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2611" y="237" width="114" height="114" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="489" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="766" y="2820" width="80" height="80" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="490" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1527" y="275" width="110" height="110" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="491" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="965" y="2853" width="86" height="86" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="492" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1116" y="2792" width="72" height="72" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="493" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="389" y="1019" width="86" height="86" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="494" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="2794" width="72" height="72" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="495" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2169" y="463" width="110" height="110" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="496" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="898" y="1640" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="497" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="868" y="2778" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="498" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2015" y="2501" width="66" height="66" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="499" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="683" y="1201" width="102" height="102" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="500" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3500" y="2270" width="100" height="100" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="501" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2150" y="2404" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="502" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="118" y="280" width="84" height="84" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 12"/>
+        </mxCell>
+        <mxCell id="503" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="792" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="504" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="855" y="945" width="94" height="94" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 21"/>
+        </mxCell>
+        <mxCell id="505" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1031" y="1653" width="82" height="82" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="506" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="852" y="2856" width="76" height="76" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="507" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3933" y="2687" width="54" height="54" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="508" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1506" y="2738" width="180" height="180" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 5"/>
+        </mxCell>
+        <mxCell id="509" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1261" y="691" width="150" height="150" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="510" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2530" y="228" width="132" height="132" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="511" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2024" y="2362" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="512" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1255" y="2821" width="82" height="82" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 12"/>
+        </mxCell>
+        <mxCell id="513" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="931" y="977" width="106" height="106" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="514" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="770" y="946" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="515" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="974" y="1644" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 14"/>
+        </mxCell>
+        <mxCell id="516" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1955" y="101" width="86" height="86" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="517" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3861" y="2265" width="106" height="106" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 22"/>
+        </mxCell>
+        <mxCell id="518" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="801" y="981" width="106" height="106" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 26"/>
+        </mxCell>
+        <mxCell id="519" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2442" y="248" width="92" height="92" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 25"/>
+        </mxCell>
+        <mxCell id="520" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="745" y="1653" width="82" height="82" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="521" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2678" y="224" width="68" height="68" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 15"/>
+        </mxCell>
+        <mxCell id="522" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="221" y="941" width="90" height="90" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 28"/>
+        </mxCell>
+        <mxCell id="523" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2080" y="396" width="88" height="88" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 20"/>
+        </mxCell>
+        <mxCell id="524" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3890" y="2774" width="44" height="44" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 12"/>
+        </mxCell>
+        <mxCell id="525" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="679" y="949" width="90" height="90" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="526" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3060" y="2284" width="88" height="88" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="527" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2465" y="469" width="98" height="98" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="528" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2721" y="253" width="78" height="78" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="529" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1163" y="2697" width="62" height="62" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="530" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3219" y="2365" width="90" height="90" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 19"/>
+        </mxCell>
+        <mxCell id="531" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="287" y="1685" width="78" height="78" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="532" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="855" y="259" width="58" height="58" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 17"/>
+        </mxCell>
+        <mxCell id="533" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1903" y="397" width="82" height="82" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="534" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="146" y="1098" width="84" height="84" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 23"/>
+        </mxCell>
+        <mxCell id="535" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="284" width="80" height="80" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 10"/>
+        </mxCell>
+        <mxCell id="536" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="662" y="1678" width="52" height="52" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 13"/>
+        </mxCell>
+        <mxCell id="537" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3886" y="2826" width="48" height="48" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 11"/>
+        </mxCell>
+        <mxCell id="538" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="79" y="1099" width="78" height="78" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="539" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3190" y="1074" width="60" height="60" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 3"/>
+        </mxCell>
+        <mxCell id="540" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2412" y="328" width="76" height="76" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 27"/>
+        </mxCell>
+        <mxCell id="541" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1064" y="256" width="76" height="76" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 9"/>
+        </mxCell>
+        <mxCell id="542" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="155" y="953" width="66" height="66" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="543" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="2692" width="60" height="60" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 5"/>
+        </mxCell>
+        <mxCell id="544" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1316" y="234" width="96" height="96" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="545" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="3401" y="2325" width="82" height="82" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 18"/>
+        </mxCell>
+        <mxCell id="546" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2187" y="885" width="66" height="66" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 16"/>
+        </mxCell>
+        <mxCell id="547" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2127" y="2385" width="58" height="58" as="geometry"/>
+          <mxCell tooltip="Тип: stakeholder | Уверенность: 0.80 | Связи: 24"/>
+        </mxCell>
+        <mxCell id="548" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="549" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="550" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="551" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="552" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="43">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="553" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="472">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="554" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="555" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4" target="21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="556" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4" target="22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="557" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4" target="46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="558" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="559" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5" target="22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="560" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5" target="23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="561" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5" target="24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="562" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5" target="47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="563" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5" target="406">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="564" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="565" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="566" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="567" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="568" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="48">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="569" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="570" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="424">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="571" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="532">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="572" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7" target="25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="573" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7" target="26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="574" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7" target="50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="575" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7" target="470">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="576" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="577" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="578" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="579" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="580" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="52">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="581" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="53">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="582" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="544">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="583" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9" target="28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="584" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9" target="29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="585" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9" target="30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="586" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9" target="31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="587" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9" target="54">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="588" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9" target="447">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="589" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="10" target="15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="590" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="10" target="32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="591" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="10" target="516">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="592" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="11" target="12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="593" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="11" target="33">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="594" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="11" target="34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="595" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="11" target="35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="596" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="11" target="36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="597" value="related" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="11" target="57">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

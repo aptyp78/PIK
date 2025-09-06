@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIK Intelligent Parser - Результаты Анализа</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .status-item {
+            background: rgba(255,255,255,0.9);
+            padding: 15px 25px;
+            border-radius: 15px;
+            text-align: center;
+            min-width: 120px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .status-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .status-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            gap: 10px;
+        }
+
+        .tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .tab:hover {
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .frameworks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .framework-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .framework-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .framework-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .framework-type {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .type-ecosystem_forces { background: #e3f2fd; color: #1565c0; }
+        .type-nfx_engines { background: #f3e5f5; color: #7b1fa2; }
+        .type-business_model { background: #e8f5e8; color: #2e7d32; }
+        .type-experience { background: #fff3e0; color: #ef6c00; }
+        .type-value_network { background: #fce4ec; color: #c2185b; }
+
+        .framework-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        .framework-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .network-container {
+            height: 600px;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            margin: 20px 0;
+            background: white;
+        }
+
+        .insights-panel {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .insight-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .insight-icon {
+            font-size: 1.5rem;
+            min-width: 40px;
+        }
+
+        .insight-text {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+
+        .loading::after {
+            content: "...";
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { color: rgba(0,0,0,0); text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0); }
+            40% { color: #666; text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0); }
+            60% { text-shadow: .25em 0 0 #666, .5em 0 0 rgba(0,0,0,0); }
+            80%, 100% { text-shadow: .25em 0 0 #666, .5em 0 0 #666; }
+        }
+
+        .error-alert {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #856404;
+        }
+
+        .error-alert h4 {
+            margin-bottom: 10px;
+        }
+
+        .error-alert code {
+            background: #f8f9fa;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+        }
+
+        @media (max-width: 768px) {
+            .frameworks-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .status-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tabs {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 PIK Intelligent Parser</h1>
+            <p>Результаты семантического анализа платформенных инновационных фреймворков</p>
+        </div>
+
+        <div class="status-bar" id="statusBar">
+            <div class="status-item">
+                <div class="status-value" id="totalFrameworks">-</div>
+                <div class="status-label">Фреймворков</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="totalElements">-</div>
+                <div class="status-label">Элементов</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="totalRelationships">-</div>
+                <div class="status-label">Связей</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="avgConfidence">-</div>
+                <div class="status-label">Уверенность</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('overview')">📊 Обзор</button>
+                <button class="tab" onclick="showTab('frameworks')">🎯 Фреймворки</button>
+                <button class="tab" onclick="showTab('analysis')">📈 Анализ</button>
+                <button class="tab" onclick="showTab('insights')">💡 Инсайты</button>
+            </div>
+
+            <!-- Вкладка Обзор -->
+            <div id="tab-overview" class="tab-content active">
+                <div class="chart-container">
+                    <canvas id="frameworksChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="confidenceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Вкладка Фреймворки -->
+            <div id="tab-frameworks" class="tab-content">
+                <div class="frameworks-grid" id="frameworksGrid">
+                    <div class="loading">Загрузка фреймворков</div>
+                </div>
+            </div>
+
+            <!-- Вкладка Анализ -->
+            <div id="tab-analysis" class="tab-content">
+                <div class="network-container" id="networkVisualization">
+                    <div class="loading">Загрузка сетевого анализа</div>
+                </div>
+            </div>
+
+            <!-- Вкладка Инсайты -->
+            <div id="tab-insights" class="tab-content">
+                <div class="insights-panel" id="insightsPanel">
+                    <div class="loading">Загрузка инсайтов</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Глобальные переменные для данных
+        let summaryData = {};
+        let frameworksData = [];
+        let currentFramework = null;
+        let charts = {};
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+        });
+
+        // Загрузка данных с сервера
+        async function loadData() {
+            try {
+                showLoading();
+                
+                // Загружаем сводку
+                const summaryResponse = await fetch('/api/summary');
+                summaryData = await summaryResponse.json();
+                
+                // Загружаем список фреймворков
+                const frameworksResponse = await fetch('/api/frameworks');
+                frameworksData = await frameworksResponse.json();
+                
+                // Загружаем инсайты
+                const insightsResponse = await fetch('/api/insights');
+                const insights = await insightsResponse.json();
+                
+                console.log('📊 Данные загружены:', {
+                    summary: summaryData,
+                    frameworks: frameworksData.length,
+                    insights: insights.length
+                });
+                
+                updateDashboard();
+                updateFrameworks();
+                updateInsights(insights);
+                initCharts();
+                
+            } catch (error) {
+                console.error('❌ Ошибка загрузки данных:', error);
+                showError('Ошибка подключения к серверу. Запустите сервер командой: python pik_visualization_server.py');
+            }
+        }
+
+        function showLoading() {
+            document.getElementById('totalFrameworks').textContent = '-';
+            document.getElementById('totalElements').textContent = '-';
+            document.getElementById('totalRelationships').textContent = '-';
+            document.getElementById('avgConfidence').textContent = '-';
+        }
+
+        function showError(message) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-alert';
+            errorDiv.innerHTML = `
+                <h4>⚠️ ${message}</h4>
+                <p>Для запуска сервера выполните в терминале:</p>
+                <code>python pik_visualization_server.py</code>
+                <p>Затем обновите страницу.</p>
+            `;
+            
+            const container = document.querySelector('.main-content');
+            container.insertBefore(errorDiv, container.firstChild);
+        }
+
+        function updateDashboard() {
+            // Обновляем статусную панель
+            document.getElementById('totalFrameworks').textContent = summaryData.total_frameworks || 0;
+            document.getElementById('totalElements').textContent = (summaryData.total_elements || 0).toLocaleString();
+            document.getElementById('totalRelationships').textContent = (summaryData.total_relationships || 0).toLocaleString();
+            document.getElementById('avgConfidence').textContent = Math.round((summaryData.avg_confidence || 0) * 100) + '%';
+        }
+
+        function updateFrameworks() {
+            const grid = document.getElementById('frameworksGrid');
+            grid.innerHTML = '';
+
+            if (frameworksData.length === 0) {
+                grid.innerHTML = '<div class="loading">Фреймворки не найдены</div>';
+                return;
+            }
+
+            frameworksData.forEach(framework => {
+                const card = document.createElement('div');
+                card.className = 'framework-card';
+                
+                const typeClass = framework.type.toLowerCase().replace('pikframeworktype.', '');
+                
+                card.innerHTML = `
+                    <div class="framework-type type-${typeClass}">
+                        ${framework.type.replace('PIKFrameworkType.', '')}
+                    </div>
+                    <div class="framework-title">${framework.title}</div>
+                    <div class="framework-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">${framework.elements_count}</div>
+                            <div class="stat-label">Элементов</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${framework.relationships_count}</div>
+                            <div class="stat-label">Связей</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${Math.round(framework.confidence * 100)}%</div>
+                            <div class="stat-label">Уверенность</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${Math.round((framework.completeness || 0) * 100)}%</div>
+                            <div class="stat-label">Полнота</div>
+                        </div>
+                    </div>
+                    <div class="framework-actions">
+                        <button class="btn btn-primary" onclick="viewFramework('${framework.id}')">
+                            📊 Анализ
+                        </button>
+                        <button class="btn btn-secondary" onclick="openDrawio('${framework.id}')">
+                            🎨 Draw.io
+                        </button>
+                        <button class="btn btn-success" onclick="downloadJSON('${framework.id}')">
+                            📄 JSON
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function updateInsights(insights) {
+            const panel = document.getElementById('insightsPanel');
+            
+            if (insights.length === 0) {
+                panel.innerHTML = '<div class="loading">Инсайты не найдены</div>';
+                return;
+            }
+            
+            panel.innerHTML = insights.map(insight => `
+                <div class="insight-item">
+                    <div class="insight-icon">${insight.icon}</div>
+                    <div class="insight-text">${insight.text}</div>
+                </div>
+            `).join('');
+        }
+
+        function initCharts() {
+            // График по типам фреймворков
+            initFrameworksChart();
+            
+            // График уверенности
+            initConfidenceChart();
+        }
+
+        function initFrameworksChart() {
+            const ctx = document.getElementById('frameworksChart');
+            if (!ctx) return;
+
+            const frameworkTypes = {};
+            frameworksData.forEach(fw => {
+                const type = fw.type.replace('PIKFrameworkType.', '');
+                if (!frameworkTypes[type]) {
+                    frameworkTypes[type] = { elements: 0, relationships: 0 };
+                }
+                frameworkTypes[type].elements += fw.elements_count;
+                frameworkTypes[type].relationships += fw.relationships_count;
+            });
+
+            charts.frameworks = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(frameworkTypes),
+                    datasets: [{
+                        label: 'Элементы',
+                        data: Object.values(frameworkTypes).map(d => d.elements),
+                        backgroundColor: 'rgba(102, 126, 234, 0.8)'
+                    }, {
+                        label: 'Связи',
+                        data: Object.values(frameworkTypes).map(d => d.relationships),
+                        backgroundColor: 'rgba(118, 75, 162, 0.8)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Распределение элементов и связей по типам фреймворков'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        function initConfidenceChart() {
+            const ctx = document.getElementById('confidenceChart');
+            if (!ctx) return;
+
+            charts.confidence = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: frameworksData.map(fw => fw.title),
+                    datasets: [{
+                        data: frameworksData.map(fw => fw.confidence * 100),
+                        backgroundColor: [
+                            '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Уверенность анализа по фреймворкам (%)'
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Функции навигации
+        function showTab(tabName) {
+            // Скрываем все вкладки
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Показываем выбранную вкладку
+            document.getElementById(`tab-${tabName}`).classList.add('active');
+            event.target.classList.add('active');
+
+            // Загружаем специфичные данные для вкладки
+            if (tabName === 'analysis') {
+                loadNetworkVisualization();
+            }
+        }
+
+        async function loadNetworkVisualization() {
+            const container = document.getElementById('networkVisualization');
+            
+            if (frameworksData.length === 0) {
+                container.innerHTML = '<div class="loading">Нет данных для визуализации</div>';
+                return;
+            }
+
+            try {
+                // Используем первый фреймворк для демонстрации
+                const firstFramework = frameworksData[0];
+                const response = await fetch(`/api/frameworks/${firstFramework.id}/network`);
+                const networkData = await response.json();
+
+                const options = {
+                    nodes: {
+                        shape: 'dot',
+                        size: 16,
+                        font: {
+                            size: 12,
+                            color: '#333'
+                        },
+                        borderWidth: 2,
+                        shadow: true
+                    },
+                    edges: {
+                        width: 2,
+                        color: { inherit: 'from' },
+                        smooth: {
+                            type: 'continuous'
+                        }
+                    },
+                    physics: {
+                        stabilization: { iterations: 150 }
+                    }
+                };
+
+                new vis.Network(container, networkData, options);
+                
+            } catch (error) {
+                console.error('Ошибка загрузки сетевой визуализации:', error);
+                container.innerHTML = '<div class="loading">Ошибка загрузки сетевого анализа</div>';
+            }
+        }
+
+        // Действия с фреймворками
+        async function viewFramework(frameworkId) {
+            try {
+                const response = await fetch(`/api/frameworks/${frameworkId}`);
+                const framework = await response.json();
+                
+                // Показываем детальную информацию
+                alert(`Фреймворк: ${framework.title}\nЭлементов: ${framework.elements?.length || 0}\nСвязей: ${framework.relationships?.length || 0}`);
+                
+            } catch (error) {
+                console.error('Ошибка загрузки фреймворка:', error);
+                alert('Ошибка загрузки данных фреймворка');
+            }
+        }
+
+        function openDrawio(frameworkId) {
+            // Открываем Draw.io файл в новой вкладке
+            window.open(`/api/frameworks/${frameworkId}/download/drawio`, '_blank');
+        }
+
+        function downloadJSON(frameworkId) {
+            // Скачиваем JSON файл
+            window.open(`/api/frameworks/${frameworkId}/download/json`, '_blank');
+        }
+    </script>
+</body>
+</html>

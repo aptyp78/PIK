@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест Draw.io файлов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .file-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .file-name {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+        
+        .download-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+        
+        .status {
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        
+        .status.valid {
+            background: rgba(76, 175, 80, 0.3);
+            color: #4CAF50;
+        }
+        
+        .status.error {
+            background: rgba(244, 67, 54, 0.3);
+            color: #f44336;
+        }
+        
+        .instructions {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Тест исправленных Draw.io файлов</h1>
+        
+        <div class="instructions">
+            <h3>📋 Инструкции для тестирования:</h3>
+            <ol>
+                <li>Скачайте любой из файлов ниже</li>
+                <li>Попробуйте открыть его в Draw.io (app.diagrams.net)</li>
+                <li>Проверьте, что файл открывается без ошибок XML</li>
+                <li>Убедитесь, что диаграмма отображается корректно</li>
+            </ol>
+        </div>
+        
+        <div class="file-grid" id="fileGrid">
+            <!-- Файлы будут загружены динамически -->
+        </div>
+    </div>
+
+    <script>
+        // Список файлов для тестирования
+        const drawioFiles = [
+            'PIK_1-0_Ecosystem_Preparation.drawio',
+            'PIK_2-0_Ecosystem_Exploration.drawio', 
+            'PIK_3-0_Ecosystem_Design.drawio',
+            'PIK_4-0_Ecosystem_Implementation.drawio',
+            'PIK_5-0_Ecosystem_Forces_Scan.drawio',
+            'PIK_6-0_Ontology_Management.drawio'
+        ];
+        
+        async function checkFileStatus(filename) {
+            try {
+                const response = await fetch(`/api/drawio/${filename}`);
+                return response.ok ? 'valid' : 'error';
+            } catch (error) {
+                return 'error';
+            }
+        }
+        
+        async function loadFiles() {
+            const grid = document.getElementById('fileGrid');
+            
+            for (const filename of drawioFiles) {
+                const status = await checkFileStatus(filename);
+                
+                const card = document.createElement('div');
+                card.className = 'file-card';
+                card.innerHTML = `
+                    <div class="file-name">${filename}</div>
+                    <a href="/api/drawio/${filename}" class="download-btn" download>
+                        📥 Скачать файл
+                    </a>
+                    <div class="status ${status}">
+                        ${status === 'valid' ? '✅ Файл доступен' : '❌ Ошибка доступа'}
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            }
+        }
+        
+        // Загружаем файлы при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadFiles);
+    </script>
+</body>
+</html>

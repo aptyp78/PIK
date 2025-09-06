@@ -1,0 +1,214 @@
+{
+  "source_image": "OCR/PIK 5-0 - Ecosystem Forces Scan - ENG/images/page_1_img_3.png",
+  "regions": {
+    "top_left": {
+      "text": "OR",
+      "confidence": 92.0,
+      "elements": [
+        "OR"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "top_right": {
+      "text": "РТ |",
+      "confidence": 62.0,
+      "elements": [
+        "РТ",
+        "|"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "bottom_left": {
+      "text": "se ~~ = ОЁ |",
+      "confidence": 65.4,
+      "elements": [
+        "se",
+        "~~",
+        "=",
+        "ОЁ",
+        "|"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "bottom_right": {
+      "text": "las нивы || я — ТЕ = ot\"",
+      "confidence": 53.5,
+      "elements": [
+        "las",
+        "нивы",
+        "||",
+        "я",
+        "—",
+        "ТЕ",
+        "=",
+        "ot\""
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "center": {
+      "text": "PIK",
+      "confidence": 91.0,
+      "elements": [
+        "PIK"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "header": {
+      "text": "—",
+      "confidence": 64.0,
+      "elements": [
+        "—"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "footer": {
+      "text": "= a",
+      "confidence": 82.5,
+      "elements": [
+        "=",
+        "a"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "left_side": {
+      "text": "|",
+      "confidence": 84.0,
+      "elements": [
+        "|"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 7 --oem 3"
+    },
+    "right_side": {
+      "text": "= i J = al",
+      "confidence": 77.8,
+      "elements": [
+        "=",
+        "i",
+        "J",
+        "=",
+        "al"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "top_center": {
+      "text": "mm",
+      "confidence": 37.0,
+      "elements": [
+        "mm"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 7 --oem 3"
+    },
+    "bottom_center": {
+      "text": "aa",
+      "confidence": 41.0,
+      "elements": [
+        "aa"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "corner_tl": {
+      "text": "р",
+      "confidence": 51.0,
+      "elements": [
+        "р"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 7 --oem 3"
+    },
+    "corner_tr": {
+      "text": "7",
+      "confidence": 46.0,
+      "elements": [
+        "7"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 7 --oem 3"
+    },
+    "corner_bl": {
+      "text": "ь",
+      "confidence": 41.0,
+      "elements": [
+        "ь"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 13 --oem 3"
+    }
+  },
+  "comprehensive_text": "[TOP_LEFT] OR [TOP_RIGHT] РТ | [BOTTOM_LEFT] se ~~ = ОЁ | [BOTTOM_RIGHT] las нивы || я — ТЕ = ot\" [CENTER] PIK [HEADER] — [FOOTER] = a [LEFT_SIDE] | [RIGHT_SIDE] = i J = al [TOP_CENTER] mm [BOTTOM_CENTER] aa [CORNER_TL] р [CORNER_TR] 7 [CORNER_BL] ь ",
+  "detected_icons": [],
+  "pik_structure": {
+    "categories": {
+      "ENVIRONMENT": {
+        "region": "top_left",
+        "elements": [
+          "OR"
+        ],
+        "confidence": 92.0
+      },
+      "MARKET": {
+        "region": "top_right",
+        "elements": [
+          "РТ",
+          "|"
+        ],
+        "confidence": 62.0
+      },
+      "VALUE CHAIN": {
+        "region": "bottom_left",
+        "elements": [
+          "se",
+          "=",
+          "|",
+          "~~",
+          "ОЁ"
+        ],
+        "confidence": 65.4
+      },
+      "MACROECONOMIC": {
+        "region": "bottom_right",
+        "elements": [
+          "las",
+          "=",
+          "||",
+          "я",
+          "нивы",
+          "—",
+          "ot\"",
+          "ТЕ"
+        ],
+        "confidence": 53.5
+      },
+      "CORE FRAMEWORK": {
+        "region": "center",
+        "elements": [
+          "PIK"
+        ],
+        "confidence": 91.0
+      }
+    },
+    "stakeholders": [],
+    "metadata": {
+      "version": null,
+      "title": null
+    },
+    "quality_indicators": {
+      "total_regions_analyzed": 14,
+      "successful_extractions": 10,
+      "overall_confidence": 71.42857142857143,
+      "total_text_length": 250,
+      "categories_found": 5,
+      "stakeholders_found": 0
+    }
+  }
+}

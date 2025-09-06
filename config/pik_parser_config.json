@@ -1,0 +1,254 @@
+{
+  "parser_config": {
+    "version": "1.0",
+    "name": "Intelligent PIK Parser",
+    "description": "Интеллектуальный парсер PIK методологии с семантическим пониманием",
+    
+    "ocr_settings": {
+      "languages": ["eng", "rus"],
+      "psm_mode": 6,
+      "confidence_threshold": 30,
+      "preprocessing": {
+        "scale_factor": 2.0,
+        "enhance_contrast": 1.3,
+        "enhance_sharpness": 1.2,
+        "min_image_size": 2000
+      }
+    },
+    
+    "vision_settings": {
+      "circle_detection": {
+        "method": "HoughCircles",
+        "param1": 50,
+        "param2": 30,
+        "min_radius": 20,
+        "max_radius": 100,
+        "min_distance": 50
+      },
+      "rectangle_detection": {
+        "min_area": 500,
+        "max_area": 5000,
+        "min_aspect_ratio": 0.3,
+        "max_aspect_ratio": 3.0
+      },
+      "text_grouping": {
+        "proximity_threshold": 50,
+        "merge_close_elements": true
+      }
+    },
+    
+    "semantic_analysis": {
+      "framework_classification": {
+        "confidence_threshold": 0.6,
+        "use_filename_hints": true,
+        "keyword_weight": 1.0,
+        "context_weight": 0.8
+      },
+      "element_classification": {
+        "visual_weight": 0.6,
+        "textual_weight": 0.4,
+        "context_weight": 0.3
+      },
+      "relationship_analysis": {
+        "max_distance": 200,
+        "min_strength": 0.1,
+        "spatial_weight": 0.7,
+        "semantic_weight": 0.3
+      }
+    },
+    
+    "quality_metrics": {
+      "min_confidence": 0.3,
+      "min_elements": 2,
+      "completeness_threshold": 0.7,
+      "alignment_threshold": 0.6
+    },
+    
+    "output_settings": {
+      "save_json": true,
+      "save_drawio": true,
+      "save_markdown": true,
+      "create_thumbnails": false,
+      "output_directory": "output",
+      "backup_originals": true
+    },
+    
+    "drawio_generation": {
+      "canvas_size": {
+        "width": 827,
+        "height": 1169
+      },
+      "scaling": {
+        "position_scale": 3,
+        "min_width": 80,
+        "min_height": 40,
+        "margin": 50
+      },
+      "styling": {
+        "use_semantic_colors": true,
+        "add_tooltips": true,
+        "include_metadata": true,
+        "generate_legend": true
+      }
+    }
+  },
+  
+  "pik_methodology": {
+    "framework_types": {
+      "ecosystem_forces": {
+        "description": "Сканирование экосистемных сил",
+        "stage": 1,
+        "expected_elements": ["stakeholder", "force"],
+        "keywords": ["ecosystem", "forces", "scan", "environment", "экосистема", "силы"],
+        "next_stage": "nfx_engines"
+      },
+      "nfx_engines": {
+        "description": "Двигатели сетевых эффектов",
+        "stage": 2,
+        "expected_elements": ["nfx_engine", "stakeholder"],
+        "keywords": ["network", "effects", "engines", "viral", "сетевые", "эффекты"],
+        "next_stage": "business_model"
+      },
+      "business_model": {
+        "description": "Бизнес-модель платформы",
+        "stage": 3,
+        "expected_elements": ["value_proposition", "stakeholder"],
+        "keywords": ["business", "model", "revenue", "monetization", "бизнес", "модель"],
+        "next_stage": "platform_experience"
+      },
+      "platform_experience": {
+        "description": "Пользовательский опыт платформы",
+        "stage": 4,
+        "expected_elements": ["process", "stakeholder"],
+        "keywords": ["experience", "user", "journey", "interface", "опыт", "интерфейс"],
+        "next_stage": "value_network"
+      },
+      "value_network": {
+        "description": "Сеть создания ценности",
+        "stage": 5,
+        "expected_elements": ["value_proposition", "connection"],
+        "keywords": ["value", "network", "creation", "exchange", "ценность", "сеть"],
+        "next_stage": null
+      }
+    },
+    
+    "element_types": {
+      "stakeholder": {
+        "description": "Участник экосистемы",
+        "visual_indicators": ["circle", "ellipse", "rounded_rectangle"],
+        "text_patterns": ["user", "customer", "partner", "пользователь", "клиент"],
+        "color": "#d5e8d4",
+        "priority": "high"
+      },
+      "force": {
+        "description": "Экосистемная сила или фактор",
+        "visual_indicators": ["hexagon", "triangle", "arrow"],
+        "text_patterns": ["force", "trend", "driver", "сила", "тренд", "фактор"],
+        "color": "#fff2cc",
+        "priority": "high"
+      },
+      "value_proposition": {
+        "description": "Ценностное предложение",
+        "visual_indicators": ["rectangle", "process_shape"],
+        "text_patterns": ["value", "benefit", "proposition", "ценность", "выгода"],
+        "color": "#f8cecc",
+        "priority": "medium"
+      },
+      "nfx_engine": {
+        "description": "Двигатель сетевых эффектов",
+        "visual_indicators": ["cloud", "gear", "engine"],
+        "text_patterns": ["engine", "effect", "viral", "двигатель", "эффект"],
+        "color": "#e1d5e7",
+        "priority": "high"
+      },
+      "process": {
+        "description": "Процесс или активность",
+        "visual_indicators": ["rectangle", "process_shape", "flow"],
+        "text_patterns": ["process", "activity", "step", "процесс", "шаг"],
+        "color": "#dae8fc",
+        "priority": "medium"
+      },
+      "connection": {
+        "description": "Связь или отношение",
+        "visual_indicators": ["line", "arrow", "connector"],
+        "text_patterns": ["связь", "отношение", "flow", "connection"],
+        "color": "#666666",
+        "priority": "low"
+      }
+    },
+    
+    "relationship_types": {
+      "provides_value": {
+        "description": "Предоставляет ценность",
+        "visual_style": "solid_arrow",
+        "color": "#82b366"
+      },
+      "influences": {
+        "description": "Влияет на",
+        "visual_style": "dashed_arrow",
+        "color": "#d6b656"
+      },
+      "engages": {
+        "description": "Вовлекает",
+        "visual_style": "curved_arrow",
+        "color": "#9673a6"
+      },
+      "produces": {
+        "description": "Производит",
+        "visual_style": "thick_arrow",
+        "color": "#6c8ebf"
+      },
+      "related": {
+        "description": "Связано с",
+        "visual_style": "simple_line",
+        "color": "#666666"
+      }
+    }
+  },
+  
+  "automation_opportunities": {
+    "level_1": {
+      "name": "Автоматическое извлечение",
+      "status": "implemented",
+      "capabilities": ["OCR", "объектное_детектирование", "позиционирование"]
+    },
+    "level_2": {
+      "name": "Семантическая классификация",
+      "status": "implemented", 
+      "capabilities": ["типизация_фреймворков", "классификация_элементов", "анализ_связей"]
+    },
+    "level_3": {
+      "name": "Генерация_диаграмм",
+      "status": "implemented",
+      "capabilities": ["drawio_XML", "интерактивность", "стилизация"]
+    },
+    "level_4": {
+      "name": "Трансформация_фреймворков",
+      "status": "planned",
+      "capabilities": ["межфреймовые_связи", "жизненный_цикл", "автоматические_переходы"]
+    },
+    "level_5": {
+      "name": "ИИ_ассистент",
+      "status": "planned",
+      "capabilities": ["рекомендации", "оптимизация", "валидация_методологии"]
+    }
+  },
+  
+  "validation_rules": {
+    "framework_completeness": {
+      "min_stakeholders": 1,
+      "min_elements_total": 3,
+      "required_relationships": true
+    },
+    "quality_thresholds": {
+      "min_ocr_confidence": 0.3,
+      "min_framework_confidence": 0.5,
+      "min_completeness_score": 0.6
+    },
+    "methodology_compliance": {
+      "check_stage_progression": true,
+      "validate_element_types": true,
+      "enforce_pik_patterns": true
+    }
+  }
+}

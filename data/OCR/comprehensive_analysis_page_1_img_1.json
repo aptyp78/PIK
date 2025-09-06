@@ -1,0 +1,166 @@
+{
+  "source_image": "OCR/PIK 5-0 - Ecosystem Forces Scan - ENG/images/page_1_img_1.png",
+  "regions": {
+    "top_left": {
+      "text": "(",
+      "confidence": 76.0,
+      "elements": [
+        "("
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "top_right": {
+      "text": "G)",
+      "confidence": 82.0,
+      "elements": [
+        "G)"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "bottom_right": {
+      "text": "SA",
+      "confidence": 94.0,
+      "elements": [
+        "SA"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "center": {
+      "text": "p Ws",
+      "confidence": 50.0,
+      "elements": [
+        "p",
+        "Ws"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "header": {
+      "text": "dg = = 7",
+      "confidence": 63.75,
+      "elements": [
+        "dg",
+        "=",
+        "=",
+        "7"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 11 --oem 3"
+    },
+    "footer": {
+      "text": "wei",
+      "confidence": 65.0,
+      "elements": [
+        "wei"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "left_side": {
+      "text": "(",
+      "confidence": 87.0,
+      "elements": [
+        "("
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 6 --oem 3"
+    },
+    "right_side": {
+      "text": "|",
+      "confidence": 81.0,
+      "elements": [
+        "|"
+      ],
+      "enhancement_variant": 2,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "bottom_center": {
+      "text": "=",
+      "confidence": 78.0,
+      "elements": [
+        "="
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "corner_tl": {
+      "text": "ии",
+      "confidence": 37.0,
+      "elements": [
+        "ии"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "corner_tr": {
+      "text": "—-",
+      "confidence": 69.0,
+      "elements": [
+        "—-"
+      ],
+      "enhancement_variant": 1,
+      "ocr_config": "--psm 8 --oem 3"
+    },
+    "corner_bl": {
+      "text": "_ №",
+      "confidence": 76.0,
+      "elements": [
+        "_",
+        "№"
+      ],
+      "enhancement_variant": 0,
+      "ocr_config": "--psm 13 --oem 3"
+    }
+  },
+  "comprehensive_text": "[TOP_LEFT] ( [TOP_RIGHT] G) [BOTTOM_RIGHT] SA [CENTER] p Ws [HEADER] dg = = 7 [FOOTER] wei [LEFT_SIDE] ( [RIGHT_SIDE] | [BOTTOM_CENTER] = [CORNER_TL] ии [CORNER_TR] —- [CORNER_BL] _ № ",
+  "detected_icons": [],
+  "pik_structure": {
+    "categories": {
+      "ENVIRONMENT": {
+        "region": "top_left",
+        "elements": [
+          "("
+        ],
+        "confidence": 76.0
+      },
+      "MARKET": {
+        "region": "top_right",
+        "elements": [
+          "G)"
+        ],
+        "confidence": 82.0
+      },
+      "MACROECONOMIC": {
+        "region": "bottom_right",
+        "elements": [
+          "SA"
+        ],
+        "confidence": 94.0
+      },
+      "CORE FRAMEWORK": {
+        "region": "center",
+        "elements": [
+          "Ws",
+          "p"
+        ],
+        "confidence": 50.0
+      }
+    },
+    "stakeholders": [],
+    "metadata": {
+      "version": null,
+      "title": null
+    },
+    "quality_indicators": {
+      "total_regions_analyzed": 12,
+      "successful_extractions": 10,
+      "overall_confidence": 83.33333333333334,
+      "total_text_length": 184,
+      "categories_found": 4,
+      "stakeholders_found": 0
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-09-06T20:03:38.547771",
+  "total_processed": 6,
+  "results": [
+    {
+      "file": "pik_20250906_164104_9f20687b_analysis.json",
+      "score": 9525.2,
+      "elements": 48,
+      "grid_coverage": 266.7
+    },
+    {
+      "file": "pik_20250906_164110_fab9493e_analysis.json",
+      "score": 4190.7,
+      "elements": 19,
+      "grid_coverage": 105.6
+    },
+    {
+      "file": "pik_20250906_164107_43f6d2f9_analysis.json",
+      "score": 3858.8,
+      "elements": 11,
+      "grid_coverage": 61.1
+    },
+    {
+      "file": "pik_20250906_164112_d4b8a70e_analysis.json",
+      "score": 4363.2,
+      "elements": 11,
+      "grid_coverage": 61.1
+    },
+    {
+      "file": "pik_20250906_163616_2a81a1ec_analysis.json",
+      "score": 4190.7,
+      "elements": 19,
+      "grid_coverage": 105.6
+    },
+    {
+      "file": "pik_20250906_164101_2ed9d0bf_analysis.json",
+      "score": 17359.7,
+      "elements": 86,
+      "grid_coverage": 477.8
+    }
+  ],
+  "avg_score": 7248.05
+}

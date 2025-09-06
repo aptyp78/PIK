@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIK Framework Collection - Draw.io Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .frameworks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .framework-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .framework-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-header {
+            padding: 30px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white"/><circle cx="80" cy="20" r="2" fill="white"/><circle cx="20" cy="80" r="2" fill="white"/><circle cx="80" cy="80" r="2" fill="white"/><circle cx="50" cy="50" r="2" fill="white"/></svg>');
+        }
+        
+        .touchpoints {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .motivation {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .sustainability {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .environment {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        .consumers {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        }
+        
+        .card-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card-subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin: 10px 0 0 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card-content {
+            padding: 30px;
+        }
+        
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .stat {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .stat-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .preview-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn.secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .summary-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .total-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .total-stat {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .total-stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .total-stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .framework-preview {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+        }
+        
+        .preview-active {
+            display: block;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            z-index: 999;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #f8f9fa;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 PIK Framework Collection</h1>
+            <p>Полная коллекция проанализированных и визуализированных PIK фреймворков в Draw.io</p>
+        </div>
+        
+        <div class="frameworks-grid">
+            <!-- TOUCHPOINTS Framework -->
+            <div class="framework-card" onclick="openFramework('touchpoints')">
+                <div class="card-header touchpoints">
+                    <h2 class="card-title">TOUCHPOINTS</h2>
+                    <p class="card-subtitle">Business Model Canvas</p>
+                </div>
+                <div class="card-content">
+                    <div class="stats-row">
+                        <div class="stat">
+                            <div class="stat-number">545</div>
+                            <div class="stat-label">Элементов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">4,490</div>
+                            <div class="stat-label">Связей</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">86.4%</div>
+                            <div class="stat-label">Точность</div>
+                        </div>
+                    </div>
+                    <p>Комплексная модель бизнес-платформы с фокусом на точки взаимодействия с клиентами и ключевые процессы.</p>
+                    <div class="preview-actions">
+                        <button class="btn" onclick="event.stopPropagation(); openDrawIO('pik_20250906_192036_2ed9d0bf_diagram.drawio')">📐 Draw.io</button>
+                        <button class="btn secondary" onclick="event.stopPropagation(); downloadFile('touchpoints')">💾 Скачать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MOTIVATION Framework -->
+            <div class="framework-card" onclick="openFramework('motivation')">
+                <div class="card-header motivation">
+                    <h2 class="card-title">MOTIVATION</h2>
+                    <p class="card-subtitle">Ecosystem Forces</p>
+                </div>
+                <div class="card-content">
+                    <div class="stats-row">
+                        <div class="stat">
+                            <div class="stat-number">346</div>
+                            <div class="stat-label">Элементов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">2,760</div>
+                            <div class="stat-label">Связей</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">86.6%</div>
+                            <div class="stat-label">Точность</div>
+                        </div>
+                    </div>
+                    <p>Анализ мотивационных факторов и движущих сил экосистемы платформы.</p>
+                    <div class="preview-actions">
+                        <button class="btn" onclick="event.stopPropagation(); openDrawIO('pik_20250906_192040_9f20687b_diagram.drawio')">📐 Draw.io</button>
+                        <button class="btn secondary" onclick="event.stopPropagation(); downloadFile('motivation')">💾 Скачать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SUSTAINABILITY Framework -->
+            <div class="framework-card" onclick="openFramework('sustainability')">
+                <div class="card-header sustainability">
+                    <h2 class="card-title">SUSTAINABILITY</h2>
+                    <p class="card-subtitle">NFX Reinforcement Engines</p>
+                </div>
+                <div class="card-content">
+                    <div class="stats-row">
+                        <div class="stat">
+                            <div class="stat-number">80</div>
+                            <div class="stat-label">Элементов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">207</div>
+                            <div class="stat-label">Связей</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">80.5%</div>
+                            <div class="stat-label">Точность</div>
+                        </div>
+                    </div>
+                    <p>Механизмы усиления сетевых эффектов и обеспечения долгосрочной устойчивости.</p>
+                    <div class="preview-actions">
+                        <button class="btn" onclick="event.stopPropagation(); openDrawIO('pik_20250906_192042_43f6d2f9_diagram.drawio')">📐 Draw.io</button>
+                        <button class="btn secondary" onclick="event.stopPropagation(); downloadFile('sustainability')">💾 Скачать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ENVIRONMENT Framework -->
+            <div class="framework-card" onclick="openFramework('environment')">
+                <div class="card-header environment">
+                    <h2 class="card-title">ENVIRONMENT</h2>
+                    <p class="card-subtitle">Ecosystem Forces Scan</p>
+                </div>
+                <div class="card-content">
+                    <div class="stats-row">
+                        <div class="stat">
+                            <div class="stat-number">191</div>
+                            <div class="stat-label">Элементов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">1,420</div>
+                            <div class="stat-label">Связей</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">82.5%</div>
+                            <div class="stat-label">Точность</div>
+                        </div>
+                    </div>
+                    <p>Сканирование внешней среды и анализ факторов влияния на экосистему.</p>
+                    <div class="preview-actions">
+                        <button class="btn" onclick="event.stopPropagation(); openDrawIO('pik_20250906_192045_fab9493e_diagram.drawio')">📐 Draw.io</button>
+                        <button class="btn secondary" onclick="event.stopPropagation(); downloadFile('environment')">💾 Скачать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CONSUMERS Framework -->
+            <div class="framework-card" onclick="openFramework('consumers')">
+                <div class="card-header consumers">
+                    <h2 class="card-title">CONSUMERS</h2>
+                    <p class="card-subtitle">Value Network Canvas</p>
+                </div>
+                <div class="card-content">
+                    <div class="stats-row">
+                        <div class="stat">
+                            <div class="stat-number">71</div>
+                            <div class="stat-label">Элементов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">175</div>
+                            <div class="stat-label">Связей</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">79.1%</div>
+                            <div class="stat-label">Точность</div>
+                        </div>
+                    </div>
+                    <p>Сетевая модель создания ценности с фокусом на потребительские сегменты.</p>
+                    <div class="preview-actions">
+                        <button class="btn" onclick="event.stopPropagation(); openDrawIO('pik_20250906_192047_d4b8a70e_diagram.drawio')">📐 Draw.io</button>
+                        <button class="btn secondary" onclick="event.stopPropagation(); downloadFile('consumers')">💾 Скачать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="summary-card">
+            <h2>📊 Общая статистика коллекции</h2>
+            <div class="total-stats">
+                <div class="total-stat">
+                    <div class="total-stat-number">5</div>
+                    <div class="total-stat-label">Фреймворков</div>
+                </div>
+                <div class="total-stat">
+                    <div class="total-stat-number">1,233</div>
+                    <div class="total-stat-label">Элементов</div>
+                </div>
+                <div class="total-stat">
+                    <div class="total-stat-number">9,052</div>
+                    <div class="total-stat-label">Связей</div>
+                </div>
+                <div class="total-stat">
+                    <div class="total-stat-number">83.0%</div>
+                    <div class="total-stat-label">Средняя точность</div>
+                </div>
+                <div class="total-stat">
+                    <div class="total-stat-number">75.4</div>
+                    <div class="total-stat-label">Качество/100</div>
+                </div>
+            </div>
+            <p>Полная коллекция PIK фреймворков успешно проанализирована, визуализирована и готова к использованию в Draw.io</p>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay" onclick="closePreview()"></div>
+    <div class="framework-preview" id="preview">
+        <button class="close-btn" onclick="closePreview()">×</button>
+        <div id="preview-content"></div>
+    </div>
+    
+    <script>
+        function openFramework(framework) {
+            // Здесь можно добавить детальный превью фреймворка
+            console.log('Opening framework:', framework);
+        }
+        
+        function openDrawIO(filename) {
+            // Открываем Draw.io с конкретным файлом
+            const drawioUrl = `https://app.diagrams.net/?splash=0&clibs=Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fjgraph%2Fdrawio-libs%2Fmaster%2Flibs%2Ftemplates.xml#G${filename}`;
+            window.open(drawioUrl, '_blank');
+        }
+        
+        function downloadFile(framework) {
+            // Создаем ссылку для скачивания
+            const link = document.createElement('a');
+            link.href = `/output/drawio/${framework}_diagram.drawio`;
+            link.download = `${framework}_framework.drawio`;
+            link.click();
+        }
+        
+        function closePreview() {
+            document.getElementById('overlay').classList.remove('active');
+            document.getElementById('preview').classList.remove('preview-active');
+        }
+        
+        // Анимация появления карточек
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.framework-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>

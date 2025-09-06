@@ -1,0 +1,71 @@
+{
+  "analysis_date": "2025-09-06 19:20:47",
+  "total_frameworks": 5,
+  "frameworks": [
+    {
+      "id": "pik_20250906_192036_2ed9d0bf",
+      "type": "business_model",
+      "title": "TOUCHPOINTS",
+      "elements_count": 545,
+      "relationships_count": 4490,
+      "confidence": 0.863596330275232,
+      "files": {
+        "analysis": "analysis/pik_20250906_192036_2ed9d0bf_analysis.json",
+        "report": "analysis/pik_20250906_192036_2ed9d0bf_report.md",
+        "drawio": "drawio/pik_20250906_192036_2ed9d0bf_diagram.drawio"
+      }
+    },
+    {
+      "id": "pik_20250906_192040_9f20687b",
+      "type": "ecosystem_forces",
+      "title": "MOTIVATION",
+      "elements_count": 346,
+      "relationships_count": 2760,
+      "confidence": 0.8655202312138773,
+      "files": {
+        "analysis": "analysis/pik_20250906_192040_9f20687b_analysis.json",
+        "report": "analysis/pik_20250906_192040_9f20687b_report.md",
+        "drawio": "drawio/pik_20250906_192040_9f20687b_diagram.drawio"
+      }
+    },
+    {
+      "id": "pik_20250906_192042_43f6d2f9",
+      "type": "nfx_engines",
+      "title": "SUSTAINABILITY",
+      "elements_count": 80,
+      "relationships_count": 207,
+      "confidence": 0.8049999999999988,
+      "files": {
+        "analysis": "analysis/pik_20250906_192042_43f6d2f9_analysis.json",
+        "report": "analysis/pik_20250906_192042_43f6d2f9_report.md",
+        "drawio": "drawio/pik_20250906_192042_43f6d2f9_diagram.drawio"
+      }
+    },
+    {
+      "id": "pik_20250906_192045_fab9493e",
+      "type": "ecosystem_forces",
+      "title": "ENVIRONMENT",
+      "elements_count": 191,
+      "relationships_count": 1420,
+      "confidence": 0.825078534031415,
+      "files": {
+        "analysis": "analysis/pik_20250906_192045_fab9493e_analysis.json",
+        "report": "analysis/pik_20250906_192045_fab9493e_report.md",
+        "drawio": "drawio/pik_20250906_192045_fab9493e_diagram.drawio"
+      }
+    },
+    {
+      "id": "pik_20250906_192047_d4b8a70e",
+      "type": "value_network",
+      "title": "CONSUMERS",
+      "elements_count": 71,
+      "relationships_count": 175,
+      "confidence": 0.7911267605633792,
+      "files": {
+        "analysis": "analysis/pik_20250906_192047_d4b8a70e_analysis.json",
+        "report": "analysis/pik_20250906_192047_d4b8a70e_report.md",
+        "drawio": "drawio/pik_20250906_192047_d4b8a70e_diagram.drawio"
+      }
+    }
+  ]
+}
