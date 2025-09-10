@@ -1,6 +1,9 @@
 export const BM_POSTER_PATHS = [
   'data/uploads/PIK-Platform-Business-Model.pdf',
   'data/uploads/PIK-Platform-Business-Model.png',
+  // Common official naming variants
+  'data/uploads/PIK 5-0 - Platform Business Model - ENG.pdf',
+  'data/uploads/PIK 5-0 - Platform Business Model - ENG.png',
 ];
 
 export const BM_ZONE_KEYS: { key: string; name: string }[] = [
@@ -26,4 +29,3 @@ export const BM_ZONE_KEYS: { key: string; name: string }[] = [
   { key: 'sam', name: 'SAM' },
   { key: 'som', name: 'SOM' },
 ];
-

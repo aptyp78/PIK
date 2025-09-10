@@ -5,9 +5,20 @@ import fs from 'fs/promises';
 import { BM_POSTER_PATHS, BM_ZONE_KEYS } from '@/lib/bm/constants';
 
 async function findPosterPath(): Promise<{ path: string; type: string } | null> {
+  // 1) Exact candidates
   for (const p of BM_POSTER_PATHS) {
-    try { await fs.access(p); return { path: p, type: p.endsWith('.png') ? 'png' : 'pdf' }; } catch {}
+    try { await fs.access(p); return { path: p, type: p.toLowerCase().endsWith('.png') ? 'png' : 'pdf' }; } catch {}
   }
+  // 2) Directory scan for common patterns
+  const dir = 'data/uploads';
+  try {
+    const items = await fs.readdir(dir).catch(() => []);
+    const cand = items.find((n) => /platform\s*business\s*model/i.test(n) && /(\.pdf|\.png)$/i.test(n));
+    if (cand) {
+      const p = `${dir}/${cand}`;
+      return { path: p, type: p.toLowerCase().endsWith('.png') ? 'png' : 'pdf' };
+    }
+  } catch {}
   return null;
 }
 
@@ -29,4 +40,3 @@ export async function GET(_req: NextRequest) {
   const zones = await prisma.zone.findMany({ where: { docId: doc.id }, orderBy: { id: 'asc' } });
   return NextResponse.json({ ok: true, docId: doc.id, path: doc.path, type: doc.type, canvasProfileId: doc.canvasProfileId, canvasTransform: doc.canvasTransform, zones });
 }
-

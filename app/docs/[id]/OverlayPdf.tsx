@@ -1,6 +1,9 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from 'react';
 import profile from '@/lib/canvas/profiles/PIK_BusinessModel_v5.json';
+import * as pdfjsLib from 'pdfjs-dist';
+// @ts-ignore align worker version dynamically
+(pdfjsLib as any).GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${(pdfjsLib as any).version}/build/pdf.worker.min.mjs`;
 
 type Block = { id: number; page: number; bbox: string; role: string; text: string | null };
 
@@ -57,6 +60,7 @@ export default function OverlayPdf({ docId, pages }: { docId: number; pages?: nu
   // Render the page via pdf.js
   useEffect(() => {
     let canceled = false;
+    const ref: { current: any } = { current: null };
     (async () => {
       const canvas = canvasRef.current;
       if (!canvas) return;
@@ -75,12 +79,15 @@ export default function OverlayPdf({ docId, pages }: { docId: number; pages?: nu
       canvas.height = viewport.height;
       setPageSize({ width: viewport.width, height: viewport.height });
       const renderContext = { canvasContext: ctx, viewport } as any;
-      await page.render(renderContext).promise;
+      try { ref.current?.cancel?.(); } catch {}
+      const task = page.render(renderContext);
+      ref.current = task;
+      try { await task.promise; } catch {}
       if (!canceled) {
         // Nothing else; overlay is drawn via absolutely positioned div over the canvas
       }
     })().catch(() => {});
-    return () => { canceled = true; };
+    return () => { canceled = true; try { ref.current?.cancel?.(); } catch {} };
   }, [docId, pageNum]);
 
   const pageBlocks = useMemo(() => blocks.filter(b => b.page === pageNum - 1), [blocks, pageNum]);

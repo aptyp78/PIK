@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
+// Align worker version with installed pdfjs version to avoid mismatch errors
 // @ts-ignore
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@4.7.76/build/pdf.worker.min.mjs';
+(pdfjsLib as any).GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${(pdfjsLib as any).version}/build/pdf.worker.min.mjs`;
 import profile from '@/lib/canvas/profiles/PIK_BusinessModel_v5.json';
 
 type Zone = { id: number; key: string; name: string; status: string; text?: string|null; confidence: number; owner?: string|null; tags?: string|null };
@@ -16,8 +17,11 @@ export default function BMPage() {
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const [drawing, setDrawing] = useState(false);
   const [evidenceRect, setEvidenceRect] = useState<{x:number;y:number;w:number;h:number}|null>(null);
+  const [qdrantItems, setQdrantItems] = useState<{ id: string|number; payload: any }[] | null>(null);
 
   useEffect(() => {
+    const renderTaskRef: { current: any } = { current: null };
+    let cancelled = false;
     (async () => {
       const res = await fetch('/api/bm/init');
       const json = await res.json();
@@ -37,13 +41,19 @@ export default function BMPage() {
           const viewport = page.getViewport({ scale: 1.5 });
           const canvas = canvasRef.current!; const ctx = canvas.getContext('2d')!;
           canvas.width = viewport.width; canvas.height = viewport.height;
+          // Cancel any previous task before starting a new one
+          try { renderTaskRef.current?.cancel?.(); } catch {}
           // @ts-ignore
-          await page.render({ canvasContext: ctx, viewport }).promise;
+          const task = page.render({ canvasContext: ctx, viewport });
+          renderTaskRef.current = task;
+          try { await task.promise; } catch {}
+          if (cancelled) return;
         } else {
           const img = new Image(); img.onload = () => { const c = canvasRef.current!; const ctx = c.getContext('2d')!; c.width = img.width; c.height = img.height; ctx.drawImage(img,0,0); }; img.src = path;
         }
       }
     })();
+    return () => { cancelled = true; try { (renderTaskRef.current as any)?.cancel?.(); } catch {} };
   }, []);
 
   function changeActive<K extends keyof Zone>(k: K, v: Zone[K]) {
@@ -161,6 +171,28 @@ export default function BMPage() {
             )}
           </div>
         </div>
+        <div className="mt-4 border rounded p-3 text-sm">
+          <div className="font-semibold mb-2">Qdrant preview</div>
+          <div className="flex gap-2 mb-2">
+            <button className="px-3 py-1 border rounded" onClick={async()=>{
+              try {
+                const res = await fetch('/api/qdrant/sample?limit=10');
+                const json = await res.json();
+                if (json?.ok) setQdrantItems(json.items || []); else setQdrantItems([]);
+              } catch { setQdrantItems([]); }
+            }}>Load 10</button>
+          </div>
+          {qdrantItems && (
+            <ul className="space-y-1 max-h-60 overflow-auto">
+              {qdrantItems.map((it, i) => (
+                <li key={i} className="border rounded px-2 py-1">
+                  <div className="text-xs text-gray-500">id: {String(it.id)}</div>
+                  <div className="text-xs whitespace-nowrap overflow-hidden text-ellipsis">{JSON.stringify(it.payload).slice(0, 160)}</div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       )}
     </main>
   );
@@ -191,4 +223,3 @@ function BMHints({ zones }: { zones: Zone[] }) {
     </div>
   );
 }
-
