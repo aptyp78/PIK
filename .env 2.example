@@ -1,0 +1,20 @@
+# Adobe OAuth (IMS v3)
+ADOBE_ORG_ID=
+ADOBE_CLIENT_ID=
+ADOBE_CLIENT_SECRET=
+ADOBE_SCOPES=openid AdobeID DCAPI
+ADOBE_TECHNICAL_ACCOUNT_ID=
+ADOBE_TECHNICAL_ACCOUNT_EMAIL=
+ADOBE_IMS_HOST=https://ims-na1.adobelogin.com
+
+# PDF Services (legacy key for fallback)
+ADOBE_API_KEY=
+
+# (optional)
+OPENAI_API_KEY=
+
+# Mock ingest (локальная отладка)
+# Принудительный mock вместо Adobe Extract
+MOCK_ADOBE=0
+# Авто-mock при сетевой ошибке (1=включено)
+MOCK_ADOBE_AUTO=1

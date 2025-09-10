@@ -1,0 +1,76 @@
+// Prisma schema for PIK‑AI Parsing MVP
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model SourceDoc {
+  id        Int      @id @default(autoincrement())
+  title     String
+  type      String?
+  path      String
+  engine    String?   // 'adobe' | 'unstructured'
+  canvasProfileId String?
+  canvasTransform String? // JSON string: { scaleX, scaleY, offsetX, offsetY, flipY, rotation }
+  canvasMatchScore Float?
+  pages     Int?
+  createdAt DateTime @default(now())
+  blocks    Block[]
+}
+
+model Block {
+  id          Int      @id @default(autoincrement())
+  sourceDocId Int
+  page        Int
+  bbox        String    // serialized bounding box: [x0,y0,x1,y1]
+  role        String    // e.g. heading, paragraph, list, table
+  text        String?
+  tableJson   String?   // optional JSON for table structures
+  hash        String?   // optional checksum to detect duplicates
+  sourceDoc   SourceDoc @relation(fields: [sourceDocId], references: [id], onDelete: Cascade)
+
+  @@index([sourceDocId])
+  @@index([page])
+  /// Create a simple index on text for faster LIKE queries.
+  @@index([text])
+}
+
+model Methodology {
+  id      Int     @id @default(autoincrement())
+  title   String
+  version String
+  frames  Frame[]
+
+  /// Ensure that a methodology is unique by the combination of title and version.
+  @@unique([title, version])
+}
+
+model Frame {
+  id             Int          @id @default(autoincrement())
+  methodologyId  Int
+  name           String
+  slug           String @unique
+  order          Int?
+  fields         Field[]
+  methodology    Methodology  @relation(fields: [methodologyId], references: [id], onDelete: Cascade)
+
+  @@index([methodologyId])
+}
+
+model Field {
+
+  id      Int   @id @default(autoincrement())
+  frameId Int
+  name    String
+  slug    String @unique
+  description String?
+  order   Int?
+  frame   Frame @relation(fields: [frameId], references: [id], onDelete: Cascade)
+
+  @@index([frameId])
+}

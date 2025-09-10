@@ -1,0 +1,33 @@
+<mxGraphModel dx="735" dy="585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="2" value="Intake" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="120" width="160" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="3" value="Normalize" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="240" y="120" width="160" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="4" value="Model" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="440" y="120" width="160" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="5" value="Review" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="640" y="120" width="160" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="6" value="Publish" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="840" y="120" width="160" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="8" style="edgeStyle=elbowEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="2" target="3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="9" style="edgeStyle=elbowEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="3" target="4">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="10" style="edgeStyle=elbowEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="4" target="5">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="11" style="edgeStyle=elbowEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="5" target="6">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>

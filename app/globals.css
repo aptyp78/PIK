@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles can be added here */
+.target-highlight:target {
+  outline: 2px solid #f59e0b; /* amber-500 */
+  background-color: rgba(245, 158, 11, 0.08);
+}

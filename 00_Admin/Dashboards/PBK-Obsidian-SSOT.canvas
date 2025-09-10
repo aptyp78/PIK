@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"n-intake","type":"text","x":-320,"y":-40,"width":320,"height":120,"text":"# Intake\nweb and pdf to _Sources"},
+		{"id":"n-normalize","type":"text","x":60,"y":-40,"width":340,"height":120,"text":"# Normalize\nfrontmatter and links"},
+		{"id":"n-model","type":"text","x":460,"y":-40,"width":320,"height":140,"text":"# Model\nframeworks, playbooks, canvases, terms"},
+		{"id":"n-review","type":"text","x":840,"y":-40,"width":240,"height":120,"text":"# Review\nchecklist and approval"},
+		{"id":"n-publish","type":"text","x":1140,"y":-40,"width":260,"height":120,"text":"# Publish\nDashboards and site"},
+		{"id":"n-roles","type":"text","x":460,"y":180,"width":460,"height":180,"text":"# Roles\nowner, librarian, producer, editor, reviewer, publisher, admin"},
+		{"id":"n-metrics","type":"text","x":60,"y":180,"width":360,"height":140,"text":"# Metrics\ncoverage, freshness, link density, orphan rate, publish latency"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"n-intake","toNode":"n-normalize","fromSide":"right","toSide":"left"},
+		{"id":"e2","fromNode":"n-normalize","toNode":"n-model","fromSide":"right","toSide":"left"},
+		{"id":"e3","fromNode":"n-model","toNode":"n-review","fromSide":"right","toSide":"left"},
+		{"id":"e4","fromNode":"n-review","toNode":"n-publish","fromSide":"right","toSide":"left"}
+	]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "pik-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:3001": "PORT=3001 next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev --name init",
+    "db:seed": "tsx prisma/seed.ts",
+    "adobe:token": "tsx scripts/adobeToken.ts",
+    "report:co-pilot": "node scripts/generateCoPilotReport.js",
+    "tunnel:cf": "bash scripts/tunnel-cloudflare.sh",
+    "health:smoke": "tsx scripts/healthSmoke.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.15.0",
+    "next": "14.2.32",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "jszip": "^3.10.1",
+    "pdfjs-dist": "^4.7.76",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.21",
+    "autoprefixer": "10.4.14",
+    "postcss": "8.4.24",
+    "prisma": "^6.15.0",
+    "tailwindcss": "3.4.4",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.0",
+    "typescript": "5.3.3"
+  }
+}

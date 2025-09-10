@@ -1,0 +1,12 @@
+{
+  "id": "PIK_BusinessModel_v5",
+  "name": "PIK Platform Business Model v5.0",
+  "canonical": { "width": 1000, "height": 1400 },
+  "zones": [
+    { "id": "core-services", "name": "Core Services", "polygon": [[60,260],[460,260],[460,520],[60,520]] },
+    { "id": "core-value-proposition", "name": "Core Value Proposition", "polygon": [[540,260],[940,260],[940,520],[540,520]] },
+    { "id": "value-capture", "name": "Value Capture", "polygon": [[60,560],[460,560],[460,800],[60,800]] },
+    { "id": "cost-structure", "name": "Cost Structure", "polygon": [[540,560],[940,560],[940,800],[540,800]] }
+  ]
+}
+
