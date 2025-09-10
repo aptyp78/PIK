@@ -8,12 +8,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="font-sans">
         <header className="border-b bg-white">
           <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
-            <Link href="/" className="font-semibold">PIK‑AI</Link>
+            <Link href="/bm" className="font-semibold">Platform Business Model</Link>
             <nav className="flex items-center gap-3 text-sm">
-              <Link className="underline" href="/upload">Upload</Link>
-              <Link className="underline" href="/docs">Docs</Link>
-              <Link className="underline" href="/frames">Frames</Link>
-              <Link className="underline" href="/compare">Compare</Link>
+              <Link className="underline" href="/bm">Business Model</Link>
+              <Link className="underline" href="/bm/export">Export</Link>
             </nav>
           </div>
         </header>

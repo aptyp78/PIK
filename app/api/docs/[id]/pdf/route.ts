@@ -9,7 +9,8 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
   const doc = await prisma.sourceDoc.findUnique({ where: { id }, select: { path: true } });
   if (!doc?.path) return NextResponse.json({ error: 'Not found' }, { status: 404 });
   try {
-    const buf = await fs.readFile(doc.path);
+    const p = doc.path.startsWith('/') ? doc.path : `${process.cwd()}/${doc.path}`;
+    const buf = await fs.readFile(p);
     return new NextResponse(buf, {
       status: 200,
       headers: {
@@ -21,4 +22,3 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
     return NextResponse.json({ error: 'File not available' }, { status: 404 });
   }
 }
-
