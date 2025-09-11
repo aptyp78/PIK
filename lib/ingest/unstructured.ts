@@ -42,7 +42,11 @@ function hashBlock(b: UBlock): string {
 }
 
 export async function extractUnstructured(filePath: string, fileName: string) {
-  const base = process.env.UNSTRUCTURED_API_URL || '';
+  let base = process.env.UNSTRUCTURED_API_URL || '';
+  // If configured with Platform base, switch to Hosted general endpoint for partition
+  if (/platform\.unstructuredapp\.io/.test(base) || /\/api\/v1\/?$/.test(base)) {
+    base = 'https://api.unstructuredapp.io';
+  }
   const key = process.env.UNSTRUCTURED_API_KEY || '';
   if (!base || !key) throw new Error('Unstructured API is not configured');
   const url = base.replace(/\/$/, '') + '/general/v0/general';
