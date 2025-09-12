@@ -250,6 +250,19 @@ export default function AdobeViewerClient() {
               })()}
             </div>
           </div>
+          {mappedZones && mappedZones.length>0 && (
+            <div className="mt-2 text-xs text-gray-700 flex flex-wrap gap-2">
+              {mappedZones.map((z, idx) => {
+                const col = ['#ff3b30','#ff9500','#ffcc00','#34c759','#0a84ff','#5e5ce6','#bf5af2','#ff375f','#64d2ff','#ffd60a'][idx%10];
+                return (
+                  <span key={z.id} className="inline-flex items-center gap-1">
+                    <span style={{ display:'inline-block', width:10, height:10, background:col, borderRadius:2 }} />
+                    <span>{z.title || z.id}</span>
+                  </span>
+                );
+              })}
+            </div>
+          )}
         )}
       </div>
     </div>
