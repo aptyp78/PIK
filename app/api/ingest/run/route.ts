@@ -6,6 +6,7 @@ import { logEvent } from '@/lib/log';
 import fs from 'fs/promises';
 import path from 'path';
 import { extractWithRawJob } from '@/lib/pdf/adobeExtract';
+import { uploadJson } from '@/lib/gcs';
 import extractUnstructured from '@/lib/ingest/unstructured';
 
 async function findPosterPath(): Promise<{ path: string; type: string } | null> {
@@ -94,8 +95,19 @@ export async function POST(req: NextRequest) {
     await fs.writeFile(out, JSON.stringify(raw, null, 2), 'utf8');
     await fs.writeFile(outBlocks, JSON.stringify(blocks, null, 2), 'utf8');
     const jobId = `local-${Date.now()}`;
-    await logEvent('ingest:run:fallback', { requestId: rid, jobId, artifact: out, durationMs: Date.now() - started });
-    const res = NextResponse.json({ ok: true, workflowId: 'local', jobId, requestId: rid });
+    // Upload Adobe artifact to GCS Adobe_Destination as well
+    let artifactGcs: string | undefined;
+    try {
+      const bucket = process.env.GCS_RESULTS_BUCKET || '';
+      const prefix = (process.env.GCS_ADOBE_DEST_PREFIX || 'Adobe_Destination').replace(/\/$/, '');
+      if (bucket) {
+        const baseName = path.basename(poster.path);
+        const objectName = `${prefix}/${baseName}.json`;
+        artifactGcs = await uploadJson(bucket, objectName, raw);
+      }
+    } catch {}
+    await logEvent('ingest:run:fallback', { requestId: rid, jobId, artifact: out, artifactGcs, durationMs: Date.now() - started });
+    const res = NextResponse.json({ ok: true, workflowId: 'local', jobId, artifactGcs: artifactGcs || null, requestId: rid });
     res.headers.set('x-request-id', rid);
     return res;
   } catch (e: any) {

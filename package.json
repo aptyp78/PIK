@@ -17,12 +17,13 @@
     "health:smoke": "tsx scripts/healthSmoke.ts"
   },
   "dependencies": {
+    "@google-cloud/storage": "^7.17.1",
     "@prisma/client": "^6.15.0",
+    "jszip": "^3.10.1",
     "next": "14.2.32",
+    "pdfjs-dist": "^4.7.76",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "jszip": "^3.10.1",
-    "pdfjs-dist": "^4.7.76",
     "zod": "^4.1.5"
   },
   "devDependencies": {

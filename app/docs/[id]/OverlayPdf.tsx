@@ -1,22 +1,20 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from 'react';
-import profile from '@/lib/canvas/profiles/PIK_BusinessModel_v5.json';
 import * as pdfjsLib from 'pdfjs-dist';
 // @ts-ignore align worker version dynamically
 (pdfjsLib as any).GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${(pdfjsLib as any).version}/build/pdf.worker.min.mjs`;
 
 type Block = { id: number; page: number; bbox: string; role: string; text: string | null };
 
-type Profile = {
+type View = {
   // scale: -1 означает авто-подбор по ширине страницы
   scale: number;
   offsetX: number;
   offsetY: number;
   flipY: boolean;
-  unit: 'points' | 'px';
 };
 
-const DEFAULT_PROFILE: Profile = { scale: -1, offsetX: 0, offsetY: 0, flipY: true, unit: 'points' };
+const DEFAULT_VIEW: View = { scale: -1, offsetX: 0, offsetY: 0, flipY: true };
 
 export default function OverlayPdf({ docId, pages }: { docId: number; pages?: number }) {
   const [pageNum, setPageNum] = useState(1);
@@ -26,19 +24,18 @@ export default function OverlayPdf({ docId, pages }: { docId: number; pages?: nu
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const [pageSize, setPageSize] = useState<{ width: number; height: number } | null>(null);
-  const [docCanvas, setDocCanvas] = useState<{ transform?: any; profileId?: string } | null>(null);
-  const storageKey = `doc:${docId}:overlayProfile`;
-  const [profile, setProfile] = useState<Profile>(() => {
+  const storageKey = `doc:${docId}:overlayView`;
+  const [view, setView] = useState<View>(() => {
     try {
       const raw = localStorage.getItem(storageKey);
       if (raw) return JSON.parse(raw);
     } catch {}
-    return DEFAULT_PROFILE;
+    return DEFAULT_VIEW;
   });
 
   useEffect(() => {
-    try { localStorage.setItem(storageKey, JSON.stringify(profile)); } catch {}
-  }, [profile, storageKey]);
+    try { localStorage.setItem(storageKey, JSON.stringify(view)); } catch {}
+  }, [view, storageKey]);
 
   useEffect(() => {
     (async () => {
@@ -48,9 +45,7 @@ export default function OverlayPdf({ docId, pages }: { docId: number; pages?: nu
         const json = await res.json();
         const arr = (json?.blocks || []) as Block[];
         setBlocks(arr);
-        if (json?.canvasTransform) {
-          try { setDocCanvas({ transform: JSON.parse(json.canvasTransform), profileId: json.canvasProfileId }); } catch {}
-        }
+        // no canvas/profile metadata anymore
       } finally {
         setLoading(false);
       }
@@ -104,80 +99,58 @@ export default function OverlayPdf({ docId, pages }: { docId: number; pages?: nu
       }, 1);
       if (maxX > 1) autoK = width / maxX;
     } catch {}
-    const k = profile.scale > 0 ? profile.scale : autoK;
+    const k = view.scale > 0 ? view.scale : autoK;
     return pageBlocks.map(b => {
       let [x0,y0,x1,y1] = JSON.parse(b.bbox) as [number,number,number,number];
       // normalize coordinates
-      if (profile.flipY) {
+      if (view.flipY) {
         const ny0 = height - y1;
         const ny1 = height - y0;
         y0 = ny0; y1 = ny1;
       }
       // unit conversion: assume points->px heuristic; user tunes with scale
-      let x = x0 * k + profile.offsetX;
-      let y = y0 * k + profile.offsetY;
+      let x = x0 * k + view.offsetX;
+      let y = y0 * k + view.offsetY;
       let w = (x1 - x0) * k;
       let h = (y1 - y0) * k;
       return { id: b.id, x, y, w, h, role: b.role };
     });
-  }, [pageBlocks, pageSize, profile]);
+  }, [pageBlocks, pageSize, view]);
 
   return (
     <div className="mb-6">
-      {docCanvas?.transform && (
-        <div className="mb-2 text-xs text-gray-600">Profile: {docCanvas.profileId || '—'} · Transform: {JSON.stringify(docCanvas.transform)}</div>
-      )}
       <div className="flex flex-wrap gap-3 items-end mb-2 text-sm">
         <label className="flex items-center gap-1">Page
           <input type="number" min={1} max={pages || 9999} value={pageNum}
                  onChange={(e)=>setPageNum(Number(e.target.value)||1)} className="border rounded px-2 py-1 w-20" />
         </label>
         <label className="flex items-center gap-1">Scale
-          <input type="number" step="0.1" value={profile.scale}
-                 onChange={(e)=>setProfile(p=>({ ...p, scale: Number(e.target.value)||1 }))}
+          <input type="number" step="0.1" value={view.scale}
+                 onChange={(e)=>setView(p=>({ ...p, scale: Number(e.target.value)||1 }))}
                  className="border rounded px-2 py-1 w-24" />
         </label>
         <label className="flex items-center gap-1">offsetX
-          <input type="number" step="1" value={profile.offsetX}
-                 onChange={(e)=>setProfile(p=>({ ...p, offsetX: Number(e.target.value)||0 }))}
+          <input type="number" step="1" value={view.offsetX}
+                 onChange={(e)=>setView(p=>({ ...p, offsetX: Number(e.target.value)||0 }))}
                  className="border rounded px-2 py-1 w-24" />
         </label>
         <label className="flex items-center gap-1">offsetY
-          <input type="number" step="1" value={profile.offsetY}
-                 onChange={(e)=>setProfile(p=>({ ...p, offsetY: Number(e.target.value)||0 }))}
+          <input type="number" step="1" value={view.offsetY}
+                 onChange={(e)=>setView(p=>({ ...p, offsetY: Number(e.target.value)||0 }))}
                  className="border rounded px-2 py-1 w-24" />
         </label>
         <label className="flex items-center gap-1">
-          <input type="checkbox" checked={profile.flipY}
-                 onChange={(e)=>setProfile(p=>({ ...p, flipY: e.target.checked }))} /> flipY
-        </label>
-        <label className="flex items-center gap-1">unit
-          <select value={profile.unit} onChange={(e)=>setProfile(p=>({ ...p, unit: e.target.value as any }))}
-                  className="border rounded px-2 py-1">
-            <option value="points">points</option>
-            <option value="px">px</option>
-          </select>
+          <input type="checkbox" checked={view.flipY}
+                 onChange={(e)=>setView(p=>({ ...p, flipY: e.target.checked }))} /> flipY
         </label>
         <button className="px-3 py-1 border rounded" onClick={()=>setShowOverlay(s=>!s)}>
           {showOverlay ? 'Hide Overlay' : 'Show Overlay'}
         </button>
-        <button className="px-3 py-1 border rounded" onClick={()=>setProfile(DEFAULT_PROFILE)}>Reset</button>
+        <button className="px-3 py-1 border rounded" onClick={()=>setView(DEFAULT_VIEW)}>Reset</button>
         <span className="text-gray-500">{loading ? 'Loading blocks…' : `${pageBlocks.length} blocks on page`}</span>
       </div>
       <div className="relative inline-block border rounded">
         <canvas ref={canvasRef} className="block" />
-        {/* Template zones (canonical) */}
-        {showOverlay && profile?.zones && (
-          <svg className="absolute left-0 top-0" width={pageSize?.width||0} height={pageSize?.height||0} style={{ pointerEvents: 'none' }}>
-            {profile.zones.map((z: any) => (
-              <polygon key={z.id}
-                points={z.polygon.map((p: any) => p.join(',')).join(' ')}
-                transform={`matrix(${(profile.canonical.width? (pageSize?.width||0)/profile.canonical.width : 1)},0,0,${(profile.canonical.height? (pageSize?.height||0)/profile.canonical.height : 1)},0,0)`}
-                fill="rgba(0,200,0,0.1)" stroke="rgba(0,200,0,0.4)" strokeWidth={2}
-              />
-            ))}
-          </svg>
-        )}
         {showOverlay && (
           <div ref={overlayRef} className="absolute left-0 top-0 pointer-events-none">
             {pageSize && rects.map(r => (

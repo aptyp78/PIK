@@ -82,6 +82,15 @@ data/normalized/**/*
 !data/normalized/.gitkeep
 tsconfig.tsbuildinfo
 
+# Secrets and cloud outputs (never commit)
+secrets/
+*.pem
+*.p12
+
+# Local GCS mirror folders (if created by tools)
+Adobe_Destination/
+Qdrant_Destination/
+
 # Accidental duplicate manifests
 package 2.json
 package-lock 2.json

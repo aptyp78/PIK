@@ -6,6 +6,7 @@ import fs from 'fs/promises';
 import { randomUUID } from 'crypto';
 import prisma from '@/lib/prisma';
 import { extractWithRawJob, createPdfFromImage } from '@/lib/pdf/adobeExtract';
+import { uploadJson } from '@/lib/gcs';
 import extractUnstructured from '@/lib/ingest/unstructured';
 import { logEvent } from '@/lib/log';
 
@@ -73,24 +74,32 @@ export async function POST(req: NextRequest) {
       docPath = tempPath;
       await logEvent('upload:extract:done', { requestId: rid, engine, blocks: blocks.length });
     } else {
-      // Adobe engine (default fallback)
-      // For PNG: convert to PDF first
-      let localPdfPath = tempPath;
+      // Adobe engine → accept only PDF (PNG не обрабатываем в Adobe‑потоке)
       if (ext === 'png') {
-        await logEvent('upload:createpdf:start', { requestId: rid, tempPath });
-        const outPdf = path.join(uploadsDir, `${Date.now()}-${randomUUID()}.pdf`);
-        await createPdfFromImage(tempPath, outPdf);
         try { await fs.unlink(tempPath); } catch {}
-        localPdfPath = outPdf;
-        await logEvent('upload:createpdf:done', { requestId: rid, pdfPath: outPdf });
+        return fail(400, 'Adobe: PNG не поддерживается. Загрузите PDF или выберите движок unstructured.');
       }
+      const localPdfPath = tempPath;
       await logEvent('upload:extract:start', { requestId: rid, engine: 'adobe', path: localPdfPath });
       ({ raw, blocks } = await extractWithRawJob(localPdfPath));
-      docPath = localPdfPath;
       await logEvent('upload:extract:done', { requestId: rid, engine: 'adobe', blocks: blocks.length });
+
+      // Upload only to GCS
+      const bucket = process.env.GCS_RESULTS_BUCKET || '';
+      const prefix = (process.env.GCS_ADOBE_DEST_PREFIX || 'Adobe_Destination').replace(/\/$/, '');
+      if (!bucket) return fail(500, 'GCS_RESULTS_BUCKET is not set');
+      const baseName = name.replace(/\.[^.]+$/, '');
+      const objectName = `${prefix}/${baseName}.json`;
+      const gsUri = await uploadJson(bucket, objectName, raw);
+      // Cleanup temp files
+      try { await fs.unlink(tempPath); } catch {}
+      const res = ok({ ok: true, message: 'Adobe parse saved to GCS', engine: 'adobe', gcs: { bucket, object: objectName, uri: gsUri }, requestId: rid, durationMs: Date.now() - started });
+      res.headers.set('x-request-id', rid);
+      await logEvent('upload:success', { requestId: rid, engine: 'adobe', gcs: objectName, durationMs: Date.now() - started, name, size });
+      return res;
     }
 
-    // Persist raw and normalized
+    // Persist raw/normalized + DB (unstructured only)
     const fileBase = path.basename(docPath, path.extname(docPath));
     const rawOut = path.join(process.cwd(), 'data', 'raw', `${fileBase}.json`);
     const normOut = path.join(process.cwd(), 'data', 'normalized', `${fileBase}.json`);
@@ -99,16 +108,11 @@ export async function POST(req: NextRequest) {
     await fs.writeFile(rawOut, JSON.stringify(raw, null, 2), 'utf8');
     await fs.writeFile(normOut, JSON.stringify(blocks, null, 2), 'utf8');
 
-    // Insert into DB
     const maxObserved = blocks.reduce((m, b) => (b.page > m ? b.page : m), -1);
     const pagesCount = maxObserved >= 0 ? maxObserved + 1 : null;
     const title = name.replace(/\.[^.]+$/, '');
-    // Optional visual-first params from client
-    const canvasTransform = String(form.get('canvasTransform') || '');
-    const canvasProfileId = String(form.get('canvasProfileId') || 'PIK_BusinessModel_v5');
-    const canvasMatchScore = Number(String(form.get('canvasMatchScore') || '0')) || null;
     const doc = await prisma.sourceDoc.create({
-      data: { title, type: ext || 'pdf', path: docPath, engine, pages: pagesCount, canvasTransform: canvasTransform || null, canvasProfileId, canvasMatchScore: canvasMatchScore ?? undefined },
+      data: { title, type: ext || 'pdf', path: docPath, engine, pages: pagesCount },
     });
 
     if (blocks.length) {

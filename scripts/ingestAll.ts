@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import prisma from '../lib/prisma';
+// Adobe parsing → GCS only
+import { uploadJson } from '../lib/gcs';
 import '../lib/runtime/net';
 
 function loadEnvLocal() {
@@ -22,34 +23,14 @@ function loadEnvLocal() {
 async function ingestOne(absPath: string) {
   const { extractWithRawJob } = await import('../lib/pdf/adobeExtract');
   const { raw, blocks } = await extractWithRawJob(absPath);
-  const basename = path.basename(absPath, path.extname(absPath));
-  const fsPromises = await import('fs/promises');
-  const rawOut = path.join(process.cwd(), 'data', 'raw', `${basename}.json`);
-  const normOut = path.join(process.cwd(), 'data', 'normalized', `${basename}.json`);
-  await fsPromises.mkdir(path.dirname(rawOut), { recursive: true });
-  await fsPromises.mkdir(path.dirname(normOut), { recursive: true });
-  await fsPromises.writeFile(rawOut, JSON.stringify(raw, null, 2), 'utf8');
-  await fsPromises.writeFile(normOut, JSON.stringify(blocks, null, 2), 'utf8');
+  const bucket = process.env.GCS_RESULTS_BUCKET || '';
+  const prefix = (process.env.GCS_ADOBE_DEST_PREFIX || 'Adobe_Destination').replace(/\/$/, '');
+  if (!bucket) throw new Error('GCS_RESULTS_BUCKET is not set');
+  const base = path.basename(absPath);
+  const objectName = `${prefix}/${base}.json`;
+  const uri = await uploadJson(bucket, objectName, raw);
   const maxPage = blocks.reduce((m, b: any) => (b.page > m ? b.page : m), 0);
-  const doc = await prisma.sourceDoc.create({
-    data: { title: basename, type: path.extname(absPath).replace('.', ''), path: absPath, pages: maxPage || null },
-  });
-  if (blocks.length) {
-    const data = blocks.map((b: any) => ({
-      sourceDocId: doc.id,
-      page: b.page,
-      bbox: JSON.stringify(b.bbox),
-      role: b.role,
-      text: b.text ?? null,
-      tableJson: b.tableJson ? JSON.stringify(b.tableJson) : null,
-      hash: null,
-    }));
-    const CHUNK = 2000;
-    for (let i = 0; i < data.length; i += CHUNK) {
-      await prisma.block.createMany({ data: data.slice(i, i + CHUNK) });
-    }
-  }
-  return { docId: doc.id, pages: maxPage || null, blocks: blocks.length };
+  return { uri, pages: maxPage || null, blocks: blocks.length };
 }
 
 async function main() {
@@ -72,21 +53,21 @@ async function main() {
   const missing = files.filter((p) => !fs.existsSync(p));
   const results: any[] = [];
   let totalBlocks = 0;
-  let firstDocId: number | undefined;
-  let lastDocId: number | undefined;
+  let firstUri: string | undefined;
+  let lastUri: string | undefined;
   for (const p of existing) {
     try {
       const r = await ingestOne(p);
       results.push({ path: p, ok: true, ...r });
       totalBlocks += r.blocks;
-      if (!firstDocId) firstDocId = r.docId;
-      lastDocId = r.docId;
+      if (!firstUri) firstUri = r.uri;
+      lastUri = r.uri;
     } catch (e: any) {
       results.push({ path: p, ok: false, error: e?.message || String(e) });
     }
   }
   // eslint-disable-next-line no-console
-  console.log(JSON.stringify({ ok: results.some((i) => i.ok), results, missing, totalBlocks, firstDocId, lastDocId }, null, 2));
+  console.log(JSON.stringify({ ok: results.some((i) => i.ok), results, missing, totalBlocks, firstUri, lastUri }, null, 2));
 }
 
 main().catch((e) => {

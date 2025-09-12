@@ -88,12 +88,19 @@ async function getDownloadUriForAsset(assetID: string, headers: Record<string, s
   return uri;
 }
 
+function elementsToExtract(): string[] {
+  const raw = (process.env.ADOBE_ELEMENTS || '').trim();
+  if (!raw) return ['text', 'tables'];
+  const arr = raw.split(/[,\s]+/).map(s=>s.trim()).filter(Boolean);
+  return arr.length ? arr : ['text', 'tables'];
+}
+
 async function startExtractJob(assetID: string, headers: Record<string, string>): Promise<string> {
   // REST contract: top-level fields (no input/inputs/options wrappers)
-  const body = {
+  const body: any = {
     assetID,
-    elementsToExtract: ['text', 'tables'],
-  } as const;
+    elementsToExtract: elementsToExtract(),
+  };
   const res = await fetch(`https://${resolvePdfHost()}/operation/extractpdf`, {
     method: 'POST',
     headers: { ...headers, Accept: 'application/json', 'Content-Type': 'application/json' },

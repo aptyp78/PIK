@@ -9,7 +9,7 @@ export default async function Page() {
     <main className="max-w-5xl mx-auto p-4">
       <h1 className="text-2xl font-bold mb-3">Финальный результат</h1>
       <div className="mb-3 text-sm text-gray-600">Коллекция: {j?.collection || '—'} · Всего (оценка): {j?.count ?? '—'}</div>
-      <div className="mb-4"><a className="px-4 py-2 border rounded inline-block" href="/bm">Открыть визуализацию /bm</a></div>
+      <div className="mb-4 text-sm text-gray-600">Просмотр примеров ниже. Отдельная визуализация будет позже.</div>
       {!j?.ok ? (
         <div className="p-3 border rounded bg-red-50 text-red-700">Не удалось получить sample из Qdrant</div>
       ) : (
@@ -25,4 +25,3 @@ export default async function Page() {
     </main>
   );
 }
-

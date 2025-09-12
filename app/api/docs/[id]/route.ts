@@ -19,7 +19,7 @@ export async function GET(
       where: { id },
       select: {
         id: true, title: true, type: true, pages: true,
-        engine: true, canvasProfileId: true, canvasTransform: true, canvasMatchScore: true,
+        engine: true,
         blocks: {
           orderBy: [{ page: 'asc' }, { id: 'asc' }],
           select: { id: true, page: true, bbox: true, role: true, text: true }

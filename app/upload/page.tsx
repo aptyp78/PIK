@@ -24,13 +24,10 @@ export default function UploadPage() {
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const [zonesReady, setZonesReady] = useState(false);
-  const [canvasTransform, setCanvasTransform] = useState<{ scaleX: number; scaleY: number; offsetX: number; offsetY: number; flipY?: boolean }>({ scaleX: 1, scaleY: 1, offsetX: 0, offsetY: 0, flipY: true });
-  const [matchScore, setMatchScore] = useState(0.7);
+  // Visual preview only (no BM alignment)
 
   async function renderPreview(f: File) {
     try {
-      setZonesReady(false);
       const canvas = canvasRef.current; if (!canvas) return;
       const ctx = canvas.getContext('2d'); if (!ctx) return;
       if (f.type === 'application/pdf' || f.name.toLowerCase().endsWith('.pdf')) {
@@ -42,20 +39,15 @@ export default function UploadPage() {
         canvas.width = viewport.width; canvas.height = viewport.height;
         // @ts-ignore
         await page.render({ canvasContext: ctx, viewport }).promise;
-        const k = Math.min(1000 / viewport.width, 1400 / viewport.height);
-        setCanvasTransform({ scaleX: k, scaleY: k, offsetX: 0, offsetY: 0, flipY: true });
       } else {
         // PNG/JPG preview
         const img = new Image();
         img.onload = () => {
           canvas.width = img.width; canvas.height = img.height;
           ctx.drawImage(img, 0, 0);
-          const k = Math.min(1000 / img.width, 1400 / img.height);
-          setCanvasTransform({ scaleX: k, scaleY: k, offsetX: 0, offsetY: 0, flipY: false });
         };
         img.src = URL.createObjectURL(f);
       }
-      setZonesReady(true);
     } catch {}
   }
 
@@ -83,9 +75,6 @@ export default function UploadPage() {
       const fd = new FormData();
       fd.set('file', file);
       fd.set('engine', engine);
-      fd.set('canvasProfileId', 'PIK_BusinessModel_v5');
-      fd.set('canvasTransform', JSON.stringify(canvasTransform));
-      fd.set('canvasMatchScore', String(matchScore));
       const res = await fetch('/api/ingest/upload', { method: 'POST', body: fd });
       if (!res.ok) {
         const t = await res.text().catch(()=> '');
@@ -94,9 +83,14 @@ export default function UploadPage() {
       const json = await res.json();
       // Mark all steps green on success
       setSteps(s => s.map(it => ({ ...it, status: 'ok' })));
-      // Navigate to doc page with overlay
-      const id = json.docId as number;
-      setTimeout(() => router.push(`/docs/${id}`), 600);
+      // Route depends on engine
+      if (engine === 'adobe') {
+        // Show a toast-like inline message; do not redirect
+        setError(null);
+      } else {
+        const id = json.docId as number;
+        setTimeout(() => router.push(`/docs/${id}`), 600);
+      }
     } catch (e: any) {
       setSteps(s => s.map(it => ({ ...it, status: it.status === 'running' ? 'err' : it.status })));
       setError(e?.message || 'Upload failed');
@@ -145,18 +139,16 @@ export default function UploadPage() {
           <canvas ref={canvasRef} className="border rounded" />
         </div>
         <div className="border rounded p-3 text-sm">
-          <div className="font-semibold mb-2">Шаги</div>
-          <ul className="space-y-1">
-            <li>Visual Grab: {zonesReady ? 'ok' : (file ? 'running' : 'idle')}</li>
-            <li>Zones Live: {zonesReady ? 'ok' : 'idle'}</li>
-            <li>OCR Running: {busy ? 'running' : 'idle'}</li>
-            <li>Drafts Ready: {busy ? 'idle' : (file ? 'pending' : 'idle')}</li>
-          </ul>
+          <div className="font-semibold mb-2">Статус</div>
+          <div className="text-gray-600">{busy ? 'Загрузка…' : (file ? 'Готово к загрузке' : 'Файл не выбран')}</div>
         </div>
       </div>
       <div className="flex items-center gap-3">
         <button className="px-4 py-2 rounded bg-blue-600 text-white disabled:opacity-50" onClick={start} disabled={!file || busy}>Загрузить</button>
         {error && <div className="text-red-700 text-sm">{error}</div>}
+        {!error && steps.every(s=>s.status==='ok') && engine==='adobe' && (
+          <div className="text-sm text-green-700">Готово: результаты Adobe сохранены в GCS (Adobe_Destination)</div>
+        )}
       </div>
       <div>
         <div className="font-semibold mb-2">Статус</div>

@@ -88,15 +88,14 @@ export async function POST(req: NextRequest) {
     try {
       const ext = local.toLowerCase().split('.').pop();
       if (ext === 'png') {
-        const tmpPdf = path.join(process.cwd(), 'data', 'uploads', `${path.basename(local, '.png')}.adobe.tmp.pdf`);
-        try { await createPdfFromImage(local, tmpPdf); } catch {}
-        ({ blocks } = await extractWithRawJob(tmpPdf));
-        try { await fs.unlink(tmpPdf); } catch {}
+        // PNG не обрабатываем через Adobe — используем Unstructured
+        ({ blocks } = await extractUnstructured(local, path.basename(local)));
       } else {
         ({ blocks } = await extractWithRawJob(local));
       }
+    } catch {
+      ({ blocks } = await extractUnstructured(local, path.basename(local)));
     }
-    catch { ({ blocks } = await extractUnstructured(local, path.basename(local))); }
     const byPage = new Map<number, { idx:number; text:string; bbox:BBox }[]>();
     for (let i=0;i<blocks.length;i++) {
       const b = blocks[i];

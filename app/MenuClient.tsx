@@ -39,23 +39,7 @@ export default function MenuClient() {
     try { const r=await fetch('/api/qdrant/indexes', { method:'POST' }); const j=await r.json(); setOut(j); } finally { setBusy(null); }
   }
 
-  async function annotateAll() {
-    setBusy('annotate-all'); setOut(null);
-    try {
-      const r = await fetch('/api/pipeline/gdrive/annotate-all?recursive=1&limit=500', { method: 'POST' });
-      const j = await r.json(); setOut(j);
-    } finally { setBusy(null); }
-  }
-
-  async function clearAdobe() {
-    setBusy('clear-adobe'); setOut(null);
-    try { const r=await fetch('/api/pipeline/gdrive/adobe/clear', { method:'POST' }); const j=await r.json(); setOut(j);} finally { setBusy(null); }
-  }
-
-  async function runAdobe() {
-    setBusy('adobe-run'); setOut(null);
-    try { const r=await fetch('/api/pipeline/gdrive/adobe/run', { method:'POST' }); const j=await r.json(); setOut(j);} finally { setBusy(null); }
-  }
+  // Removed Drive-based batch/adobe actions
 
   async function annotateOne() {
     setBusy('annotate-one'); setOut(null);
@@ -74,10 +58,7 @@ export default function MenuClient() {
     try { const r=await fetch('/api/qdrant/sample?limit=10',{ cache:'no-store'}); const j=await r.json(); setOut(j); } finally { setBusy(null); }
   }
 
-  async function bmBlocks() {
-    setBusy('blocks'); setOut(null);
-    try { const r=await fetch('/api/bm/blocks?limit=50',{ cache:'no-store'}); const j=await r.json(); setOut(j); } finally { setBusy(null); }
-  }
+  // BM preview removed
 
   return (
     <div className="space-y-4">
@@ -85,9 +66,7 @@ export default function MenuClient() {
         <a className="px-4 py-3 border rounded hover:bg-gray-50" href="/results">Open Results</a>
         <button className="px-4 py-3 border rounded" onClick={runIngest} disabled={!!busy}>Run Platform Workflow {busy==='ingest' && '…'}</button>
         <button className="px-4 py-3 border rounded" onClick={createIndexes} disabled={!!busy}>Create Qdrant Indexes {busy==='indexes' && '…'}</button>
-        <button className="px-4 py-3 border rounded" onClick={annotateAll} disabled={!!busy}>Annotate All (Drive→Qdrant bbox) {busy==='annotate-all' && '…'}</button>
-        <button className="px-4 py-3 border rounded" onClick={clearAdobe} disabled={!!busy}>Adobe: Clear folder {busy==='clear-adobe' && '…'}</button>
-        <button className="px-4 py-3 border rounded" onClick={runAdobe} disabled={!!busy}>Adobe: Parse Drive → Adobe {busy==='adobe-run' && '…'}</button>
+        {/* Drive-based actions removed */}
         <a className="px-4 py-3 border rounded hover:bg-gray-50" href="/pipeline/adobe">Adobe Results</a>
         <a className="px-4 py-3 border rounded hover:bg-gray-50" href="/pipeline/final">Final Sample</a>
       </div>
@@ -102,7 +81,6 @@ export default function MenuClient() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <button className="px-4 py-3 border rounded" onClick={sampleQdrant} disabled={!!busy}>Qdrant Sample {busy==='sample' && '…'}</button>
-        <button className="px-4 py-3 border rounded" onClick={bmBlocks} disabled={!!busy}>Preview BM Blocks {busy==='blocks' && '…'}</button>
       </div>
       {job?.id && (
         <div className="text-sm">Job: <span className="font-mono">{job.id}</span> · Status: {job.status || '—'}</div>

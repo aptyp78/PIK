@@ -84,6 +84,7 @@ npm run adobe:token
    * Open **`/upload`** to upload a `.pdf` or `.png` (<= 30 MB). PNGs are converted via Create PDF first, then extracted.
    * Browse **`/docs`** for a list of uploaded documents; open an item to view extracted blocks grouped by page with a PDF overlay.
    * Use **`/api/search?q=…`** for a basic case‑insensitive substring search over the extracted text.  The endpoint returns up to 20 matching blocks with the document id, page and a snippet.
+   * View **`/pipeline/adobe`** to list and просмотреть JSON‑артефакты Adobe, сохранённые в GCS (`GCS_RESULTS_BUCKET`/`GCS_ADOBE_DEST_PREFIX`).
    * View **`/frames`** to see the static definitions of PIK frames and their fields.  Automatic mapping into these frames is not yet implemented.
    
 Health endpoint: `/api/health` → `{ ok, docs, blocks, time }`.
@@ -131,7 +132,7 @@ Health endpoint: `/api/health` → `{ ok, docs, blocks, time }`.
 
 ## Adobe Extract implementation
 
-`lib/pdf/adobeExtract.ts` implements the **async job flow** (asset upload → start job → polling → result download). Helper `extractWithRawJob` returns `{ raw, blocks }`. PNG uploads are converted via `Create PDF` before extraction.
+`lib/pdf/adobeExtract.ts` implements the **async job flow** (asset upload → start job → polling → result download). Helper `extractWithRawJob` returns `{ raw, blocks }`. PNG uploads are converted via `Create PDF` before extraction. При выборе движка `adobe` на `/upload` результат парсинга сохраняется только в GCS (`GCS_RESULTS_BUCKET`/`GCS_ADOBE_DEST_PREFIX`).
 
 ## Prisma data model
 

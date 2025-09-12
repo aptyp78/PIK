@@ -1,0 +1,10 @@
+{
+  "id": "PIK_PBM_v5",
+  "title": "Platform Business Model v5 (example)",
+  "version": "5.0",
+  "zones": [
+    { "id": "left-rail", "title": "Left Rail", "box": [0.04, 0.08, 0.22, 0.92] },
+    { "id": "main-area", "title": "Main Area", "box": [0.24, 0.08, 0.96, 0.92] }
+  ]
+}
+

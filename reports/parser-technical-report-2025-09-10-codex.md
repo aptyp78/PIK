@@ -5,22 +5,21 @@
 
 ## 1. Резюме
 
-Система переведена в режим Uploads‑Only, без предзагруженных данных. Поддерживаются два реальных двигателя извлечения: Adobe PDF Services (job‑based) и Unstructured Hosted API (Partition). Добавлен «Шаг 0: Visual‑First» — пользователь видит холст и зоны сразу после загрузки файла, без ожидания OCR.
+Система переведена в режим Uploads‑Only, без предзагруженных данных. Поддерживаются два реальных двигателя извлечения: Adobe PDF Services (job‑based) и Unstructured Hosted API (Partition). Результаты Adobe сохраняются только в GCS (`GCS_RESULTS_BUCKET`/`GCS_ADOBE_DEST_PREFIX`).
 
 Ключевые достижения:
 - Два движка: Unstructured (по умолчанию) и Adobe; переключение на `/upload`.
-- Визуальный захват: рендер 1‑й страницы PDF/PNG и немедленное отображение зон шаблона (Business Model v5).
+- Сохранение артефактов Adobe в GCS и предпросмотр на `/pipeline/adobe`.
 - Интеграция логов событий в формате JSONL, health‑роуты для обоих движков.
-- Новые поля в БД для хранения выравнивания зон и использованного движка.
 
 ## 2. Архитектура и поток
 
 Высокоуровневый поток Uploads‑Only:
 
 1) Пользователь загружает файл на `/upload` (PDF/PNG, ≤ 30 МБ)
-2) UI немедленно рендерит превью 1‑й страницы и накладывает зоны шаблона (Visual‑First)
-3) Бэкенд запускает выбранный движок извлечения → нормализация блоков → сохранение raw/normalized и запись в БД
-4) Автопереход на `/docs/:id` с включённым Overlay и последующим отображением блоков/репорта
+2) UI показывает превью 1‑й страницы
+3) Бэкенд запускает выбранный движок извлечения → нормализация блоков → сохранение raw/normalized и запись в БД (для Unstructured)
+4) Для Adobe — сохраняем raw JSON в GCS и показываем на `/pipeline/adobe`; для Unstructured — переход на `/docs/:id`
 
 ## 3. Движки извлечения
 
@@ -42,20 +41,9 @@
 - PNG: предварительный `Create PDF` (POST `/operation/createpdf`), затем обычный Extract
 - Нормализация: элементы/элементы таблиц → Block (page, bbox, role, text?, tableJson?)
 
-## 4. Visual‑First (Шаг 0)
+## 4. Visual‑First
 
-### 4.1 Профиль зон
-- Файл: `lib/canvas/profiles/PIK_BusinessModel_v5.json`
-- Структура: { id, name, canonical {width,height}, zones:[{ id,name,polygon }] }
-
-### 4.2 Выравнивание
-- Код: `lib/canvas/visualAlign.ts`, `lib/canvas/transform.ts`
-- Текущая реализация: чтение геометрии 1‑й страницы через pdfjs → fitToCanonical(1000×1400), `matchScore≈0.7` (плейсхолдер)
-- Преобразование: `{ scaleX, scaleY, offsetX, offsetY, flipY, rotation? }`
-
-### 4.3 Сохранение выравнивания
-- Поля в БД: `SourceDoc.canvasProfileId`, `SourceDoc.canvasTransform` (JSON строка), `SourceDoc.canvasMatchScore`
-- Передача с фронта при upload: поля формы `canvasProfileId`, `canvasTransform`, `canvasMatchScore`
+Функциональность визиуализации зон (BM) и связанное выравнивание удалены на данном этапе.
 
 ## 5. Данные и БД
 
@@ -63,25 +51,26 @@
 
 `prisma/schema.prisma:SourceDoc`
 - `engine: String?` — 'adobe' | 'unstructured'
-- `canvasProfileId: String?`
-- `canvasTransform: String?` (JSON)
-- `canvasMatchScore: Float?`
+- `pages: Int?` — количество страниц (при наличии)
 
 ### 5.2 Хранилище артефактов
 - Исходники загрузок: `data/uploads/` (gitignored)
-- Raw JSON от движков: `data/raw/…json`
-- Нормализованные блоки: `data/normalized/…json`
+- Raw JSON (Unstructured): `data/raw/…json`
+- Нормализованные блоки (Unstructured): `data/normalized/…json`
+- Артефакты Adobe: GCS `GCS_RESULTS_BUCKET/GCS_ADOBE_DEST_PREFIX`
 
 ## 6. API
 
 - `POST /api/ingest/upload` — основная точка загрузки
-  - Параметры формы: `file`, `engine` ('unstructured' | 'adobe'), `canvasProfileId`, `canvasTransform`, `canvasMatchScore`
-  - Возвращает: `{ ok, engine, docId, pages, blocks, requestId }`
-  - Логи: `upload:received`, `upload:extract:start|done`, `upload:db:inserted`, `upload:success|error`
+  - Параметры формы: `file`, `engine` ('unstructured' | 'adobe')
+  - Возвращает: Unstructured → `{ ok, engine, docId, pages, blocks, requestId }`; Adobe → `{ ok, engine: 'adobe', gcs: { bucket, object, uri } }`
+  - Логи: `upload:received`, `upload:extract:start|done`, (для Unstructured) `upload:db:inserted`, `upload:success|error`
 
 - `GET /api/docs` — список документов
-- `GET /api/docs/:id` — документ + блоки (включает `canvasProfileId`, `canvasTransform`, `engine`)
-- `PATCH /api/docs/:id/canvas` — сохранение подгонки overlay (`canvasTransform`, `canvasProfileId`, `canvasMatchScore`)
+- `GET /api/docs/:id` — документ + блоки (включает `engine`)
+- (Удалено) `PATCH /api/docs/:id/canvas`
+- `GET /api/pipeline/gcs/adobe/status` — листинг GCS артефактов Adobe
+- `GET /api/pipeline/gcs/adobe/get?name=…` — получить содержимое артефакта
 - `GET /api/docs/:id/pdf` — исходный PDF
 - `GET /api/ingest/:id/report` — базовые метрики (см. §8)
 - Health: `GET /api/health`, `GET /api/health/adobe`, `GET /api/health/unstructured`
@@ -90,19 +79,16 @@
 
 - `/upload`:
   - Переключатель движка (Unstructured по умолчанию)
-  - Немедленный рендер 1‑й страницы (pdfjs) + шаблонные зоны (SVG)
-  - Статусы: `Visual Grab → Zones Live → OCR Running → Drafts Ready`
-  - При завершении — переход на `/docs/:id`
+  - Превью 1‑й страницы (pdfjs)
+  - Для Unstructured — после завершения переход на `/docs/:id`; для Adobe — артефакт доступен на `/pipeline/adobe`
 
 - `/docs/:id`:
-  - `app/docs/[id]/OverlayPdf.tsx` — overlay; рисует PDF и зоны профиля (каноника → масштаб к полотну)
-  - Отображает текущее `canvasTransform` (отладочно)
+  - `app/docs/[id]/OverlayPdf.tsx` — overlay блоков
 
 - `/frames`:
   - Автоприсвоение (демо) работает от текущих блоков независимо от двигателя
 
-- `/compare`:
-  - Выбор двух документов (например, Unstructured vs Adobe) и сравнение базовых метрик
+*Раздел сравнения и BM‑визуализация исключены на текущем этапе.*
 
 ## 8. Отчёты и метрики
 
@@ -202,4 +188,3 @@ curl -s http://localhost:3002/api/health/unstructured
 ---
 
 Готов к расширению: калибровка по двум ориентирам, серверная раскладка черновиков, сохранение Evidence и авто‑заполнение фреймов.
-
