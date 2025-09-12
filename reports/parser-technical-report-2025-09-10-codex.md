@@ -85,10 +85,12 @@
 - `/docs/:id`:
   - `app/docs/[id]/OverlayPdf.tsx` — overlay блоков
 
-- `/frames`:
-  - Автоприсвоение (демо) работает от текущих блоков независимо от двигателя
+- `/pipeline/adobe` — список артефактов Adobe (GCS)
+- `/pipeline/adobe/viewer` — подробный вьюер: фон‑PDF (pdf.js) + overlay bbox Adobe; выбор шаблона зон; легенда; фильтры
+- `/pipeline/frames` — обзор тайлами (по шаблону PIK_PBM_v5): зоны и счётчики на мини‑канвасе, клик ведёт в Viewer
+- `/pipeline/frames/editor` — базовый редактор шаблонов зон (`?template=PIK_PBM_v5`), редактирование box в долях (0..1) с превью
 
-*Раздел сравнения и BM‑визуализация исключены на текущем этапе.*
+Примечание: старый раздел сравнения и BM‑визуализация удалены.
 
 ## 8. Отчёты и метрики
 
@@ -125,20 +127,17 @@
 
 ## 12. Известные вопросы и дорожная карта
 
-1) Visual matching (pHash/анкеры)
-- Сейчас используется быстрый fit‑to‑canonical; требуется улучшить matchScore/калибровку: двухкликовая привязка «pick two anchors» с пересчётом аффинного преобразования и сохранением через `PATCH /api/docs/:id/canvas`.
+1) Editor зон (улучшения)
+- Перетаскивание/ресайз зон мышью; версияция шаблонов (`PIK_PBM_v5_1`); предпросмотр поверх выбранного PDF.
 
-2) Раскладка текста по зонам и черновики
-- Реализовать серверный маршрут `/api/docs/:id/drafts`: применять `canvasTransform` к bbox, раскладывать по полигонам (point‑in‑polygon), формировать черновики полей (top‑N блоков по площади/длине текста) и Evidence.
+2) Батч‑маппинг и отчёты
+- Скрипт пакетного маппинга всех артефактов (`scripts/mapAll.ts`) и страницы отчётов по зонам (counts/топ‑фразы, CSV/JSON).
 
-3) Стабилизация Unstructured/Adobe
-- Добавить троттлинг/ретраи и коды ошибок в логах с `x-request-id`/`x-ms-request-id` там, где доступны.
+3) Стабилизация Adobe/батча
+- Лимиты параллелизма, ретраи, метрики (время/ошибки) и алёрты; квоты GCS/Adobe.
 
-4) Безопасность внешнего доступа
-- Для `/upload` предусмотреть опциональный токен/Basic Auth при публикации туннеля.
-
-5) UI/UX
-- Включить «калибровку 2‑точки» и удобные ползунки; авто‑сохранение профиля документа.
+4) Безопасность
+- Auth для публичного доступа (Basic/Auth токен/Cloudflare Access), Named Tunnel вместо Quick Tunnel.
 
 ## 13. Воспроизводимость / Быстрый старт
 
@@ -164,26 +163,15 @@ curl -s http://localhost:3002/api/health/unstructured
 
 ## 14. Приложение: основные файлы
 
-- Клиент Unstructured: `lib/ingest/unstructured.ts`
-- Клиент Adobe (Extract/Create PDF): `lib/pdf/adobeExtract.ts`
-- Visual‑First:
-  - Профиль: `lib/canvas/profiles/PIK_BusinessModel_v5.json`
-  - Трансформы: `lib/canvas/transform.ts`
-  - Выравнивание: `lib/canvas/visualAlign.ts`
-- API upload: `app/api/ingest/upload/route.ts`
-- Документы:
-  - `app/api/docs/route.ts`
-  - `app/api/docs/[id]/route.ts`
-  - `app/api/docs/[id]/pdf/route.ts`
-  - `app/api/docs/[id]/canvas/route.ts`
-- Health:
-  - `app/api/health/route.ts`
-  - `app/api/health/unstructured/route.ts`
-- UI:
-  - `app/upload/page.tsx`
-  - `app/docs/[id]/OverlayPdf.tsx`
-  - `app/compare/page.tsx`
-- Логи: `lib/log.ts`, `logs/events/*.jsonl`
+- Парсинг Adobe: `lib/pdf/adobeExtract.ts`
+- GCS helper: `lib/gcs.ts`
+- Mapping ядро/шаблоны: `lib/mapping/canvasMap.ts`, `lib/mapping/templates/*.json`
+- API Mapping: `app/api/mapping/templates`, `app/api/mapping/template`, `app/api/mapping/map`
+- API GCS: `app/api/pipeline/gcs/adobe/status`, `app/api/pipeline/gcs/adobe/get`, `app/api/pipeline/gcs/pdf`
+- UI: `app/pipeline/adobe/page.tsx`, `app/pipeline/adobe/viewer/*`, `app/pipeline/frames/*`
+- Batch: `scripts/adobeBatchFromGcs.ts`, `scripts/mapAll.ts`
+- Unstructured (опц.): `lib/ingest/unstructured.ts`, `app/docs/[id]/OverlayPdf.tsx`, `app/api/docs/*`
+- Health/Логи: `app/api/health/*`, `lib/log.ts`, `logs/events/*.jsonl`
 
 ---
 
