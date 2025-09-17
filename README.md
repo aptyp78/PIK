@@ -1,6 +1,16 @@
 # PIK‑AI Parsing MVP
 
-This repository contains a proof of concept for a platform that ingests PIK methodology PDFs and exposes the raw document structure to a web interface. The goal of this milestone is to build a **functional skeleton** that can import documents, persist the extracted content in a SQLite database and provide a simple search and browsing experience. Subsequent iterations will layer on automatic mapping into PIK frames, vector search and RAG‑style Q&A.
+This repository contains a proof of concept for a platform that ingests PIK methodology PDFs and exposes the raw document structure to a web interface. The goal of this milestone is to build a **functional skeleton** that can import documents, persist the extracted content in a SQLite database and provide a simple search and browsing experience. Subsequent iterations will layer on automatic mapping into PIK frames, vector search and RAG-style Q&A.
+
+## GroundedDINO + SAM2 Notebook
+
+We maintain a Colab-friendly notebook that orchestrates GroundedDINO + SAM/SAM2 detection, bucket mounting, and artifact upload flows that feed this app. Open it directly from this repository:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/aptyp78/PIK/blob/main/notebooks/Grounded_DINO_SAM2_Detection.ipynb)
+
+Notebook source: `notebooks/Grounded_DINO_SAM2_Detection.ipynb`
+
+It mirrors the automation used in the original `PIKAi` tooling (gcsfuse mounts, region extraction, and uploads). Update the service-account path in the `Configure service account key path` cell before running the GCS mounting steps.
 
 ## Project structure
 
